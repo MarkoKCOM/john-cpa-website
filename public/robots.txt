@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://getjohn.ai/sitemap-index.xml
+Sitemap: https://heshbonai.co/sitemap-index.xml

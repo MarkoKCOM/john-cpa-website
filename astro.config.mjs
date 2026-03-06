@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://getjohn.ai',
+  site: 'https://heshbonai.co',
   integrations: [
     tailwind(),
     sitemap(),
