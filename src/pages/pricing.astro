@@ -1,0 +1,602 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+const title = 'Pricing — JOHN | AI Document Collection for CPAs';
+const description = 'Simple per-client pricing starting at $10/client/month. No setup fees, no annual contracts. 14-day free trial. JOHN automates document collection via WhatsApp so CPAs save 32+ hours per month.';
+---
+
+<Layout title={title} description={description} canonical="https://getjohn.ai/pricing">
+  <Navbar />
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="pt-32 pb-16 md:pt-40 md:pb-20 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="section-label">Pricing</span>
+        <h1 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          Simple Pricing. Pay Per Client. <span class="gradient-text">Save Per Hour.</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-cool-gray max-w-2xl mx-auto">
+          No setup fees. No annual contracts. Start free for 14 days.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== PRICING TIERS ==================== -->
+    <section class="pb-20 px-4">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-start">
+
+        <!-- Starter -->
+        <div class="card flex flex-col h-full">
+          <div class="mb-6">
+            <h3 class="text-lg font-semibold text-off-white">Starter</h3>
+            <div class="mt-4 flex items-baseline gap-1">
+              <span class="text-4xl font-bold text-off-white">$15</span>
+              <span class="text-cool-gray text-sm">/client/mo</span>
+            </div>
+            <p class="mt-2 text-sm text-cool-gray">Up to 50 clients</p>
+          </div>
+          <a href="#cta" class="btn-secondary w-full text-center mb-8">Start Free Trial</a>
+          <ul class="space-y-3 text-sm text-off-white/80 flex-1">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              WhatsApp document collection
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Up to 3 follow-ups per client
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Document recognition
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Dashboard
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Hebrew + English
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Email support
+            </li>
+          </ul>
+        </div>
+
+        <!-- Growth (highlighted) -->
+        <div class="card flex flex-col h-full border-electric/60 ring-1 ring-electric/30 relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="bg-electric text-white text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full">Most Popular</span>
+          </div>
+          <div class="mb-6">
+            <h3 class="text-lg font-semibold text-off-white">Growth</h3>
+            <div class="mt-4 flex items-baseline gap-1">
+              <span class="text-4xl font-bold text-off-white">$10</span>
+              <span class="text-cool-gray text-sm">/client/mo</span>
+            </div>
+            <p class="mt-2 text-sm text-cool-gray">51 - 200 clients</p>
+          </div>
+          <a href="#cta" class="btn-primary w-full text-center mb-8">Start Free Trial</a>
+          <p class="text-xs text-cool-gray mb-4">Everything in Starter, plus:</p>
+          <ul class="space-y-3 text-sm text-off-white/80 flex-1">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Unlimited follow-ups
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Deadline priority engine
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Multi-language (Arabic, Russian)
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Custom message templates
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Team dashboard (up to 5 CPAs)
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              CSV / API export
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Priority support
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Onboarding specialist
+            </li>
+          </ul>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="card flex flex-col h-full">
+          <div class="mb-6">
+            <h3 class="text-lg font-semibold text-off-white">Enterprise</h3>
+            <div class="mt-4 flex items-baseline gap-1">
+              <span class="text-4xl font-bold text-off-white">Custom</span>
+            </div>
+            <p class="mt-2 text-sm text-cool-gray">200+ clients</p>
+          </div>
+          <a href="#cta" class="btn-secondary w-full text-center mb-8">Contact Sales</a>
+          <p class="text-xs text-cool-gray mb-4">Everything in Growth, plus:</p>
+          <ul class="space-y-3 text-sm text-off-white/80 flex-1">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Unlimited team members
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Custom integrations (Hashavshevet, Priority, SAP)
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              White-label option
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Dedicated account manager
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              SLA 99.9% uptime
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              On-premise deployment option
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-mint shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Phone + WhatsApp support
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="text-center text-cool-gray text-sm mt-8 max-w-xl mx-auto">
+        All plans include a <strong class="text-off-white">14-day free trial</strong>. Pay annually and get <strong class="text-off-white">2 months free</strong> (17% off).
+      </p>
+    </section>
+
+    <!-- ==================== COST COMPARISON ==================== -->
+    <section class="py-20 px-4 border-t border-cool-gray/10">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="section-label">ROI</span>
+          <h2 class="mt-4 text-3xl md:text-4xl font-bold">
+            JOHN Pays for Itself <span class="gradient-text">in Week One</span>
+          </h2>
+          <p class="mt-4 text-cool-gray max-w-xl mx-auto">Based on a 100-client CPA firm at $50/hr billing rate.</p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-cool-gray/20">
+                <th class="py-4 pr-4 text-cool-gray font-medium">Metric</th>
+                <th class="py-4 px-4 text-cool-gray font-medium">Manual Process</th>
+                <th class="py-4 pl-4 text-electric font-medium">With JOHN</th>
+              </tr>
+            </thead>
+            <tbody class="text-off-white/80">
+              <tr class="border-b border-cool-gray/10">
+                <td class="py-4 pr-4 font-medium text-off-white">Time on document chasing</td>
+                <td class="py-4 px-4">8 hrs/week</td>
+                <td class="py-4 pl-4 text-mint font-medium">0 hrs/week</td>
+              </tr>
+              <tr class="border-b border-cool-gray/10">
+                <td class="py-4 pr-4 font-medium text-off-white">Billing rate opportunity cost</td>
+                <td class="py-4 px-4">$50/hr</td>
+                <td class="py-4 pl-4">$50/hr</td>
+              </tr>
+              <tr class="border-b border-cool-gray/10">
+                <td class="py-4 pr-4 font-medium text-off-white">Weekly cost of chasing</td>
+                <td class="py-4 px-4 text-coral">$400</td>
+                <td class="py-4 pl-4 text-mint font-medium">$0</td>
+              </tr>
+              <tr class="border-b border-cool-gray/10">
+                <td class="py-4 pr-4 font-medium text-off-white">Monthly cost of chasing</td>
+                <td class="py-4 px-4 text-coral">$1,600</td>
+                <td class="py-4 pl-4 text-mint font-medium">$0</td>
+              </tr>
+              <tr class="border-b border-cool-gray/10">
+                <td class="py-4 pr-4 font-medium text-off-white">JOHN cost (100 clients)</td>
+                <td class="py-4 px-4">--</td>
+                <td class="py-4 pl-4">$1,000 - $1,500/mo</td>
+              </tr>
+              <tr class="border-b border-cool-gray/10">
+                <td class="py-4 pr-4 font-medium text-off-white">Net monthly savings</td>
+                <td class="py-4 px-4">--</td>
+                <td class="py-4 pl-4 text-mint font-bold text-base">$1,400/mo</td>
+              </tr>
+              <tr class="border-b border-cool-gray/10">
+                <td class="py-4 pr-4 font-medium text-off-white">Hours recovered/month</td>
+                <td class="py-4 px-4">0</td>
+                <td class="py-4 pl-4 text-mint font-bold text-base">32 hours</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-medium text-off-white">Client response rate</td>
+                <td class="py-4 px-4">42%</td>
+                <td class="py-4 pl-4 text-mint font-medium">94%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-8 card bg-electric/5 border-electric/20 text-center">
+          <p class="text-lg font-semibold text-off-white">
+            A 100-client firm saves <span class="text-mint font-bold">$1,400/month</span> and recovers <span class="text-mint font-bold">32 hours</span>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURE COMPARISON MATRIX ==================== -->
+    <section class="py-20 px-4 border-t border-cool-gray/10">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="section-label">Compare Plans</span>
+          <h2 class="mt-4 text-3xl md:text-4xl font-bold">Feature Comparison</h2>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-cool-gray/20">
+                <th class="py-4 pr-4 text-left text-cool-gray font-medium w-2/5">Feature</th>
+                <th class="py-4 px-4 text-center text-cool-gray font-medium">Starter</th>
+                <th class="py-4 px-4 text-center text-electric font-medium">Growth</th>
+                <th class="py-4 pl-4 text-center text-cool-gray font-medium">Enterprise</th>
+              </tr>
+            </thead>
+            <tbody class="text-off-white/80">
+              <!-- Collection -->
+              <tr class="border-b border-cool-gray/10">
+                <td class="py-3 pr-4 font-medium text-off-white" colspan="4">Collection</td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">WhatsApp document collection</td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">SMS fallback</td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">Follow-ups</td>
+                <td class="py-3 px-4 text-center">Up to 3</td>
+                <td class="py-3 px-4 text-center text-mint font-medium">Unlimited</td>
+                <td class="py-3 pl-4 text-center text-mint font-medium">Unlimited</td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">Deadline priority engine</td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">Document recognition (AI)</td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+
+              <!-- Language & Templates -->
+              <tr class="border-b border-cool-gray/10 mt-2">
+                <td class="py-3 pr-4 font-medium text-off-white pt-6" colspan="4">Language & Templates</td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">Hebrew + English</td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">Arabic, Russian</td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">Custom message templates</td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+
+              <!-- Dashboard & Export -->
+              <tr class="border-b border-cool-gray/10">
+                <td class="py-3 pr-4 font-medium text-off-white pt-6" colspan="4">Dashboard & Export</td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">Dashboard</td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">Team dashboard</td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 px-4 text-center">Up to 5 CPAs</td>
+                <td class="py-3 pl-4 text-center text-mint font-medium">Unlimited</td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">CSV / API export</td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+
+              <!-- Integrations -->
+              <tr class="border-b border-cool-gray/10">
+                <td class="py-3 pr-4 font-medium text-off-white pt-6" colspan="4">Integrations</td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">Accounting software (Hashavshevet, Priority, SAP)</td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">White-label</td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">On-premise deployment</td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+
+              <!-- Support -->
+              <tr class="border-b border-cool-gray/10">
+                <td class="py-3 pr-4 font-medium text-off-white pt-6" colspan="4">Support & Security</td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">Email support</td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">Priority support</td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">Phone + WhatsApp support</td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">Onboarding specialist</td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-mint">&#10003;</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+              <tr class="border-b border-cool-gray/5">
+                <td class="py-3 pr-4 pl-4">Dedicated account manager</td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 pl-4 text-center"><span class="text-mint">&#10003;</span></td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 pl-4">SLA guarantee</td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 px-4 text-center"><span class="text-cool-gray">--</span></td>
+                <td class="py-3 pl-4 text-center">99.9%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="py-20 px-4 border-t border-cool-gray/10">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="section-label">FAQ</span>
+          <h2 class="mt-4 text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-3" id="faq-list">
+
+          <div class="faq-item card !p-0 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-medium text-off-white">What counts as a "client"?</span>
+              <svg class="faq-icon w-5 h-5 text-cool-gray shrink-0 ml-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-5">
+              <p class="text-cool-gray text-sm leading-relaxed">A client is any individual or business entity that JOHN contacts for document collection during a billing month. If a client is inactive (not contacted) in a given month, they don't count toward your total. You only pay for clients JOHN actively works with.</p>
+            </div>
+          </div>
+
+          <div class="faq-item card !p-0 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-medium text-off-white">How does the 14-day free trial work?</span>
+              <svg class="faq-icon w-5 h-5 text-cool-gray shrink-0 ml-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-5">
+              <p class="text-cool-gray text-sm leading-relaxed">Sign up, connect your WhatsApp Business number, and start collecting documents immediately. No credit card required for the first 14 days. You get full access to all features in your chosen plan. If you don't convert, your data is exported and securely deleted.</p>
+            </div>
+          </div>
+
+          <div class="faq-item card !p-0 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-medium text-off-white">Can I change plans later?</span>
+              <svg class="faq-icon w-5 h-5 text-cool-gray shrink-0 ml-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-5">
+              <p class="text-cool-gray text-sm leading-relaxed">Yes. You can upgrade or downgrade at any time. When upgrading, the new rate is prorated for the remainder of the billing cycle. When downgrading, the change takes effect at the start of the next billing period.</p>
+            </div>
+          </div>
+
+          <div class="faq-item card !p-0 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-medium text-off-white">Is there an annual discount?</span>
+              <svg class="faq-icon w-5 h-5 text-cool-gray shrink-0 ml-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-5">
+              <p class="text-cool-gray text-sm leading-relaxed">Yes. Pay annually and get 2 months free -- that's a 17% discount. Starter drops to ~$12.50/client/mo and Growth drops to ~$8.33/client/mo. Annual plans are billed upfront based on your client count at signup, with adjustments at renewal.</p>
+            </div>
+          </div>
+
+          <div class="faq-item card !p-0 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-medium text-off-white">What if a client doesn't have WhatsApp?</span>
+              <svg class="faq-icon w-5 h-5 text-cool-gray shrink-0 ml-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-5">
+              <p class="text-cool-gray text-sm leading-relaxed">JOHN automatically falls back to SMS for clients without WhatsApp. The experience is similar: they receive a message, tap a secure link, and upload their documents. Response rates are slightly lower via SMS (~78%) compared to WhatsApp (~94%), but still far above email.</p>
+            </div>
+          </div>
+
+          <div class="faq-item card !p-0 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-medium text-off-white">Does my client need to install anything?</span>
+              <svg class="faq-icon w-5 h-5 text-cool-gray shrink-0 ml-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-5">
+              <p class="text-cool-gray text-sm leading-relaxed">No. Clients interact with JOHN through WhatsApp or SMS -- apps they already have. They simply reply with photos of documents or tap a link to upload files. There is nothing to download, no account to create, and no password to remember.</p>
+            </div>
+          </div>
+
+          <div class="faq-item card !p-0 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-medium text-off-white">How are sensitive documents protected?</span>
+              <svg class="faq-icon w-5 h-5 text-cool-gray shrink-0 ml-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-5">
+              <p class="text-cool-gray text-sm leading-relaxed">All documents are encrypted in transit with TLS 1.3 and at rest with AES-256 encryption. We are SOC 2 Type II compliant. Documents are stored in region-specific data centers and automatically purged after your configured retention period. Access is logged and auditable.</p>
+            </div>
+          </div>
+
+          <div class="faq-item card !p-0 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-medium text-off-white">Can I customize the messages JOHN sends?</span>
+              <svg class="faq-icon w-5 h-5 text-cool-gray shrink-0 ml-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-5">
+              <p class="text-cool-gray text-sm leading-relaxed">On the Growth and Enterprise plans, yes. You get full control over message templates, tone, language, and follow-up cadence. Starter plan users get professionally crafted default templates in Hebrew and English that work out of the box.</p>
+            </div>
+          </div>
+
+          <div class="faq-item card !p-0 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-medium text-off-white">Which accounting software integrations are supported?</span>
+              <svg class="faq-icon w-5 h-5 text-cool-gray shrink-0 ml-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-5">
+              <p class="text-cool-gray text-sm leading-relaxed">Enterprise plans include custom integrations with Hashavshevet, Priority ERP, and SAP. All plans support CSV export, and the Growth plan adds API access so you can build your own integrations. We are continuously adding new connectors -- contact us if you need a specific one.</p>
+            </div>
+          </div>
+
+          <div class="faq-item card !p-0 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+              <span class="font-medium text-off-white">What's the cancellation policy?</span>
+              <svg class="faq-icon w-5 h-5 text-cool-gray shrink-0 ml-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-5">
+              <p class="text-cool-gray text-sm leading-relaxed">Cancel anytime, no questions asked. Monthly plans end at the close of the current billing cycle. Annual plans can be cancelled and you will receive a prorated refund for unused months. All your data is exported to you before deletion. We believe in earning your business every month.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FINAL CTA ==================== -->
+    <section id="cta" class="py-20 px-4 border-t border-cool-gray/10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold">
+          14 Days Free. 5 Hours Back. <span class="gradient-text">Every Week.</span>
+        </h2>
+        <p class="mt-6 text-cool-gray text-lg max-w-xl mx-auto">
+          Start collecting documents on autopilot today. No credit card required.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#" class="btn-primary text-lg px-8 py-4">Start Free Trial</a>
+          <a href="#" class="btn-secondary text-lg px-8 py-4">Book a Demo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+
+  <!-- FAQ Accordion Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggles = document.querySelectorAll('.faq-toggle');
+
+      toggles.forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+          const item = toggle.closest('.faq-item');
+          const content = item.querySelector('.faq-content');
+          const icon = toggle.querySelector('.faq-icon');
+          const isOpen = !content.classList.contains('hidden');
+
+          // Close all other items
+          document.querySelectorAll('.faq-item').forEach((otherItem) => {
+            if (otherItem !== item) {
+              const otherContent = otherItem.querySelector('.faq-content');
+              const otherIcon = otherItem.querySelector('.faq-icon');
+              const otherToggle = otherItem.querySelector('.faq-toggle');
+              otherContent.classList.add('hidden');
+              otherContent.style.maxHeight = null;
+              otherIcon.style.transform = 'rotate(0deg)';
+              otherToggle.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          // Toggle current item
+          if (isOpen) {
+            content.style.maxHeight = null;
+            setTimeout(() => content.classList.add('hidden'), 200);
+            icon.style.transform = 'rotate(0deg)';
+            toggle.setAttribute('aria-expanded', 'false');
+          } else {
+            content.classList.remove('hidden');
+            content.style.maxHeight = content.scrollHeight + 'px';
+            icon.style.transform = 'rotate(180deg)';
+            toggle.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    });
+  </script>
+
+  <style>
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-content:not(.hidden) {
+      max-height: none;
+    }
+    .faq-icon {
+      transition: transform 0.2s ease;
+    }
+  </style>
+</Layout>

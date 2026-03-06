@@ -1,0 +1,77 @@
+---
+const testimonials = [
+  {
+    quote: 'In 3 weeks, JOHN collected 847 documents from my clients. I used to spend every February begging people for receipts. This year I spent it actually doing tax work.',
+    name: 'Yael Davidovich',
+    title: 'CPA, Davidovich & Co.',
+    clients: '180 clients',
+    avatar: 'YD',
+  },
+  {
+    quote: '80% of my clients responded within 24 hours. I couldn\'t believe it. Some of them even thanked JOHN for the reminder. Thanked. The. Bot.',
+    name: 'Ran Abergel',
+    title: 'Senior Accountant, Abergel Tax',
+    clients: '95 clients',
+    avatar: 'RA',
+  },
+  {
+    quote: 'Three clients asked me if I hired a new assistant. That\'s when I knew JOHN was working. 300+ clients and I didn\'t send a single reminder myself.',
+    name: 'Michal Shaked',
+    title: 'Managing Partner, Shaked CPA',
+    clients: '300+ clients',
+    avatar: 'MS',
+  },
+];
+
+const stats = [
+  { value: '12,400+', label: 'documents collected' },
+  { value: '2,100+', label: 'hours saved' },
+  { value: '82%', label: 'response rate' },
+  { value: '94%', label: 'on-time delivery' },
+];
+---
+
+<section id="about" class="py-20 sm:py-28 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-in">
+      <p class="section-label mb-4">Testimonials</p>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">CPAs Who <span class="gradient-text">Stopped Chasing</span></h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
+      {testimonials.map((t) => (
+        <div class="card hover:border-cool-gray/25 transition-all duration-300 fade-in flex flex-col">
+          <!-- Stars -->
+          <div class="flex gap-1 mb-4">
+            {[1,2,3,4,5].map(() => (
+              <svg class="w-4 h-4 text-amber" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+
+          <blockquote class="text-off-white text-sm leading-relaxed mb-6 flex-1">"{t.quote}"</blockquote>
+
+          <div class="flex items-center gap-3 pt-4 border-t border-cool-gray/10">
+            <div class="w-10 h-10 rounded-full bg-electric/20 flex items-center justify-center text-electric text-sm font-bold flex-shrink-0">
+              {t.avatar}
+            </div>
+            <div>
+              <p class="text-white text-sm font-semibold">{t.name}</p>
+              <p class="text-cool-gray text-xs">{t.title}</p>
+              <p class="text-electric text-xs font-medium">{t.clients}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="card grid grid-cols-2 md:grid-cols-4 gap-6 text-center fade-in">
+      {stats.map((stat) => (
+        <div>
+          <p class="text-2xl sm:text-3xl font-bold gradient-text">{stat.value}</p>
+          <p class="text-cool-gray text-sm mt-1">{stat.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
