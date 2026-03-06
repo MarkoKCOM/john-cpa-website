@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-import WhatsAppDemo from '../components/WhatsAppDemo.astro';
 import '../styles/global.css';
 ---
 
@@ -14,198 +13,183 @@ import '../styles/global.css';
 
   <main class="pt-24">
     <!-- Hero -->
-    <section class="py-20 md:py-28">
+    <section class="py-20 md:py-28 bg-forest-pale">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <p class="section-label mb-4">How It Works</p>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-          Three steps.<br />
-          <span class="gradient-text">Zero chasing.</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-slate-900">
+          Three steps. Zero chasing.
         </h1>
-        <p class="text-lg md:text-xl text-cool-gray max-w-2xl mx-auto">
+        <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
           Connect your client list. JOHN handles the rest. Documents arrive organized and on time.
         </p>
       </div>
     </section>
 
     <!-- Steps -->
-    <section class="py-16 md:py-20">
+    <section class="py-16 md:py-20 bg-white">
       <div class="max-w-5xl mx-auto px-4 sm:px-6">
         <div class="space-y-16 md:space-y-24">
           <!-- Step 1 -->
           <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div class="flex items-center gap-4 mb-6">
-                <div class="w-12 h-12 rounded-full bg-electric/10 border-2 border-electric flex items-center justify-center">
-                  <span class="text-electric font-bold text-lg">1</span>
-                </div>
+                <div class="w-12 h-12 rounded-full bg-forest text-white flex items-center justify-center font-display font-bold text-lg">1</div>
                 <p class="section-label">Connect</p>
               </div>
-              <h2 class="text-3xl md:text-4xl font-bold mb-4">Upload your client list</h2>
-              <p class="text-cool-gray text-lg mb-6">
+              <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Upload your client list</h2>
+              <p class="text-slate-600 text-lg mb-6">
                 Import your client list from a spreadsheet, or connect your accounting software directly.
                 Link your WhatsApp Business account. The whole setup takes about 10 minutes.
               </p>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-mint mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-cool-gray">CSV upload or direct integration</span>
+                  <svg class="w-5 h-5 text-forest mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="text-slate-600">CSV upload or direct integration</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-mint mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-cool-gray">WhatsApp Business API setup guided</span>
+                  <svg class="w-5 h-5 text-forest mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="text-slate-600">WhatsApp Business API setup guided</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-mint mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-cool-gray">No migration from existing systems</span>
+                  <svg class="w-5 h-5 text-forest mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="text-slate-600">No migration from existing systems</span>
                 </li>
               </ul>
             </div>
-            <div class="card text-center">
-              <div class="py-8">
-                <svg class="w-24 h-24 mx-auto text-electric/20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                </svg>
-                <p class="text-cool-gray mt-4">Upload CSV or connect your software</p>
-                <p class="text-sm text-cool-gray/60 mt-2">Hashavshevet, Priority, QuickBooks, and more</p>
-              </div>
+            <div class="bg-slate-50 rounded-2xl border border-slate-200 p-8 text-center">
+              <svg class="w-24 h-24 mx-auto text-forest/20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+              </svg>
+              <p class="text-slate-600 mt-4">Upload CSV or connect your software</p>
+              <p class="text-sm text-slate-400 mt-2">Hashavshevet, Priority, QuickBooks, and more</p>
             </div>
-          </div>
-
-          <!-- Connector Line -->
-          <div class="hidden md:flex justify-center">
-            <div class="w-px h-12 bg-gradient-to-b from-electric/50 to-transparent"></div>
           </div>
 
           <!-- Step 2 -->
           <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="md:order-2">
               <div class="flex items-center gap-4 mb-6">
-                <div class="w-12 h-12 rounded-full bg-electric/10 border-2 border-electric flex items-center justify-center">
-                  <span class="text-electric font-bold text-lg">2</span>
-                </div>
+                <div class="w-12 h-12 rounded-full bg-forest text-white flex items-center justify-center font-display font-bold text-lg">2</div>
                 <p class="section-label">JOHN Takes Over</p>
               </div>
-              <h2 class="text-3xl md:text-4xl font-bold mb-4">Autonomous document collection</h2>
-              <p class="text-cool-gray text-lg mb-6">
+              <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Autonomous document collection</h2>
+              <p class="text-slate-600 text-lg mb-6">
                 JOHN messages each client on WhatsApp, asking for their missing documents.
                 Smart scheduling ensures messages go out at the right time. Polite follow-ups
                 continue until every document is in.
               </p>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-mint mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-cool-gray">Context-aware: knows which docs are missing and why</span>
+                  <svg class="w-5 h-5 text-forest mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="text-slate-600">Context-aware: knows which docs are missing and why</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-mint mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-cool-gray">Respects quiet hours and Shabbat</span>
+                  <svg class="w-5 h-5 text-forest mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="text-slate-600">Respects quiet hours and Shabbat</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-mint mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-cool-gray">Escalates to you only when needed</span>
+                  <svg class="w-5 h-5 text-forest mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="text-slate-600">Escalates to you only when needed</span>
                 </li>
               </ul>
             </div>
             <div class="md:order-1">
-              <WhatsAppDemo />
+              <!-- WhatsApp preview -->
+              <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg max-w-sm mx-auto">
+                <div class="bg-[#075E54] px-4 py-3 flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-forest-light/40 flex items-center justify-center text-white text-xs font-bold">J</div>
+                  <div>
+                    <p class="text-white text-sm font-semibold">JOHN</p>
+                    <p class="text-white/60 text-xs">online</p>
+                  </div>
+                </div>
+                <div class="bg-[#0B141A] px-3 py-4 space-y-2">
+                  <div class="flex justify-start">
+                    <div class="max-w-[85%] rounded-lg px-3 py-2 bg-[#1F2C34] text-[#E9EDEF]" style="border-top-left-radius: 2px;">
+                      <p class="text-[#00A884] text-xs font-medium mb-1">JOHN</p>
+                      <p class="text-sm leading-relaxed">Hi Avi, we need 3 documents for your annual filing. Can you send them here?</p>
+                      <div class="flex justify-end mt-1"><span class="text-[10px] text-[#8696A0]">10:02</span></div>
+                    </div>
+                  </div>
+                  <div class="flex justify-end">
+                    <div class="max-w-[85%] rounded-lg px-3 py-2 bg-[#005C4B] text-[#E9EDEF]" style="border-top-right-radius: 2px;">
+                      <p class="text-sm">Sure, let me find them!</p>
+                      <div class="flex justify-end mt-1"><span class="text-[10px] text-[#8696A0]">11:47</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-
-          <!-- Connector Line -->
-          <div class="hidden md:flex justify-center">
-            <div class="w-px h-12 bg-gradient-to-b from-electric/50 to-transparent"></div>
           </div>
 
           <!-- Step 3 -->
           <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div class="flex items-center gap-4 mb-6">
-                <div class="w-12 h-12 rounded-full bg-electric/10 border-2 border-electric flex items-center justify-center">
-                  <span class="text-electric font-bold text-lg">3</span>
-                </div>
+                <div class="w-12 h-12 rounded-full bg-forest text-white flex items-center justify-center font-display font-bold text-lg">3</div>
                 <p class="section-label">Documents Delivered</p>
               </div>
-              <h2 class="text-3xl md:text-4xl font-bold mb-4">Everything in your dashboard</h2>
-              <p class="text-cool-gray text-lg mb-6">
+              <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Everything in your dashboard</h2>
+              <p class="text-slate-600 text-lg mb-6">
                 Every document collected, categorized, and ready for processing. Real-time status
-                shows who responded, who's pending, and what's still missing. Export to your
-                accounting software in one click.
+                shows who responded, who's pending, and what's still missing.
               </p>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-mint mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-cool-gray">Real-time document status tracking</span>
+                  <svg class="w-5 h-5 text-forest mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="text-slate-600">Real-time document status tracking</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-mint mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-cool-gray">Auto-categorization (bank statements, receipts, forms)</span>
+                  <svg class="w-5 h-5 text-forest mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="text-slate-600">Auto-categorization (bank statements, receipts, forms)</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-mint mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-cool-gray">One-click export to your accounting system</span>
+                  <svg class="w-5 h-5 text-forest mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span class="text-slate-600">One-click export to your accounting system</span>
                 </li>
               </ul>
             </div>
-            <div class="card">
-              <div class="py-4">
-                <div class="flex items-center justify-between mb-6">
-                  <h3 class="font-semibold">Document Status</h3>
-                  <span class="text-xs text-cool-gray">Updated just now</span>
+            <!-- Dashboard mockup -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="font-semibold text-slate-900">Document Status</h3>
+                <span class="text-xs text-slate-400">Updated just now</span>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span class="text-slate-600">Avi Cohen</span>
+                    <span class="text-forest font-mono text-xs">3/3 Complete</span>
+                  </div>
+                  <div class="w-full bg-slate-100 rounded-full h-2">
+                    <div class="bg-forest h-2 rounded-full" style="width: 100%"></div>
+                  </div>
                 </div>
-                <div class="space-y-4">
-                  <div>
-                    <div class="flex justify-between text-sm mb-1">
-                      <span class="text-cool-gray">Avi Cohen</span>
-                      <span class="text-mint font-mono text-xs">3/3 Complete</span>
-                    </div>
-                    <div class="w-full bg-navy rounded-full h-2">
-                      <div class="bg-mint h-2 rounded-full" style="width: 100%"></div>
-                    </div>
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span class="text-slate-600">Dana Levi</span>
+                    <span class="text-forest-light font-mono text-xs">2/4 In Progress</span>
                   </div>
-                  <div>
-                    <div class="flex justify-between text-sm mb-1">
-                      <span class="text-cool-gray">Dana Levi</span>
-                      <span class="text-electric font-mono text-xs">2/4 In Progress</span>
-                    </div>
-                    <div class="w-full bg-navy rounded-full h-2">
-                      <div class="bg-electric h-2 rounded-full" style="width: 50%"></div>
-                    </div>
+                  <div class="w-full bg-slate-100 rounded-full h-2">
+                    <div class="bg-forest-light h-2 rounded-full" style="width: 50%"></div>
                   </div>
-                  <div>
-                    <div class="flex justify-between text-sm mb-1">
-                      <span class="text-cool-gray">Moshe Shapira</span>
-                      <span class="text-amber font-mono text-xs">0/5 Pending</span>
-                    </div>
-                    <div class="w-full bg-navy rounded-full h-2">
-                      <div class="bg-amber h-2 rounded-full" style="width: 5%"></div>
-                    </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span class="text-slate-600">Moshe Shapira</span>
+                    <span class="text-amber font-mono text-xs">0/5 Pending</span>
                   </div>
-                  <div>
-                    <div class="flex justify-between text-sm mb-1">
-                      <span class="text-cool-gray">Rachel Mizrahi</span>
-                      <span class="text-mint font-mono text-xs">5/5 Complete</span>
-                    </div>
-                    <div class="w-full bg-navy rounded-full h-2">
-                      <div class="bg-mint h-2 rounded-full" style="width: 100%"></div>
-                    </div>
+                  <div class="w-full bg-slate-100 rounded-full h-2">
+                    <div class="bg-amber h-2 rounded-full" style="width: 5%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span class="text-slate-600">Rachel Mizrahi</span>
+                    <span class="text-forest font-mono text-xs">5/5 Complete</span>
+                  </div>
+                  <div class="w-full bg-slate-100 rounded-full h-2">
+                    <div class="bg-forest h-2 rounded-full" style="width: 100%"></div>
                   </div>
                 </div>
               </div>
@@ -216,19 +200,19 @@ import '../styles/global.css';
     </section>
 
     <!-- CTA -->
-    <section class="py-20 md:py-28 bg-charcoal/50">
+    <section class="py-20 md:py-28 bg-forest">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
           Ready to let JOHN handle it?
         </h2>
-        <p class="text-cool-gray text-lg mb-8">
+        <p class="text-white/70 text-lg mb-8">
           Set up in 10 minutes. See results in your first week.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#" class="btn-primary text-lg px-8 py-4">Start Your 14-Day Free Trial</a>
-          <a href="/demo" class="btn-secondary text-lg px-8 py-4">Book a Demo</a>
+          <a href="mailto:markos@heshbonai.co" class="inline-flex items-center justify-center px-8 py-4 bg-white text-forest font-semibold rounded-lg hover:bg-forest-pale transition-all duration-200 text-lg shadow-sm">Start Your 14-Day Free Trial</a>
+          <a href="/demo" class="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-all duration-200 text-lg">Book a Demo</a>
         </div>
-        <p class="text-cool-gray/60 text-sm mt-4">No credit card required. Cancel anytime.</p>
+        <p class="text-white/40 text-sm mt-4">No credit card required. Cancel anytime.</p>
       </div>
     </section>
   </main>
