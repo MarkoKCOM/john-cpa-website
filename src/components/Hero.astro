@@ -1,56 +1,67 @@
 ---
 ---
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-  <!-- Background gradient orbs -->
-  <div class="absolute top-1/4 -left-32 w-96 h-96 bg-electric/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
-  <div class="absolute bottom-1/4 -right-32 w-80 h-80 bg-mint/8 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-electric/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+<section class="relative pt-24 pb-16 sm:pt-32 sm:pb-24 bg-forest-pale overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Left: Text -->
+      <div>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-forest-light/20 mb-8 shadow-sm">
+          <span class="w-2 h-2 bg-forest-light rounded-full"></span>
+          <span class="text-sm text-slate-600 font-medium">Built for Israeli CPAs</span>
+        </div>
 
-  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <!-- Stat Badge -->
-    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-charcoal border border-cool-gray/20 mb-8 animate-fade-in">
-      <span class="w-2 h-2 bg-mint rounded-full animate-pulse"></span>
-      <span class="text-sm text-cool-gray font-medium">5+ hours saved per week</span>
-    </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-slate-900">
+          Stop Chasing Clients
+          <span class="text-forest"> for Documents</span>
+        </h1>
 
-    <!-- H1 -->
-    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in">
-      Stop Chasing Clients<br />
-      <span class="gradient-text">for Documents</span>
-    </h1>
+        <p class="text-lg text-slate-600 max-w-lg mb-10 leading-relaxed">
+          JOHN is an AI agent that collects documents from your clients via WhatsApp. No portals. No follow-up emails. Just documents, delivered.
+        </p>
 
-    <!-- Subheading -->
-    <p class="text-lg sm:text-xl text-cool-gray max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in">
-      JOHN is an AI agent that autonomously collects documents from your clients via WhatsApp. No portals. No apps. No follow-up emails. Just documents, delivered.
-    </p>
+        <div class="flex flex-col sm:flex-row items-start gap-4 mb-10">
+          <a href="#cta" class="btn-primary text-base px-8 py-4">
+            Start Your 14-Day Free Trial
+          </a>
+          <a href="#demo" class="btn-secondary text-base px-8 py-4">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            Watch Demo
+          </a>
+        </div>
 
-    <!-- CTAs -->
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in">
-      <a href="#cta" class="btn-primary text-base px-8 py-4">
-        Start Your 14-Day Free Trial
-      </a>
-      <a href="#demo" class="btn-secondary text-base px-8 py-4">
-        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        Watch Demo
-      </a>
-    </div>
-
-    <!-- Trust Badges -->
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-cool-gray text-sm animate-fade-in">
-      <div class="flex items-center gap-2">
-        <svg class="w-5 h-5 text-whatsapp" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.253-.152-2.837.743.756-2.764-.167-.267A7.98 7.98 0 014 12a8 8 0 1116 0 8 8 0 01-8 8z"/></svg>
-        WhatsApp Business API
+        <div class="flex items-center gap-6 text-slate-500 text-sm">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-whatsapp" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.253-.152-2.837.743.756-2.764-.167-.267A7.98 7.98 0 014 12a8 8 0 1116 0 8 8 0 01-8 8z"/></svg>
+            WhatsApp Native
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-forest-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            End-to-End Encrypted
+          </div>
+        </div>
       </div>
-      <span class="hidden sm:block text-cool-gray/30">|</span>
-      <div class="flex items-center gap-2">
-        <svg class="w-5 h-5 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-        End-to-End Encrypted
-      </div>
-      <span class="hidden sm:block text-cool-gray/30">|</span>
-      <div class="flex items-center gap-2">
-        <svg class="w-5 h-5 text-electric" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        GDPR Compliant
+
+      <!-- Right: Image -->
+      <div class="relative">
+        <img
+          src="/images/hero-professional.jpg"
+          alt="Professional accountant working at desk"
+          class="rounded-2xl shadow-2xl shadow-forest/10 w-full object-cover"
+          loading="eager"
+        />
+        <!-- Floating stat card -->
+        <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 border border-slate-100">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-forest-pale rounded-lg flex items-center justify-center">
+              <svg class="w-5 h-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-slate-900 font-display">5+ hrs</p>
+              <p class="text-xs text-slate-500">saved per week</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

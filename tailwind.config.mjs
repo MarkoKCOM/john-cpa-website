@@ -4,22 +4,32 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: {
-          DEFAULT: '#0A1628',
-          light: '#141C2E',
+        forest: {
+          DEFAULT: '#166534',
+          light: '#059669',
+          pale: '#ECFDF5',
+          dark: '#14532D',
         },
-        electric: '#2D7FF9',
-        mint: '#00D68F',
-        charcoal: '#141C2E',
-        'off-white': '#E8ECF1',
-        'cool-gray': '#8A95A8',
-        amber: '#FFB020',
-        coral: '#FF4D4F',
+        slate: {
+          50: '#F8FAFC',
+          100: '#F1F5F9',
+          200: '#E2E8F0',
+          300: '#CBD5E1',
+          400: '#94A3B8',
+          500: '#64748B',
+          600: '#475569',
+          700: '#334155',
+          800: '#1E293B',
+          900: '#0F172A',
+        },
+        amber: '#F59E0B',
+        coral: '#DC2626',
         whatsapp: '#25D366',
       },
       fontFamily: {
+        display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
         sans: ['Inter', 'Heebo', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        mono: ['"DM Mono"', 'monospace'],
       },
     },
   },

@@ -1,64 +1,155 @@
 ---
-const features = [
-  {
-    title: 'Autonomous Follow-Ups',
-    description: 'JOHN follows up on its own schedule. Polite, persistent, and never forgets. Clients respond because it feels human.',
-    stat: '82% response rate',
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>`,
-  },
-  {
-    title: 'Deadline Intelligence',
-    description: 'JOHN knows your filing deadlines and escalates urgency automatically as dates approach. No calendar juggling.',
-    stat: null,
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>`,
-  },
-  {
-    title: 'Document Recognition',
-    description: 'Send a photo of a receipt or a blurry 106 form — JOHN identifies the document type and files it correctly.',
-    stat: null,
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`,
-  },
-  {
-    title: 'Smart Scheduling',
-    description: 'Messages go out during optimal hours (Sun-Thu, 10AM-1PM peak) when clients are most likely to respond.',
-    stat: null,
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
-  },
-  {
-    title: 'Multi-Language',
-    description: 'JOHN speaks Hebrew, English, Arabic, and Russian. It detects your client\'s preferred language automatically.',
-    stat: null,
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>`,
-  },
-  {
-    title: 'CPA Dashboard',
-    description: 'See every client\'s document status at a glance. Filter by missing docs, deadlines, or response rate. Export for filing.',
-    stat: null,
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm0 8a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zm10 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1v-6z"/></svg>`,
-  },
-];
 ---
 
-<section class="py-20 sm:py-28 relative">
+<section class="py-20 sm:py-28 bg-slate-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 fade-in">
+    <div class="text-center mb-16">
       <p class="section-label mb-4">Features</p>
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">Built for How CPAs <span class="gradient-text">Actually Work</span></h2>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Built for How CPAs Actually Work</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {features.map((feature) => (
-        <div class="card hover:border-electric/20 transition-all duration-300 fade-in">
-          <div class="w-12 h-12 rounded-xl bg-electric/10 flex items-center justify-center text-electric mb-5" set:html={feature.icon} />
-          <h3 class="text-lg font-bold text-white mb-2">{feature.title}</h3>
-          <p class="text-cool-gray text-sm leading-relaxed">{feature.description}</p>
-          {feature.stat && (
-            <div class="mt-4 pt-4 border-t border-cool-gray/10">
-              <span class="text-sm font-semibold gradient-text">{feature.stat}</span>
+    <!-- 2-column layout: features left, big visual right -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <!-- Left: Feature list -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-forest-pale flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
             </div>
-          )}
+            <div>
+              <h3 class="font-bold text-slate-900 mb-1">Autonomous Follow-Ups</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">JOHN follows up on its own schedule. Polite, persistent, and never forgets.</p>
+            </div>
+          </div>
         </div>
-      ))}
+
+        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-forest-pale flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 mb-1">Deadline Intelligence</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">Knows your filing deadlines and escalates urgency as dates approach.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-forest-pale flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 mb-1">Document Recognition</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">Identifies document types from photos — receipts, 106 forms, bank statements — and files them correctly.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-forest-pale flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 mb-1">Multi-Language</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">Hebrew, English, Arabic, and Russian — detects your client's preferred language automatically.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Dashboard mockup -->
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 lg:sticky lg:top-24">
+        <div class="mb-4">
+          <h3 class="font-bold text-slate-900 text-lg mb-1">CPA Dashboard</h3>
+          <p class="text-slate-500 text-sm">Real-time view of every client's document status</p>
+        </div>
+        <!-- Simulated dashboard -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between p-3 bg-forest-pale rounded-lg">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-forest/10 flex items-center justify-center text-forest text-xs font-bold">AC</div>
+              <div>
+                <p class="text-sm font-medium text-slate-900">Avi Cohen</p>
+                <p class="text-xs text-slate-500">Last active: 2h ago</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="flex gap-0.5">
+                <div class="w-2 h-2 rounded-full bg-forest"></div>
+                <div class="w-2 h-2 rounded-full bg-forest"></div>
+                <div class="w-2 h-2 rounded-full bg-forest"></div>
+              </div>
+              <span class="text-xs font-medium text-forest">3/3</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-slate-100">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-amber/10 flex items-center justify-center text-amber text-xs font-bold">DL</div>
+              <div>
+                <p class="text-sm font-medium text-slate-900">Dana Levi</p>
+                <p class="text-xs text-slate-500">Waiting on receipts</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="flex gap-0.5">
+                <div class="w-2 h-2 rounded-full bg-forest"></div>
+                <div class="w-2 h-2 rounded-full bg-forest"></div>
+                <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+                <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+              </div>
+              <span class="text-xs font-medium text-amber">2/4</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-slate-100">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-coral/10 flex items-center justify-center text-coral text-xs font-bold">YB</div>
+              <div>
+                <p class="text-sm font-medium text-slate-900">Yosef Barak</p>
+                <p class="text-xs text-slate-500">No response yet</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="flex gap-0.5">
+                <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+                <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+                <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+              </div>
+              <span class="text-xs font-medium text-coral">0/3</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 bg-forest-pale rounded-lg">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-forest/10 flex items-center justify-center text-forest text-xs font-bold">SK</div>
+              <div>
+                <p class="text-sm font-medium text-slate-900">Sarah Katz</p>
+                <p class="text-xs text-slate-500">Completed yesterday</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="flex gap-0.5">
+                <div class="w-2 h-2 rounded-full bg-forest"></div>
+                <div class="w-2 h-2 rounded-full bg-forest"></div>
+                <div class="w-2 h-2 rounded-full bg-forest"></div>
+                <div class="w-2 h-2 rounded-full bg-forest"></div>
+                <div class="w-2 h-2 rounded-full bg-forest"></div>
+              </div>
+              <span class="text-xs font-medium text-forest">5/5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+          <p class="text-xs text-slate-500">Updated just now</p>
+          <p class="text-xs font-medium text-forest">10/15 docs collected</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

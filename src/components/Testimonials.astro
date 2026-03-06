@@ -5,59 +5,48 @@ const testimonials = [
     name: 'Yael Davidovich',
     title: 'CPA, Davidovich & Co.',
     clients: '180 clients',
-    avatar: 'YD',
+    image: '/images/testimonial-1.jpg',
   },
   {
-    quote: '80% of my clients responded within 24 hours. I couldn\'t believe it. Some of them even thanked JOHN for the reminder. Thanked. The. Bot.',
+    quote: '80% of my clients responded within 24 hours. Some of them even thanked JOHN for the reminder. They thought I hired a new assistant.',
     name: 'Ran Abergel',
     title: 'Senior Accountant, Abergel Tax',
     clients: '95 clients',
-    avatar: 'RA',
+    image: '/images/testimonial-2.jpg',
   },
   {
-    quote: 'Three clients asked me if I hired a new assistant. That\'s when I knew JOHN was working. 300+ clients and I didn\'t send a single reminder myself.',
+    quote: 'Three clients asked me who my new assistant was. 300+ clients and I didn\'t send a single reminder myself this season.',
     name: 'Michal Shaked',
     title: 'Managing Partner, Shaked CPA',
     clients: '300+ clients',
-    avatar: 'MS',
+    image: '/images/testimonial-3.jpg',
   },
-];
-
-const stats = [
-  { value: '12,400+', label: 'documents collected' },
-  { value: '2,100+', label: 'hours saved' },
-  { value: '82%', label: 'response rate' },
-  { value: '94%', label: 'on-time delivery' },
 ];
 ---
 
-<section id="about" class="py-20 sm:py-28 relative">
+<section id="about" class="py-20 sm:py-28 bg-forest-pale">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 fade-in">
+    <div class="text-center mb-16">
       <p class="section-label mb-4">Testimonials</p>
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">CPAs Who <span class="gradient-text">Stopped Chasing</span></h2>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">CPAs Who Stopped Chasing</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
       {testimonials.map((t) => (
-        <div class="card hover:border-cool-gray/25 transition-all duration-300 fade-in flex flex-col">
-          <!-- Stars -->
-          <div class="flex gap-1 mb-4">
-            {[1,2,3,4,5].map(() => (
-              <svg class="w-4 h-4 text-amber" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            ))}
-          </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow flex flex-col">
+          <blockquote class="text-slate-700 leading-relaxed mb-6 flex-1">"{t.quote}"</blockquote>
 
-          <blockquote class="text-off-white text-sm leading-relaxed mb-6 flex-1">"{t.quote}"</blockquote>
-
-          <div class="flex items-center gap-3 pt-4 border-t border-cool-gray/10">
-            <div class="w-10 h-10 rounded-full bg-electric/20 flex items-center justify-center text-electric text-sm font-bold flex-shrink-0">
-              {t.avatar}
-            </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <img
+              src={t.image}
+              alt={t.name}
+              class="w-12 h-12 rounded-full object-cover"
+              loading="lazy"
+            />
             <div>
-              <p class="text-white text-sm font-semibold">{t.name}</p>
-              <p class="text-cool-gray text-xs">{t.title}</p>
-              <p class="text-electric text-xs font-medium">{t.clients}</p>
+              <p class="text-slate-900 font-semibold text-sm">{t.name}</p>
+              <p class="text-slate-500 text-xs">{t.title}</p>
+              <p class="text-forest text-xs font-medium">{t.clients}</p>
             </div>
           </div>
         </div>
@@ -65,13 +54,23 @@ const stats = [
     </div>
 
     <!-- Stats Bar -->
-    <div class="card grid grid-cols-2 md:grid-cols-4 gap-6 text-center fade-in">
-      {stats.map((stat) => (
-        <div>
-          <p class="text-2xl sm:text-3xl font-bold gradient-text">{stat.value}</p>
-          <p class="text-cool-gray text-sm mt-1">{stat.label}</p>
-        </div>
-      ))}
+    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm grid grid-cols-2 md:grid-cols-4 gap-6 p-8 text-center">
+      <div>
+        <p class="text-2xl sm:text-3xl font-bold text-forest font-display">5+ hrs</p>
+        <p class="text-slate-500 text-sm mt-1">saved per week</p>
+      </div>
+      <div>
+        <p class="text-2xl sm:text-3xl font-bold text-forest font-display">82%</p>
+        <p class="text-slate-500 text-sm mt-1">response rate</p>
+      </div>
+      <div>
+        <p class="text-2xl sm:text-3xl font-bold text-forest font-display">94%</p>
+        <p class="text-slate-500 text-sm mt-1">on-time collection</p>
+      </div>
+      <div>
+        <p class="text-2xl sm:text-3xl font-bold text-forest font-display">10 min</p>
+        <p class="text-slate-500 text-sm mt-1">setup time</p>
+      </div>
     </div>
   </div>
 </section>

@@ -1,18 +1,18 @@
 ---
 ---
 
-<section class="py-20 sm:py-28 relative">
+<section class="py-20 sm:py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 fade-in">
+    <div class="text-center mb-16">
       <p class="section-label mb-4">ROI Calculator</p>
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">See What JOHN <span class="gradient-text">Saves You</span></h2>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">See What JOHN Saves You</h2>
     </div>
 
-    <div class="max-w-3xl mx-auto fade-in">
-      <div class="card">
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-8">
         <!-- Slider -->
         <div class="mb-10">
-          <label for="client-slider" class="block text-white font-semibold mb-2">How many clients do you manage?</label>
+          <label for="client-slider" class="block text-slate-900 font-semibold mb-2">How many clients do you manage?</label>
           <div class="flex items-center gap-4">
             <input
               type="range"
@@ -21,13 +21,13 @@
               max="500"
               value="100"
               step="10"
-              class="flex-1 h-2 bg-charcoal rounded-lg appearance-none cursor-pointer accent-electric
-                     [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-electric [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-electric/30
-                     [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-electric [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:border-0"
+              class="flex-1 h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer
+                     [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-forest [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-forest/20
+                     [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-forest [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:border-0"
             />
-            <span id="client-count" class="text-2xl font-bold text-electric min-w-[4ch] text-right">100</span>
+            <span id="client-count" class="text-2xl font-bold text-forest font-display min-w-[4ch] text-right">100</span>
           </div>
-          <div class="flex justify-between text-xs text-cool-gray mt-1">
+          <div class="flex justify-between text-xs text-slate-400 mt-1">
             <span>10</span>
             <span>500</span>
           </div>
@@ -35,69 +35,63 @@
 
         <!-- Comparison Table -->
         <div class="grid grid-cols-3 gap-4 text-center">
-          <!-- Header -->
           <div></div>
-          <div class="pb-4 border-b border-cool-gray/10">
-            <p class="text-cool-gray text-sm font-medium">Without JOHN</p>
+          <div class="pb-4 border-b border-slate-200">
+            <p class="text-slate-500 text-sm font-medium">Without JOHN</p>
           </div>
-          <div class="pb-4 border-b border-electric/30">
-            <p class="text-electric text-sm font-semibold">With JOHN</p>
-          </div>
-
-          <!-- Hours/week -->
-          <div class="py-4 text-left border-b border-cool-gray/10">
-            <p class="text-off-white text-sm font-medium">Hours/week</p>
-          </div>
-          <div class="py-4 border-b border-cool-gray/10">
-            <p id="hours-without" class="text-xl font-bold text-cool-gray">8</p>
-          </div>
-          <div class="py-4 border-b border-cool-gray/10">
-            <p id="hours-with" class="text-xl font-bold text-mint">1.5</p>
+          <div class="pb-4 border-b border-forest/20">
+            <p class="text-forest text-sm font-semibold">With JOHN</p>
           </div>
 
-          <!-- Response rate -->
-          <div class="py-4 text-left border-b border-cool-gray/10">
-            <p class="text-off-white text-sm font-medium">Response rate</p>
+          <div class="py-4 text-left border-b border-slate-100">
+            <p class="text-slate-700 text-sm font-medium">Hours/week</p>
           </div>
-          <div class="py-4 border-b border-cool-gray/10">
-            <p class="text-xl font-bold text-cool-gray">35%</p>
+          <div class="py-4 border-b border-slate-100">
+            <p id="hours-without" class="text-xl font-bold text-slate-400">8</p>
           </div>
-          <div class="py-4 border-b border-cool-gray/10">
-            <p class="text-xl font-bold text-mint">82%</p>
-          </div>
-
-          <!-- On-time collection -->
-          <div class="py-4 text-left border-b border-cool-gray/10">
-            <p class="text-off-white text-sm font-medium">On-time collection</p>
-          </div>
-          <div class="py-4 border-b border-cool-gray/10">
-            <p class="text-xl font-bold text-cool-gray">58%</p>
-          </div>
-          <div class="py-4 border-b border-cool-gray/10">
-            <p class="text-xl font-bold text-mint">94%</p>
+          <div class="py-4 border-b border-slate-100">
+            <p id="hours-with" class="text-xl font-bold text-forest">1.5</p>
           </div>
 
-          <!-- Monthly cost -->
+          <div class="py-4 text-left border-b border-slate-100">
+            <p class="text-slate-700 text-sm font-medium">Response rate</p>
+          </div>
+          <div class="py-4 border-b border-slate-100">
+            <p class="text-xl font-bold text-slate-400">35%</p>
+          </div>
+          <div class="py-4 border-b border-slate-100">
+            <p class="text-xl font-bold text-forest">82%</p>
+          </div>
+
+          <div class="py-4 text-left border-b border-slate-100">
+            <p class="text-slate-700 text-sm font-medium">On-time collection</p>
+          </div>
+          <div class="py-4 border-b border-slate-100">
+            <p class="text-xl font-bold text-slate-400">58%</p>
+          </div>
+          <div class="py-4 border-b border-slate-100">
+            <p class="text-xl font-bold text-forest">94%</p>
+          </div>
+
           <div class="py-4 text-left">
-            <p class="text-off-white text-sm font-medium">Monthly cost</p>
+            <p class="text-slate-700 text-sm font-medium">Monthly cost</p>
           </div>
           <div class="py-4">
-            <p id="cost-without" class="text-xl font-bold text-cool-gray">$2,400</p>
-            <p class="text-xs text-cool-gray mt-1">staff time @ $30/hr</p>
+            <p id="cost-without" class="text-xl font-bold text-slate-400">$2,400</p>
+            <p class="text-xs text-slate-400 mt-1">staff time @ $30/hr</p>
           </div>
           <div class="py-4">
-            <p id="cost-with" class="text-xl font-bold text-mint">$1,000</p>
-            <p class="text-xs text-cool-gray mt-1">JOHN subscription</p>
+            <p id="cost-with" class="text-xl font-bold text-forest">$1,000</p>
+            <p class="text-xs text-slate-400 mt-1">JOHN subscription</p>
           </div>
         </div>
 
         <!-- Savings highlight -->
-        <div class="mt-8 p-4 rounded-xl bg-mint/10 border border-mint/20 text-center">
-          <p class="text-cool-gray text-sm mb-1">Estimated monthly savings</p>
-          <p id="savings" class="text-3xl font-bold text-mint">$1,400</p>
+        <div class="mt-8 p-5 rounded-xl bg-forest-pale border border-forest-light/20 text-center">
+          <p class="text-slate-600 text-sm mb-1">Estimated monthly savings</p>
+          <p id="savings" class="text-3xl font-bold text-forest font-display">$1,400</p>
         </div>
 
-        <!-- CTA -->
         <div class="text-center mt-8">
           <a href="#cta" class="btn-primary">Start Saving Time — Free for 14 Days</a>
         </div>
@@ -119,24 +113,19 @@
     const clients = parseInt(slider.value);
     if (clientCount) clientCount.textContent = String(clients);
 
-    // Hours without: ~0.08 hrs/client/week (5-10 hrs for 100 clients)
     const hrsWithout = Math.round(clients * 0.08 * 10) / 10;
-    // Hours with: ~0.015 hrs/client/week
     const hrsWith = Math.round(clients * 0.015 * 10) / 10;
     if (hoursWithout) hoursWithout.textContent = String(hrsWithout);
     if (hoursWith) hoursWith.textContent = String(hrsWith);
 
-    // Cost without: hours * $30/hr * 4.3 weeks
     const monthlyHoursWithout = hrsWithout * 4.3;
     const cWithout = Math.round(monthlyHoursWithout * 30);
     if (costWithout) costWithout.textContent = `$${cWithout.toLocaleString()}`;
 
-    // Cost with: tiered pricing
     let perClient = clients <= 50 ? 15 : clients <= 200 ? 10 : 8;
     const cWith = clients * perClient;
     if (costWith) costWith.textContent = `$${cWith.toLocaleString()}`;
 
-    // Savings
     const saved = Math.max(0, cWithout - cWith);
     if (savings) savings.textContent = `$${saved.toLocaleString()}`;
   }
