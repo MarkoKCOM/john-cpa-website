@@ -8,30 +8,76 @@
       <h2 class="text-3xl sm:text-4xl font-bold text-white">What changes when follow-up becomes automatic</h2>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+    <div id="roi-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
       <div class="card text-center">
-        <div class="text-3xl font-bold text-blue font-display mb-2">70%</div>
+        <div class="text-3xl font-bold text-blue font-display mb-2" data-count-to="70" data-suffix="%">0%</div>
         <p class="text-offwhite text-sm font-medium mb-1">Less time on chasing</p>
         <p class="text-muted text-xs">Automated reminders replace manual follow-up</p>
       </div>
 
       <div class="card text-center">
-        <div class="text-3xl font-bold text-blue font-display mb-2">82%</div>
+        <div class="text-3xl font-bold text-blue font-display mb-2" data-count-to="82" data-suffix="%">0%</div>
         <p class="text-offwhite text-sm font-medium mb-1">Client response rate</p>
         <p class="text-muted text-xs">WhatsApp vs 23% for email</p>
       </div>
 
       <div class="card text-center">
-        <div class="text-3xl font-bold text-blue font-display mb-2">94%</div>
+        <div class="text-3xl font-bold text-blue font-display mb-2" data-count-to="94" data-suffix="%">0%</div>
         <p class="text-offwhite text-sm font-medium mb-1">On-time collection</p>
         <p class="text-muted text-xs">Documents in before the deadline</p>
       </div>
 
       <div class="card text-center">
-        <div class="text-3xl font-bold text-blue font-display mb-2">1 day</div>
+        <div class="text-3xl font-bold text-blue font-display mb-2" data-count-text="1 day">—</div>
         <p class="text-offwhite text-sm font-medium mb-1">Setup time</p>
         <p class="text-muted text-xs">Import clients, connect WhatsApp, go</p>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  // KPI count-up on scroll
+  function animateCountUp(el: HTMLElement, target: number, suffix: string, duration: number) {
+    const start = performance.now();
+    function tick(now: number) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease-out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(eased * target);
+      el.textContent = current + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const roiGrid = document.getElementById('roi-grid');
+  if (roiGrid) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          observer.disconnect();
+          // Animate numeric counters
+          roiGrid.querySelectorAll<HTMLElement>('[data-count-to]').forEach((el, i) => {
+            const target = parseInt(el.dataset.countTo || '0', 10);
+            const suffix = el.dataset.suffix || '';
+            setTimeout(() => animateCountUp(el, target, suffix, 1200), i * 150);
+          });
+          // Animate text-based counter ("1 day")
+          roiGrid.querySelectorAll<HTMLElement>('[data-count-text]').forEach((el, i) => {
+            setTimeout(() => {
+              el.style.transition = 'opacity 0.3s';
+              el.style.opacity = '0';
+              setTimeout(() => {
+                el.textContent = el.dataset.countText || '';
+                el.style.opacity = '1';
+              }, 200);
+            }, 3 * 150 + 400);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    observer.observe(roiGrid);
+  }
+</script>

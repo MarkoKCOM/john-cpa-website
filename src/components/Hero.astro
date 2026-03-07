@@ -74,15 +74,15 @@
               <span class="px-2 py-0.5 bg-success/10 text-success text-xs rounded font-medium">Complete</span>
             </div>
 
-            <div class="flex items-center justify-between py-3 px-4 bg-navy rounded-lg border border-border">
+            <div id="hero-dana-row" class="flex items-center justify-between py-3 px-4 bg-navy rounded-lg border border-border transition-all duration-500">
               <div class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded-full bg-blue/10 flex items-center justify-center"><span class="text-blue text-xs font-bold">DL</span></div>
+                <div id="hero-dana-avatar" class="w-8 h-8 rounded-full bg-blue/10 flex items-center justify-center transition-colors duration-500"><span id="hero-dana-initials" class="text-blue text-xs font-bold transition-colors duration-500">DL</span></div>
                 <div>
                   <p class="text-white text-sm font-medium">Dana Levi</p>
-                  <p class="text-muted text-xs">2/4 documents — follow-up sent</p>
+                  <p id="hero-dana-sub" class="text-muted text-xs transition-opacity duration-300">2/4 documents — follow-up sent</p>
                 </div>
               </div>
-              <span class="px-2 py-0.5 bg-blue/10 text-blue text-xs rounded font-medium">In Progress</span>
+              <span id="hero-dana-badge" class="px-2 py-0.5 bg-blue/10 text-blue text-xs rounded font-medium transition-all duration-500">In Progress</span>
             </div>
 
             <div class="flex items-center justify-between py-3 px-4 bg-navy rounded-lg border border-border">
@@ -107,8 +107,75 @@
               <span class="px-2 py-0.5 bg-error/10 text-error text-xs rounded font-medium">Overdue</span>
             </div>
           </div>
+
+          <!-- Updated timestamp -->
+          <div class="flex items-center gap-2 mt-4 px-1">
+            <span id="hero-pulse" class="w-2 h-2 rounded-full bg-muted transition-colors duration-500"></span>
+            <p id="hero-timestamp" class="text-muted text-xs transition-opacity duration-300">Updated 5 min ago</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  // Hero progress animation: Dana goes from 2/4 → 4/4
+  function runHeroAnimation() {
+    const row = document.getElementById('hero-dana-row');
+    if (!row) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          observer.disconnect();
+          setTimeout(animateDana, 2000);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(row);
+  }
+
+  function animateDana() {
+    const sub = document.getElementById('hero-dana-sub');
+    const badge = document.getElementById('hero-dana-badge');
+    const avatar = document.getElementById('hero-dana-avatar');
+    const initials = document.getElementById('hero-dana-initials');
+    const pulse = document.getElementById('hero-pulse');
+    const timestamp = document.getElementById('hero-timestamp');
+    if (!sub || !badge || !avatar || !initials || !pulse || !timestamp) return;
+
+    // Step 1: Update subtitle
+    sub.style.opacity = '0';
+    setTimeout(() => {
+      sub.textContent = '4/4 documents received';
+      sub.style.opacity = '1';
+    }, 300);
+
+    // Step 2: Update badge
+    setTimeout(() => {
+      badge.className = 'px-2 py-0.5 bg-success/10 text-success text-xs rounded font-medium transition-all duration-500';
+      badge.textContent = 'Complete';
+    }, 400);
+
+    // Step 3: Update avatar color
+    setTimeout(() => {
+      avatar.className = avatar.className.replace('bg-blue/10', 'bg-success/10');
+      initials.className = initials.className.replace('text-blue', 'text-success');
+    }, 400);
+
+    // Step 4: Pulse the timestamp
+    setTimeout(() => {
+      pulse.className = 'w-2 h-2 rounded-full bg-success animate-pulse transition-colors duration-500';
+      timestamp.style.opacity = '0';
+      setTimeout(() => {
+        timestamp.textContent = 'Updated just now';
+        timestamp.className = 'text-success text-xs transition-opacity duration-300';
+        timestamp.style.opacity = '1';
+      }, 200);
+    }, 600);
+  }
+
+  runHeroAnimation();
+</script>

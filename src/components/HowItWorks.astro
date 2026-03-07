@@ -11,41 +11,68 @@
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="text-center">
-        <div class="w-14 h-14 rounded-2xl bg-blue/10 flex items-center justify-center mx-auto mb-5">
-          <span class="text-blue font-display font-bold text-xl">1</span>
-        </div>
-        <h3 class="text-white font-semibold text-lg mb-3">Set what each client needs</h3>
-        <p class="text-muted text-sm leading-relaxed">
-          Upload your client list and assign required documents. CSV import, or connect your accounting software directly.
-        </p>
+    <div class="relative">
+      <!-- Connecting line (desktop) -->
+      <div class="hidden md:block absolute top-7 left-[16.67%] right-[16.67%] h-px bg-border">
+        <div id="hiw-line" class="h-full bg-blue origin-left" style="transform: scaleX(0); transition: transform 1.2s ease-out;"></div>
       </div>
 
-      <div class="text-center">
-        <div class="w-14 h-14 rounded-2xl bg-blue/10 flex items-center justify-center mx-auto mb-5">
-          <span class="text-blue font-display font-bold text-xl">2</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="hiw-step text-center opacity-0 translate-y-4" style="transition: opacity 0.5s ease-out, transform 0.5s ease-out;">
+          <div class="w-14 h-14 rounded-2xl bg-blue/10 flex items-center justify-center mx-auto mb-5 relative z-10">
+            <span class="text-blue font-display font-bold text-xl">1</span>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">Set what each client needs</h3>
+          <p class="text-muted text-sm leading-relaxed">
+            Upload your client list and assign required documents. CSV import, or connect your accounting software directly.
+          </p>
         </div>
-        <h3 class="text-white font-semibold text-lg mb-3">HeshbonAI follows up automatically</h3>
-        <p class="text-muted text-sm leading-relaxed">
-          The assistant messages each client on WhatsApp, requests missing documents, confirms receipt, and follows up on a smart schedule.
-        </p>
-      </div>
 
-      <div class="text-center">
-        <div class="w-14 h-14 rounded-2xl bg-blue/10 flex items-center justify-center mx-auto mb-5">
-          <span class="text-blue font-display font-bold text-xl">3</span>
+        <div class="hiw-step text-center opacity-0 translate-y-4" style="transition: opacity 0.5s ease-out 0.3s, transform 0.5s ease-out 0.3s;">
+          <div class="w-14 h-14 rounded-2xl bg-blue/10 flex items-center justify-center mx-auto mb-5 relative z-10">
+            <span class="text-blue font-display font-bold text-xl">2</span>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">HeshbonAI follows up automatically</h3>
+          <p class="text-muted text-sm leading-relaxed">
+            The assistant messages each client on WhatsApp, requests missing documents, confirms receipt, and follows up on a smart schedule.
+          </p>
         </div>
-        <h3 class="text-white font-semibold text-lg mb-3">Your team tracks progress in real time</h3>
-        <p class="text-muted text-sm leading-relaxed">
-          One dashboard for everything: who sent what, who hasn't, what's overdue, and what needs your team's attention.
-        </p>
-      </div>
-    </div>
 
-    <!-- Connecting line -->
-    <div class="hidden md:flex justify-center mt-2 mb-0">
-      <div class="w-2/3 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+        <div class="hiw-step text-center opacity-0 translate-y-4" style="transition: opacity 0.5s ease-out 0.6s, transform 0.5s ease-out 0.6s;">
+          <div class="w-14 h-14 rounded-2xl bg-blue/10 flex items-center justify-center mx-auto mb-5 relative z-10">
+            <span class="text-blue font-display font-bold text-xl">3</span>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">Your team tracks progress in real time</h3>
+          <p class="text-muted text-sm leading-relaxed">
+            One dashboard for everything: who sent what, who hasn't, what's overdue, and what needs your team's attention.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  // Timeline animation: steps reveal sequentially, line draws across
+  const hiwSection = document.getElementById('how-it-works');
+  if (hiwSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          observer.disconnect();
+          // Reveal steps
+          hiwSection.querySelectorAll('.hiw-step').forEach((step) => {
+            step.style.opacity = '1';
+            step.style.transform = 'translateY(0)';
+          });
+          // Draw connecting line
+          const line = document.getElementById('hiw-line');
+          if (line) {
+            setTimeout(() => { line.style.transform = 'scaleX(1)'; }, 200);
+          }
+        }
+      });
+    }, { threshold: 0.2 });
+    observer.observe(hiwSection);
+  }
+</script>

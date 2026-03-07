@@ -42,6 +42,12 @@
   }
 
   .card {
-    @apply bg-navy-light rounded-2xl border border-border p-6 md:p-8;
+    @apply bg-navy-light rounded-2xl border border-border p-6 md:p-8
+           transition-all duration-300 ease-out;
+  }
+
+  .card:hover {
+    @apply border-border shadow-lg shadow-blue/5;
+    transform: translateY(-2px);
   }
 }
