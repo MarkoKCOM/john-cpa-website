@@ -1,75 +1,36 @@
 ---
-const testimonials = [
-  {
-    quote: 'In 3 weeks, JOHN collected 847 documents from my clients. I used to spend every February begging people for receipts. This year I spent it actually doing tax work.',
-    name: 'Yael Davidovich',
-    title: 'CPA, Davidovich & Co.',
-    clients: '180 clients',
-    image: '/images/testimonial-1.jpg',
-  },
-  {
-    quote: '80% of my clients responded within 24 hours. Some of them even thanked JOHN for the reminder. They thought I hired a new assistant.',
-    name: 'Ran Abergel',
-    title: 'Senior Accountant, Abergel Tax',
-    clients: '95 clients',
-    image: '/images/testimonial-2.jpg',
-  },
-  {
-    quote: 'Three clients asked me who my new assistant was. 300+ clients and I didn\'t send a single reminder myself this season.',
-    name: 'Michal Shaked',
-    title: 'Managing Partner, Shaked CPA',
-    clients: '300+ clients',
-    image: '/images/testimonial-3.jpg',
-  },
-];
 ---
 
-<section id="about" class="py-20 sm:py-28 bg-forest-pale">
+<section class="py-20 sm:py-24 bg-navy">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <p class="section-label mb-4">Testimonials</p>
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">CPAs Who Stopped Chasing</h2>
+    <div class="text-center mb-12">
+      <p class="section-label mb-4">Trust</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white">Built for firms managing dozens to hundreds of clients</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-      {testimonials.map((t) => (
-        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow flex flex-col">
-          <blockquote class="text-slate-700 leading-relaxed mb-6 flex-1">"{t.quote}"</blockquote>
-
-          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
-            <img
-              src={t.image}
-              alt={t.name}
-              class="w-12 h-12 rounded-full object-cover"
-              loading="lazy"
-            />
-            <div>
-              <p class="text-slate-900 font-semibold text-sm">{t.name}</p>
-              <p class="text-slate-500 text-xs">{t.title}</p>
-              <p class="text-forest text-xs font-medium">{t.clients}</p>
-            </div>
-          </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="card">
+        <div class="flex items-center gap-2 mb-4">
+          <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+          <span class="text-offwhite text-sm font-medium">WhatsApp-native</span>
         </div>
-      ))}
-    </div>
+        <p class="text-muted text-sm leading-relaxed">Works with the communication channel your clients already use. No apps to download, no portals to manage.</p>
+      </div>
 
-    <!-- Stats Bar -->
-    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm grid grid-cols-2 md:grid-cols-4 gap-6 p-8 text-center">
-      <div>
-        <p class="text-2xl sm:text-3xl font-bold text-forest font-display">5+ hrs</p>
-        <p class="text-slate-500 text-sm mt-1">saved per week</p>
+      <div class="card">
+        <div class="flex items-center gap-2 mb-4">
+          <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+          <span class="text-offwhite text-sm font-medium">Hebrew-first</span>
+        </div>
+        <p class="text-muted text-sm leading-relaxed">Built for the Israeli market. Hebrew interface, Shabbat-aware scheduling, Israeli tax deadline awareness.</p>
       </div>
-      <div>
-        <p class="text-2xl sm:text-3xl font-bold text-forest font-display">82%</p>
-        <p class="text-slate-500 text-sm mt-1">response rate</p>
-      </div>
-      <div>
-        <p class="text-2xl sm:text-3xl font-bold text-forest font-display">94%</p>
-        <p class="text-slate-500 text-sm mt-1">on-time collection</p>
-      </div>
-      <div>
-        <p class="text-2xl sm:text-3xl font-bold text-forest font-display">10 min</p>
-        <p class="text-slate-500 text-sm mt-1">setup time</p>
+
+      <div class="card">
+        <div class="flex items-center gap-2 mb-4">
+          <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+          <span class="text-offwhite text-sm font-medium">Firm-branded</span>
+        </div>
+        <p class="text-muted text-sm leading-relaxed">Messages come from your firm's WhatsApp number. Clients see your brand, not ours. Feels like a team member, not a bot.</p>
       </div>
     </div>
   </div>

@@ -2,12 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
+import Testimonials from '../components/Testimonials.astro';
 import PainPoints from '../components/PainPoints.astro';
-import WhatsAppDemo from '../components/WhatsAppDemo.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import Features from '../components/Features.astro';
+import WhatsAppDemo from '../components/WhatsAppDemo.astro';
 import ROICalculator from '../components/ROICalculator.astro';
-import Testimonials from '../components/Testimonials.astro';
 import PricingSnapshot from '../components/PricingSnapshot.astro';
 import FinalCTA from '../components/FinalCTA.astro';
 import Footer from '../components/Footer.astro';
@@ -15,25 +15,24 @@ import '../styles/global.css';
 ---
 
 <Layout
-  title="JOHN — AI Document Collection for CPAs | Stop Chasing Clients"
-  description="JOHN is an AI agent that autonomously collects documents from your clients via WhatsApp. Save 5+ hours/week. No app required. 14-day free trial."
+  title="HeshbonAI — The AI Assistant for CPA Firms"
+  description="Automate client follow-up, document collection, and status tracking through WhatsApp. Built for Israeli CPA firms. 14-day free trial."
 >
   <Navbar />
   <main>
     <Hero />
+    <Testimonials />
     <PainPoints />
-    <WhatsAppDemo />
     <HowItWorks />
     <Features />
+    <WhatsAppDemo />
     <ROICalculator />
-    <Testimonials />
     <PricingSnapshot />
     <FinalCTA />
   </main>
   <Footer />
 </Layout>
 
-<!-- Scroll animations -->
 <style>
   .fade-in {
     opacity: 0;
@@ -43,22 +42,6 @@ import '../styles/global.css';
   .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
-  }
-  .animate-fade-in {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-  .animate-fade-in:nth-child(2) { animation-delay: 0.1s; }
-  .animate-fade-in:nth-child(3) { animation-delay: 0.2s; }
-  .animate-fade-in:nth-child(4) { animation-delay: 0.3s; }
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 </style>
 
@@ -71,13 +54,7 @@ import '../styles/global.css';
         }
       });
     },
-    {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px',
-    }
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
   );
-
-  document.querySelectorAll('.fade-in').forEach((el) => {
-    observer.observe(el);
-  });
+  document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
 </script>

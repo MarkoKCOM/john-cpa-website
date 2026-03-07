@@ -9,55 +9,49 @@ const { title, description, canonical } = Astro.props;
 const siteUrl = 'https://heshbonai.co';
 const currentUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
 
-// Schema.org structured data
-const organizationSchema = {
-  "@type": "Organization",
-  "name": "Heshbonai Ltd",
-  "url": siteUrl,
-  "logo": `${siteUrl}/favicon.svg`,
-  "description": "AI-powered document collection for CPAs and accountants in Israel.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Tel Aviv",
-    "addressCountry": "IL"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "support@heshbonai.co",
-    "contactType": "customer support",
-    "availableLanguage": ["Hebrew", "English"]
-  }
-};
-
-const websiteSchema = {
-  "@type": "WebSite",
-  "name": "JOHN — AI Document Collection for CPAs",
-  "url": siteUrl,
-  "description": "JOHN is an AI agent that autonomously collects documents from your clients via WhatsApp.",
-  "publisher": { "@id": `${siteUrl}/#organization` }
-};
-
-const softwareSchema = {
-  "@type": "SoftwareApplication",
-  "name": "JOHN",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Web",
-  "description": "AI agent that autonomously collects documents from clients via WhatsApp for CPAs and accountants in Israel.",
-  "offers": {
-    "@type": "AggregateOffer",
-    "lowPrice": "1000",
-    "highPrice": "2700",
-    "priceCurrency": "ILS",
-    "offerCount": "3"
-  }
-};
-
 const graphSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    { ...organizationSchema, "@id": `${siteUrl}/#organization` },
-    websiteSchema,
-    softwareSchema
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      "name": "Heshbonai Ltd",
+      "url": siteUrl,
+      "logo": `${siteUrl}/favicon.svg`,
+      "description": "AI assistant for CPA firms — automates client follow-up, document collection, and workflow visibility through WhatsApp.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tel Aviv",
+        "addressCountry": "IL"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "support@heshbonai.co",
+        "contactType": "customer support",
+        "availableLanguage": ["Hebrew", "English"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "name": "HeshbonAI — The AI Assistant for CPA Firms",
+      "url": siteUrl,
+      "description": "Automate client follow-up, document collection, and status tracking through WhatsApp.",
+      "publisher": { "@id": `${siteUrl}/#organization` }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "HeshbonAI",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "AI assistant that automates client follow-up, document collection, and workflow visibility for CPA firms through WhatsApp.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "1000",
+        "highPrice": "2700",
+        "priceCurrency": "ILS",
+        "offerCount": "3"
+      }
+    }
   ]
 };
 ---
@@ -69,36 +63,29 @@ const graphSchema = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Primary Meta -->
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={currentUrl} />
 
-    <!-- Geo/Locale -->
     <meta name="geo.region" content="IL" />
     <meta name="geo.placename" content="Tel Aviv" />
     <link rel="alternate" hreflang="en" href={currentUrl} />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={currentUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:site_name" content="JOHN" />
+    <meta property="og:site_name" content="HeshbonAI" />
     <meta property="og:locale" content="en_IL" />
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
-    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json" set:html={JSON.stringify(graphSchema)} />
 
-    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>

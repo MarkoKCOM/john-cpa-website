@@ -1,140 +1,37 @@
 ---
 ---
 
-<section class="py-20 sm:py-28 bg-white">
+<section class="py-20 sm:py-28 bg-navy-light">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <p class="section-label mb-4">ROI Calculator</p>
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">See What JOHN Saves You</h2>
+      <p class="section-label mb-4">Outcomes</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white">What changes when follow-up becomes automatic</h2>
     </div>
 
-    <div class="max-w-3xl mx-auto">
-      <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-8">
-        <!-- Slider -->
-        <div class="mb-10">
-          <label for="client-slider" class="block text-slate-900 font-semibold mb-2">How many clients do you manage?</label>
-          <div class="flex items-center gap-4">
-            <input
-              type="range"
-              id="client-slider"
-              min="10"
-              max="500"
-              value="100"
-              step="10"
-              class="flex-1 h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer
-                     [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-forest [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-forest/20
-                     [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-forest [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:border-0"
-            />
-            <span id="client-count" class="text-2xl font-bold text-forest font-display min-w-[4ch] text-right">100</span>
-          </div>
-          <div class="flex justify-between text-xs text-slate-400 mt-1">
-            <span>10</span>
-            <span>500</span>
-          </div>
-        </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <div class="card text-center">
+        <div class="text-3xl font-bold text-blue font-display mb-2">70%</div>
+        <p class="text-offwhite text-sm font-medium mb-1">Less time on chasing</p>
+        <p class="text-muted text-xs">Automated reminders replace manual follow-up</p>
+      </div>
 
-        <!-- Comparison Table -->
-        <div class="grid grid-cols-3 gap-4 text-center">
-          <div></div>
-          <div class="pb-4 border-b border-slate-200">
-            <p class="text-slate-500 text-sm font-medium">Without JOHN</p>
-          </div>
-          <div class="pb-4 border-b border-forest/20">
-            <p class="text-forest text-sm font-semibold">With JOHN</p>
-          </div>
+      <div class="card text-center">
+        <div class="text-3xl font-bold text-blue font-display mb-2">82%</div>
+        <p class="text-offwhite text-sm font-medium mb-1">Client response rate</p>
+        <p class="text-muted text-xs">WhatsApp vs 23% for email</p>
+      </div>
 
-          <div class="py-4 text-left border-b border-slate-100">
-            <p class="text-slate-700 text-sm font-medium">Hours/week</p>
-          </div>
-          <div class="py-4 border-b border-slate-100">
-            <p id="hours-without" class="text-xl font-bold text-slate-400">8</p>
-          </div>
-          <div class="py-4 border-b border-slate-100">
-            <p id="hours-with" class="text-xl font-bold text-forest">1.5</p>
-          </div>
+      <div class="card text-center">
+        <div class="text-3xl font-bold text-blue font-display mb-2">94%</div>
+        <p class="text-offwhite text-sm font-medium mb-1">On-time collection</p>
+        <p class="text-muted text-xs">Documents in before the deadline</p>
+      </div>
 
-          <div class="py-4 text-left border-b border-slate-100">
-            <p class="text-slate-700 text-sm font-medium">Response rate</p>
-          </div>
-          <div class="py-4 border-b border-slate-100">
-            <p class="text-xl font-bold text-slate-400">23%</p>
-          </div>
-          <div class="py-4 border-b border-slate-100">
-            <p class="text-xl font-bold text-forest">82%</p>
-          </div>
-
-          <div class="py-4 text-left border-b border-slate-100">
-            <p class="text-slate-700 text-sm font-medium">On-time collection</p>
-          </div>
-          <div class="py-4 border-b border-slate-100">
-            <p class="text-xl font-bold text-slate-400">61%</p>
-          </div>
-          <div class="py-4 border-b border-slate-100">
-            <p class="text-xl font-bold text-forest">94%</p>
-          </div>
-
-          <div class="py-4 text-left">
-            <p class="text-slate-700 text-sm font-medium">Monthly cost</p>
-          </div>
-          <div class="py-4">
-            <p id="cost-without" class="text-xl font-bold text-slate-400">&#8362;10,200</p>
-            <p class="text-xs text-slate-400 mt-1">staff time @ 300 NIS/hr</p>
-          </div>
-          <div class="py-4">
-            <p id="cost-with" class="text-xl font-bold text-forest">&#8362;1,800</p>
-            <p class="text-xs text-slate-400 mt-1">JOHN subscription</p>
-          </div>
-        </div>
-
-        <!-- Savings highlight -->
-        <div class="mt-8 p-5 rounded-xl bg-forest-pale border border-forest-light/20 text-center">
-          <p class="text-slate-600 text-sm mb-1">Estimated monthly savings</p>
-          <p id="savings" class="text-3xl font-bold text-forest font-display">&#8362;8,400</p>
-        </div>
-
-        <div class="text-center mt-8">
-          <a href="/demo" class="btn-primary">Start Saving Time — Free for 14 Days</a>
-        </div>
+      <div class="card text-center">
+        <div class="text-3xl font-bold text-blue font-display mb-2">1 day</div>
+        <p class="text-offwhite text-sm font-medium mb-1">Setup time</p>
+        <p class="text-muted text-xs">Import clients, connect WhatsApp, go</p>
       </div>
     </div>
   </div>
 </section>
-
-<script>
-  const slider = document.getElementById('client-slider') as HTMLInputElement;
-  const clientCount = document.getElementById('client-count');
-  const hoursWithout = document.getElementById('hours-without');
-  const hoursWith = document.getElementById('hours-with');
-  const costWithout = document.getElementById('cost-without');
-  const costWith = document.getElementById('cost-with');
-  const savings = document.getElementById('savings');
-
-  function update() {
-    const clients = parseInt(slider.value);
-    if (clientCount) clientCount.textContent = String(clients);
-
-    // ~5 min per client per week on chasing
-    const hrsWithout = Math.round(clients * 0.085 * 10) / 10;
-    const hrsWith = Math.round(clients * 0.005 * 10) / 10;
-    if (hoursWithout) hoursWithout.textContent = String(hrsWithout);
-    if (hoursWith) hoursWith.textContent = String(Math.max(0.5, hrsWith));
-
-    // 300 NIS/hr billing rate
-    const monthlyHoursWithout = hrsWithout * 4.3;
-    const cWithout = Math.round(monthlyHoursWithout * 300);
-    if (costWithout) costWithout.textContent = `\u20AA${cWithout.toLocaleString()}`;
-
-    // Flat pricing tiers
-    let cWith: number;
-    if (clients <= 50) cWith = 1000;
-    else if (clients <= 150) cWith = 1800;
-    else cWith = 2700;
-    if (costWith) costWith.textContent = `\u20AA${cWith.toLocaleString()}`;
-
-    const saved = Math.max(0, cWithout - cWith);
-    if (savings) savings.textContent = `\u20AA${saved.toLocaleString()}`;
-  }
-
-  slider?.addEventListener('input', update);
-  update();
-</script>

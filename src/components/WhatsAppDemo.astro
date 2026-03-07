@@ -1,126 +1,125 @@
 ---
-const messages = [
-  {
-    sender: 'john',
-    text: 'Hi Avi, this is JOHN from Yael Davidovich\'s office. We\'re preparing your annual filing and need the following:\n\n1. Bank statements (Jan-Dec)\n2. Receipts for business expenses\n3. Annual employer certificate (106)\n\nCan you send them here when you get a chance?',
-    time: '10:02 AM',
-  },
-  {
-    sender: 'avi',
-    text: 'Oh right, I keep forgetting. Let me check what I have',
-    time: '11:47 AM',
-  },
-  {
-    sender: 'avi',
-    text: 'Here are the bank statements',
-    time: '11:48 AM',
-    attachment: 'bank-statements-2025.pdf',
-  },
-  {
-    sender: 'john',
-    text: 'Got it, thanks Avi! Bank statements received and filed.\n\nStill need:\n- Receipts for business expenses\n- Annual employer certificate (106)\n\nNo rush today, but our filing deadline is March 20th.',
-    time: '11:49 AM',
-  },
-  {
-    sender: 'avi',
-    text: 'The 106 form I need to get from HR. The receipts I have in a shoebox somewhere... I\'ll sort them tonight',
-    time: '11:52 AM',
-  },
-  {
-    sender: 'john',
-    text: 'No problem! You can snap photos of the receipts and send them here, I\'ll sort them out. I\'ll check back in a couple of days if I haven\'t heard from you.',
-    time: '11:52 AM',
-  },
-];
 ---
 
-<section id="demo" class="py-20 sm:py-28 bg-slate-50">
+<section class="py-20 sm:py-28 bg-navy-light">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      <!-- Left: Text -->
-      <div>
-        <p class="section-label mb-4">Live demo</p>
-        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">See JOHN Work a Real Conversation</h2>
-        <p class="text-slate-600 leading-relaxed mb-8">JOHN initiates the conversation, knows which documents are missing, and follows up until everything's collected. Your clients just snap a photo and send.</p>
+    <div class="text-center mb-16">
+      <p class="section-label mb-4">Client Experience</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white">A better client experience, without more work for your staff</h2>
+    </div>
 
-        <div class="space-y-4">
-          <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-full bg-forest-pale flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg class="w-4 h-4 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            </div>
-            <div>
-              <p class="font-semibold text-slate-900 text-sm">Autonomous</p>
-              <p class="text-slate-500 text-sm">Sends first, follows up on its own</p>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- WhatsApp Thread -->
+      <div class="card p-0 overflow-hidden">
+        <div class="bg-[#075E54] px-4 py-3 flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white text-xs font-bold">LA</div>
+          <div>
+            <p class="text-white text-sm font-semibold">Levi & Associates</p>
+            <p class="text-white/60 text-xs">online</p>
+          </div>
+        </div>
+        <div class="bg-[#0B141A] px-3 py-4 space-y-2">
+          <div class="flex justify-start">
+            <div class="max-w-[85%] rounded-lg px-3 py-2 bg-[#1F2C34] text-[#E9EDEF]" style="border-top-left-radius: 2px;">
+              <p class="text-[#00A884] text-xs font-medium mb-1">Office Assistant</p>
+              <p class="text-sm leading-relaxed">Hi Avi, we need 3 documents for your annual filing:<br/>1. Bank statement (Dec)<br/>2. Vehicle expense receipts<br/>3. Signed form 106</p>
+              <div class="flex justify-end mt-1"><span class="text-[10px] text-[#8696A0]">10:02</span></div>
             </div>
           </div>
-          <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-full bg-forest-pale flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg class="w-4 h-4 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
-            </div>
-            <div>
-              <p class="font-semibold text-slate-900 text-sm">Context-aware</p>
-              <p class="text-slate-500 text-sm">Tracks what's been sent and what's missing</p>
+          <div class="flex justify-end">
+            <div class="max-w-[85%] rounded-lg px-3 py-2 bg-[#005C4B] text-[#E9EDEF]" style="border-top-right-radius: 2px;">
+              <p class="text-sm">Here's the bank statement</p>
+              <div class="flex items-center gap-2 mt-1 bg-[#024B3F] rounded px-2 py-1">
+                <svg class="w-4 h-4 text-[#8696A0]" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/></svg>
+                <span class="text-xs text-[#8696A0]">bank-dec-2025.pdf</span>
+              </div>
+              <div class="flex justify-end mt-1"><span class="text-[10px] text-[#8696A0]">11:47</span></div>
             </div>
           </div>
-          <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-full bg-forest-pale flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg class="w-4 h-4 text-forest" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-            </div>
-            <div>
-              <p class="font-semibold text-slate-900 text-sm">WhatsApp-native</p>
-              <p class="text-slate-500 text-sm">Works where your clients already are</p>
+          <div class="flex justify-start">
+            <div class="max-w-[85%] rounded-lg px-3 py-2 bg-[#1F2C34] text-[#E9EDEF]" style="border-top-left-radius: 2px;">
+              <p class="text-[#00A884] text-xs font-medium mb-1">Office Assistant</p>
+              <p class="text-sm leading-relaxed">Got it — bank statement received. Still need:<br/>- Vehicle expense receipts<br/>- Signed form 106</p>
+              <div class="flex justify-end mt-1"><span class="text-[10px] text-[#8696A0]">11:47</span></div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Right: WhatsApp Mockup -->
-      <div class="max-w-sm mx-auto lg:mx-0 lg:ml-auto">
-        <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-xl">
-          <!-- WhatsApp Header -->
-          <div class="bg-[#075E54] px-4 py-3 flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-forest-light/40 flex items-center justify-center text-white text-xs font-bold">J</div>
-            <div>
-              <p class="text-white text-sm font-semibold">JOHN - Yael Davidovich CPA</p>
-              <p class="text-white/60 text-xs">online</p>
+      <!-- AI Detection Panel -->
+      <div class="card">
+        <h3 class="text-white font-semibold text-sm mb-4 flex items-center gap-2">
+          <svg class="w-4 h-4 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+          AI-Detected Status
+        </h3>
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-success"></span>
+              <span class="text-sm text-offwhite">Bank statement (Dec)</span>
+            </div>
+            <span class="text-xs text-success font-medium">Received</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-warning"></span>
+              <span class="text-sm text-offwhite">Vehicle expense receipts</span>
+            </div>
+            <span class="text-xs text-warning font-medium">Pending</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-warning"></span>
+              <span class="text-sm text-offwhite">Signed form 106</span>
+            </div>
+            <span class="text-xs text-warning font-medium">Pending</span>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-border">
+          <p class="text-muted text-xs">Next follow-up scheduled:</p>
+          <p class="text-white text-sm font-medium mt-1">March 10, 10:00 AM</p>
+        </div>
+      </div>
+
+      <!-- Dashboard Update -->
+      <div class="card">
+        <h3 class="text-white font-semibold text-sm mb-4 flex items-center gap-2">
+          <svg class="w-4 h-4 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+          Dashboard Updated
+        </h3>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between text-sm mb-1.5">
+              <span class="text-offwhite">Avi Cohen</span>
+              <span class="text-blue font-mono text-xs">1/3</span>
+            </div>
+            <div class="w-full bg-navy rounded-full h-1.5">
+              <div class="bg-blue h-1.5 rounded-full" style="width: 33%"></div>
             </div>
           </div>
-
-          <!-- Chat Area -->
-          <div class="bg-[#0B141A] px-3 py-4 space-y-3 max-h-[420px] overflow-y-auto" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMC41IiBmaWxsPSIjMWExZTI1Ii8+PC9zdmc+');">
-            {messages.map((msg) => (
-              <div class={`flex ${msg.sender === 'john' ? 'justify-start' : 'justify-end'}`}>
-                <div class={`max-w-[85%] rounded-lg px-3 py-2 ${msg.sender === 'john' ? 'bg-[#1F2C34] text-[#E9EDEF]' : 'bg-[#005C4B] text-[#E9EDEF]'}`}
-                     style={msg.sender === 'john' ? 'border-top-left-radius: 2px;' : 'border-top-right-radius: 2px;'}>
-                  {msg.sender === 'john' && (
-                    <p class="text-[#00A884] text-xs font-medium mb-1">JOHN</p>
-                  )}
-                  {msg.attachment && (
-                    <div class="bg-[#12272F] rounded px-3 py-2 mb-2 flex items-center gap-2">
-                      <svg class="w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-                      <span class="text-xs text-slate-400">{msg.attachment}</span>
-                    </div>
-                  )}
-                  <p class="text-sm leading-relaxed whitespace-pre-line">{msg.text}</p>
-                  <div class="flex items-center justify-end gap-1 mt-1">
-                    <span class="text-[10px] text-[#8696A0]">{msg.time}</span>
-                    {msg.sender === 'avi' && (
-                      <svg class="w-4 h-3 text-[#53BDEB]" viewBox="0 0 16 11" fill="currentColor"><path d="M11.071.653a.457.457 0 0 0-.304-.102.493.493 0 0 0-.381.178l-6.19 7.636-2.011-2.095a.46.46 0 0 0-.327-.145.458.458 0 0 0-.326.145l-.655.672a.497.497 0 0 0 0 .684l2.881 3.035c.1.098.21.163.338.163h.04c.136 0 .27-.076.382-.195l.035-.038 6.763-8.384a.497.497 0 0 0-.063-.653l-.182-.101zm-2.866 7.388L12.18.635a.457.457 0 0 1 .659-.083l.182.1c.208.17.235.453.063.654l-6.763 8.384a.513.513 0 0 1-.382.195h-.04a.456.456 0 0 1-.338-.163L4.18 8.387"/></svg>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div>
+            <div class="flex justify-between text-sm mb-1.5">
+              <span class="text-offwhite">Dana Levi</span>
+              <span class="text-success font-mono text-xs">4/4</span>
+            </div>
+            <div class="w-full bg-navy rounded-full h-1.5">
+              <div class="bg-success h-1.5 rounded-full" style="width: 100%"></div>
+            </div>
           </div>
-
-          <!-- Input Bar -->
-          <div class="bg-[#1F2C34] px-3 py-2 flex items-center gap-2">
-            <div class="flex-1 bg-[#2A3942] rounded-full px-4 py-2">
-              <span class="text-[#8696A0] text-sm">Type a message</span>
+          <div>
+            <div class="flex justify-between text-sm mb-1.5">
+              <span class="text-offwhite">Moshe Shapira</span>
+              <span class="text-warning font-mono text-xs">0/5</span>
             </div>
-            <div class="w-10 h-10 rounded-full bg-[#00A884] flex items-center justify-center">
-              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M1.101 21.757L23.8 12.028 1.101 2.3l.011 7.912 13.239 1.816-13.239 1.817-.011 7.912z"/></svg>
+            <div class="w-full bg-navy rounded-full h-1.5">
+              <div class="bg-warning h-1.5 rounded-full" style="width: 3%"></div>
             </div>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-border">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-success animate-pulse"></span>
+            <p class="text-muted text-xs">Live — updated 2 seconds ago</p>
           </div>
         </div>
       </div>

@@ -37,12 +37,12 @@ const tiers = [
     name: 'Complete',
     price: '\u20AA2,700',
     unit: '/mo',
-    description: 'Full integration, PDF generation & branding',
+    description: 'Full integration, reports & branding',
     clients: 'Up to 300 clients',
     features: [
       'Everything in Professional',
       'Auto PDF & report generation',
-      'Full accounting software integration',
+      'Full software integration',
       'Custom branding (white-label)',
       'Unlimited team members',
       'Dedicated account manager',
@@ -52,45 +52,45 @@ const tiers = [
 ];
 ---
 
-<section id="pricing" class="py-20 sm:py-28 bg-white">
+<section id="pricing" class="py-20 sm:py-28 bg-navy-light">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <p class="section-label mb-4">Pricing</p>
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Simple Pricing. No Surprises.</h2>
-      <p class="text-slate-500 mt-4">14 days free. No credit card required. All prices excl. VAT.</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white">Simple pricing for growing firms</h2>
+      <p class="text-muted mt-4">14 days free. No credit card required. All prices excl. VAT.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
       {tiers.map((tier) => (
-        <div class={`rounded-2xl p-8 flex flex-col relative ${tier.highlighted ? 'bg-forest text-white ring-2 ring-forest shadow-xl' : 'bg-white border border-slate-200 shadow-sm'}`}>
+        <div class={`rounded-2xl p-8 flex flex-col relative ${tier.highlighted ? 'bg-blue text-white ring-2 ring-blue shadow-xl shadow-blue/10' : 'bg-navy-light border border-border'}`}>
           {tier.highlighted && (
             <div class="absolute -top-3 left-1/2 -translate-x-1/2">
-              <span class="bg-amber text-slate-900 text-xs font-bold px-3 py-1 rounded-full">Most Popular</span>
+              <span class="bg-warning text-navy text-xs font-bold px-3 py-1 rounded-full">Most Popular</span>
             </div>
           )}
 
           <div class="mb-6">
-            <h3 class={`text-lg font-bold mb-1 ${tier.highlighted ? 'text-white' : 'text-slate-900'}`}>{tier.name}</h3>
-            <p class={`text-sm ${tier.highlighted ? 'text-white/70' : 'text-slate-500'}`}>{tier.description}</p>
+            <h3 class={`text-lg font-bold mb-1 ${tier.highlighted ? 'text-white' : 'text-white'}`}>{tier.name}</h3>
+            <p class={`text-sm ${tier.highlighted ? 'text-white/70' : 'text-muted'}`}>{tier.description}</p>
           </div>
 
           <div class="mb-6">
-            <span class={`text-4xl font-extrabold font-display ${tier.highlighted ? 'text-white' : 'text-slate-900'}`}>{tier.price}</span>
-            {tier.unit && <span class={`text-sm ${tier.highlighted ? 'text-white/70' : 'text-slate-500'}`}>{tier.unit}</span>}
-            <p class={`text-sm font-medium mt-1 ${tier.highlighted ? 'text-forest-pale' : 'text-forest'}`}>{tier.clients}</p>
+            <span class={`text-4xl font-extrabold font-display ${tier.highlighted ? 'text-white' : 'text-white'}`}>{tier.price}</span>
+            {tier.unit && <span class={`text-sm ${tier.highlighted ? 'text-white/70' : 'text-muted'}`}>{tier.unit}</span>}
+            <p class={`text-sm font-medium mt-1 ${tier.highlighted ? 'text-blue-pale' : 'text-blue'}`}>{tier.clients}</p>
           </div>
 
           <ul class="space-y-3 mb-8 flex-1">
             {tier.features.map((feature) => (
-              <li class={`flex items-start gap-2 text-sm ${tier.highlighted ? 'text-white/90' : 'text-slate-700'}`}>
-                <svg class={`w-4 h-4 flex-shrink-0 mt-0.5 ${tier.highlighted ? 'text-forest-pale' : 'text-forest'}`} fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <li class={`flex items-start gap-2 text-sm ${tier.highlighted ? 'text-white/90' : 'text-muted'}`}>
+                <svg class={`w-4 h-4 flex-shrink-0 mt-0.5 ${tier.highlighted ? 'text-blue-pale' : 'text-blue'}`} fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
                 {feature}
               </li>
             ))}
           </ul>
 
           <a href={`mailto:markos@heshbonai.co?subject=Start Free Trial — ${tier.name}`} class={tier.highlighted
-            ? 'inline-flex items-center justify-center px-6 py-3 bg-white text-forest font-semibold rounded-lg hover:bg-forest-pale transition-all duration-200 text-sm shadow-sm w-full text-center'
+            ? 'inline-flex items-center justify-center px-6 py-3 bg-white text-blue font-semibold rounded-lg hover:bg-blue-pale transition-all duration-200 text-sm shadow-sm w-full text-center'
             : 'btn-secondary w-full text-center'}>
             Start Free Trial
           </a>
@@ -99,8 +99,8 @@ const tiers = [
     </div>
 
     <div class="text-center mt-8">
-      <a href="/pricing" class="text-forest hover:text-forest-dark text-sm font-medium transition-colors inline-flex items-center gap-1">
-        See Full Pricing Details
+      <a href="/pricing" class="text-blue hover:text-blue-soft text-sm font-medium transition-colors inline-flex items-center gap-1">
+        See full pricing details
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
       </a>
     </div>

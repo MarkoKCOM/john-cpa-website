@@ -6,47 +6,46 @@ import '../styles/global.css';
 ---
 
 <Layout
-  title="Book a Demo — JOHN | AI Document Collection for CPAs"
-  description="See JOHN in action. Book a 15-minute demo and watch JOHN handle document collection for your client list live."
+  title="Book a Demo — HeshbonAI | AI Assistant for CPA Firms"
+  description="See HeshbonAI in action. Book a 15-minute demo and see how we automate client follow-up and document collection for firms like yours."
 >
   <Navbar />
 
   <main class="pt-24">
-    <section class="py-20 md:py-28 bg-white">
+    <section class="py-20 md:py-28 bg-navy">
       <div class="max-w-5xl mx-auto px-4 sm:px-6">
         <div class="grid md:grid-cols-2 gap-12 items-start">
-          <!-- Left: Info -->
           <div>
             <p class="section-label mb-4">Get Started</p>
-            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
-              See JOHN in action
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+              See HeshbonAI in action
             </h1>
-            <p class="text-lg text-slate-600 mb-8">
-              Book a 15-minute demo. We'll show you how JOHN handles document collection
-              for a firm like yours — using your actual client scenarios.
+            <p class="text-lg text-muted mb-8">
+              Book a 15-minute demo. We'll show you how HeshbonAI handles client follow-up
+              and document collection for a firm like yours.
             </p>
 
             <div class="space-y-6 mb-8">
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg bg-forest-pale flex items-center justify-center flex-shrink-0">
-                  <svg class="w-5 h-5 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <div class="w-10 h-10 rounded-lg bg-blue/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
-                  <p class="font-semibold text-slate-900">15 minutes, no fluff</p>
-                  <p class="text-slate-500 text-sm">We respect your time. Quick demo, real answers.</p>
+                  <p class="font-semibold text-white">15 minutes, no fluff</p>
+                  <p class="text-muted text-sm">We respect your time. Quick demo, real answers.</p>
                 </div>
               </div>
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg bg-forest-pale flex items-center justify-center flex-shrink-0">
-                  <svg class="w-5 h-5 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <div class="w-10 h-10 rounded-lg bg-blue/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
-                  <p class="font-semibold text-slate-900">Your scenarios, not ours</p>
-                  <p class="text-slate-500 text-sm">Tell us your client count and we'll show relevant results.</p>
+                  <p class="font-semibold text-white">Your scenarios, not ours</p>
+                  <p class="text-muted text-sm">Tell us your client count and we'll show relevant results.</p>
                 </div>
               </div>
               <div class="flex items-start gap-4">
@@ -56,68 +55,45 @@ import '../styles/global.css';
                   </svg>
                 </div>
                 <div>
-                  <p class="font-semibold text-slate-900">Live WhatsApp walkthrough</p>
-                  <p class="text-slate-500 text-sm">See exactly what your clients will experience.</p>
+                  <p class="font-semibold text-white">Live WhatsApp walkthrough</p>
+                  <p class="text-muted text-sm">See exactly what your clients will experience.</p>
                 </div>
               </div>
             </div>
 
-            <div class="bg-forest-pale rounded-2xl border border-forest-light/20 p-6">
-              <p class="text-sm text-slate-600 mb-3">Prefer to start right away?</p>
-              <a href="mailto:markos@heshbonai.co" class="btn-primary w-full text-center">Start Your 14-Day Free Trial</a>
-              <p class="text-xs text-slate-400 mt-2 text-center">No credit card required</p>
+            <div class="card">
+              <p class="text-sm text-muted mb-3">Prefer to start right away?</p>
+              <a href="mailto:markos@heshbonai.co?subject=Start Free Trial" class="btn-primary w-full text-center">Start Your 14-Day Free Trial</a>
+              <p class="text-xs text-muted/60 mt-2 text-center">No credit card required</p>
             </div>
           </div>
 
-          <!-- Right: Contact Form -->
-          <div class="bg-slate-50 rounded-2xl border border-slate-200 p-8">
-            <h2 class="text-2xl font-bold text-slate-900 mb-6">Book your demo</h2>
+          <div class="card">
+            <h2 class="text-2xl font-bold text-white mb-6">Book your demo</h2>
             <form id="demo-form" class="space-y-5" action="mailto:markos@heshbonai.co" method="post" enctype="text/plain">
               <div>
-                <label for="name" class="block text-sm font-medium text-slate-600 mb-1.5">Full name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400
-                         focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest transition-colors"
-                  placeholder="Yael Davidovich"
-                />
+                <label for="name" class="block text-sm font-medium text-muted mb-1.5">Full name</label>
+                <input type="text" id="name" name="name" required
+                  class="w-full px-4 py-3 bg-navy border border-border rounded-lg text-white placeholder-muted/50
+                         focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-colors" placeholder="Yael Davidovich" />
               </div>
               <div>
-                <label for="email" class="block text-sm font-medium text-slate-600 mb-1.5">Work email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400
-                         focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest transition-colors"
-                  placeholder="yael@firm.co.il"
-                />
+                <label for="email" class="block text-sm font-medium text-muted mb-1.5">Work email</label>
+                <input type="email" id="email" name="email" required
+                  class="w-full px-4 py-3 bg-navy border border-border rounded-lg text-white placeholder-muted/50
+                         focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-colors" placeholder="yael@firm.co.il" />
               </div>
               <div>
-                <label for="firm" class="block text-sm font-medium text-slate-600 mb-1.5">Firm name</label>
-                <input
-                  type="text"
-                  id="firm"
-                  name="firm"
-                  required
-                  class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400
-                         focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest transition-colors"
-                  placeholder="Davidovich & Levi Accounting"
-                />
+                <label for="firm" class="block text-sm font-medium text-muted mb-1.5">Firm name</label>
+                <input type="text" id="firm" name="firm" required
+                  class="w-full px-4 py-3 bg-navy border border-border rounded-lg text-white placeholder-muted/50
+                         focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-colors" placeholder="Davidovich & Levi Accounting" />
               </div>
               <div>
-                <label for="clients" class="block text-sm font-medium text-slate-600 mb-1.5">How many clients do you manage?</label>
-                <select
-                  id="clients"
-                  name="clients"
-                  required
-                  class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-900
-                         focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest transition-colors"
-                >
+                <label for="clients" class="block text-sm font-medium text-muted mb-1.5">How many clients do you manage?</label>
+                <select id="clients" name="clients" required
+                  class="w-full px-4 py-3 bg-navy border border-border rounded-lg text-white
+                         focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-colors">
                   <option value="" disabled selected>Select range</option>
                   <option value="1-25">1-25 clients</option>
                   <option value="26-50">26-50 clients</option>
@@ -127,20 +103,15 @@ import '../styles/global.css';
                 </select>
               </div>
               <div>
-                <label for="phone" class="block text-sm font-medium text-slate-600 mb-1.5">Phone (optional)</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400
-                         focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest transition-colors"
-                  placeholder="+972-50-123-4567"
-                />
+                <label for="phone" class="block text-sm font-medium text-muted mb-1.5">Phone (optional)</label>
+                <input type="tel" id="phone" name="phone"
+                  class="w-full px-4 py-3 bg-navy border border-border rounded-lg text-white placeholder-muted/50
+                         focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-colors" placeholder="+972-50-123-4567" />
               </div>
               <button type="submit" class="btn-primary w-full text-lg py-4">
                 Book My Demo
               </button>
-              <p class="text-xs text-slate-400 text-center">
+              <p class="text-xs text-muted/60 text-center">
                 We'll respond within 4 hours during business days (Sun-Thu).
               </p>
             </form>
@@ -149,25 +120,24 @@ import '../styles/global.css';
       </div>
     </section>
 
-    <!-- Contact Info -->
-    <section class="py-16 bg-slate-50">
+    <section class="py-16 bg-navy-light border-t border-border">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <h2 class="text-2xl font-bold text-slate-900 mb-8">Other ways to reach us</h2>
+        <h2 class="text-2xl font-bold text-white mb-8">Other ways to reach us</h2>
         <div class="grid sm:grid-cols-2 gap-6">
-          <div class="bg-white rounded-2xl p-8 border border-slate-200 text-center shadow-sm">
-            <svg class="w-8 h-8 text-forest mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <div class="card text-center">
+            <svg class="w-8 h-8 text-blue mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            <p class="font-semibold text-slate-900 mb-1">Email</p>
-            <a href="mailto:support@heshbonai.co" class="text-forest text-sm hover:underline">support@heshbonai.co</a>
+            <p class="font-semibold text-white mb-1">Email</p>
+            <a href="mailto:support@heshbonai.co" class="text-blue text-sm hover:underline">support@heshbonai.co</a>
           </div>
-          <div class="bg-white rounded-2xl p-8 border border-slate-200 text-center shadow-sm">
-            <svg class="w-8 h-8 text-forest mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <div class="card text-center">
+            <svg class="w-8 h-8 text-blue mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <p class="font-semibold text-slate-900 mb-1">Location</p>
-            <p class="text-slate-500 text-sm">Tel Aviv, Israel</p>
+            <p class="font-semibold text-white mb-1">Location</p>
+            <p class="text-muted text-sm">Tel Aviv, Israel</p>
           </div>
         </div>
       </div>
