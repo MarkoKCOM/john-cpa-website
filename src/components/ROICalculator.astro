@@ -57,7 +57,7 @@
             <p class="text-slate-700 text-sm font-medium">Response rate</p>
           </div>
           <div class="py-4 border-b border-slate-100">
-            <p class="text-xl font-bold text-slate-400">35%</p>
+            <p class="text-xl font-bold text-slate-400">23%</p>
           </div>
           <div class="py-4 border-b border-slate-100">
             <p class="text-xl font-bold text-forest">82%</p>
@@ -67,7 +67,7 @@
             <p class="text-slate-700 text-sm font-medium">On-time collection</p>
           </div>
           <div class="py-4 border-b border-slate-100">
-            <p class="text-xl font-bold text-slate-400">58%</p>
+            <p class="text-xl font-bold text-slate-400">61%</p>
           </div>
           <div class="py-4 border-b border-slate-100">
             <p class="text-xl font-bold text-forest">94%</p>
@@ -77,11 +77,11 @@
             <p class="text-slate-700 text-sm font-medium">Monthly cost</p>
           </div>
           <div class="py-4">
-            <p id="cost-without" class="text-xl font-bold text-slate-400">$2,400</p>
-            <p class="text-xs text-slate-400 mt-1">staff time @ $30/hr</p>
+            <p id="cost-without" class="text-xl font-bold text-slate-400">&#8362;10,200</p>
+            <p class="text-xs text-slate-400 mt-1">staff time @ 300 NIS/hr</p>
           </div>
           <div class="py-4">
-            <p id="cost-with" class="text-xl font-bold text-forest">$1,000</p>
+            <p id="cost-with" class="text-xl font-bold text-forest">&#8362;1,800</p>
             <p class="text-xs text-slate-400 mt-1">JOHN subscription</p>
           </div>
         </div>
@@ -89,11 +89,11 @@
         <!-- Savings highlight -->
         <div class="mt-8 p-5 rounded-xl bg-forest-pale border border-forest-light/20 text-center">
           <p class="text-slate-600 text-sm mb-1">Estimated monthly savings</p>
-          <p id="savings" class="text-3xl font-bold text-forest font-display">$1,400</p>
+          <p id="savings" class="text-3xl font-bold text-forest font-display">&#8362;8,400</p>
         </div>
 
         <div class="text-center mt-8">
-          <a href="#cta" class="btn-primary">Start Saving Time — Free for 14 Days</a>
+          <a href="/demo" class="btn-primary">Start Saving Time — Free for 14 Days</a>
         </div>
       </div>
     </div>
@@ -113,21 +113,26 @@
     const clients = parseInt(slider.value);
     if (clientCount) clientCount.textContent = String(clients);
 
-    const hrsWithout = Math.round(clients * 0.08 * 10) / 10;
-    const hrsWith = Math.round(clients * 0.015 * 10) / 10;
+    // ~5 min per client per week on chasing
+    const hrsWithout = Math.round(clients * 0.085 * 10) / 10;
+    const hrsWith = Math.round(clients * 0.005 * 10) / 10;
     if (hoursWithout) hoursWithout.textContent = String(hrsWithout);
-    if (hoursWith) hoursWith.textContent = String(hrsWith);
+    if (hoursWith) hoursWith.textContent = String(Math.max(0.5, hrsWith));
 
+    // 300 NIS/hr billing rate
     const monthlyHoursWithout = hrsWithout * 4.3;
-    const cWithout = Math.round(monthlyHoursWithout * 30);
-    if (costWithout) costWithout.textContent = `$${cWithout.toLocaleString()}`;
+    const cWithout = Math.round(monthlyHoursWithout * 300);
+    if (costWithout) costWithout.textContent = `\u20AA${cWithout.toLocaleString()}`;
 
-    let perClient = clients <= 50 ? 15 : clients <= 200 ? 10 : 8;
-    const cWith = clients * perClient;
-    if (costWith) costWith.textContent = `$${cWith.toLocaleString()}`;
+    // Flat pricing tiers
+    let cWith: number;
+    if (clients <= 50) cWith = 1000;
+    else if (clients <= 150) cWith = 1800;
+    else cWith = 2700;
+    if (costWith) costWith.textContent = `\u20AA${cWith.toLocaleString()}`;
 
     const saved = Math.max(0, cWithout - cWith);
-    if (savings) savings.textContent = `$${saved.toLocaleString()}`;
+    if (savings) savings.textContent = `\u20AA${saved.toLocaleString()}`;
   }
 
   slider?.addEventListener('input', update);

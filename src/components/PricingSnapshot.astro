@@ -2,45 +2,50 @@
 const tiers = [
   {
     name: 'Starter',
-    price: '$15',
-    unit: '/client/mo',
-    description: 'For small practices getting started',
+    price: '\u20AA1,000',
+    unit: '/mo',
+    description: 'Document tracking, reminders & FAQ bot',
     clients: 'Up to 50 clients',
     features: [
-      'Autonomous WhatsApp follow-ups',
-      'Document recognition & filing',
-      'Basic dashboard',
-      'Email support',
+      'WhatsApp collection & confirmation',
+      'Automated reminders (up to 3)',
+      'Document tracking dashboard',
+      'FAQ bot for client questions',
+      'Daily summary reports',
+      'Hebrew + English',
     ],
     highlighted: false,
   },
   {
-    name: 'Growth',
-    price: '$10',
-    unit: '/client/mo',
-    description: 'For growing firms that need more',
-    clients: '51-200 clients',
+    name: 'Professional',
+    price: '\u20AA1,800',
+    unit: '/mo',
+    description: 'AI reading, data extraction & multi-CPA',
+    clients: 'Up to 150 clients',
     features: [
       'Everything in Starter',
-      'Deadline intelligence',
-      'Multi-language support',
-      'Priority support',
-      'Custom templates',
+      'AI document reading & data extraction',
+      'Unlimited follow-ups',
+      'Automated monthly reports',
+      'Multi-accountant (up to 5 CPAs)',
+      'CSV / API export',
+      'Priority support (4hr)',
     ],
     highlighted: true,
   },
   {
-    name: 'Enterprise',
-    price: 'Custom',
-    unit: '',
-    description: 'For large firms with complex needs',
-    clients: '200+ clients',
+    name: 'Complete',
+    price: '\u20AA2,700',
+    unit: '/mo',
+    description: 'Full integration, PDF generation & branding',
+    clients: 'Up to 300 clients',
     features: [
-      'Everything in Growth',
+      'Everything in Professional',
+      'Auto PDF & report generation',
+      'Full accounting software integration',
+      'Custom branding (white-label)',
+      'Unlimited team members',
       'Dedicated account manager',
-      'API access',
-      'Custom integrations',
-      'SLA guarantee',
     ],
     highlighted: false,
   },
@@ -52,7 +57,7 @@ const tiers = [
     <div class="text-center mb-16">
       <p class="section-label mb-4">Pricing</p>
       <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Simple Pricing. No Surprises.</h2>
-      <p class="text-slate-500 mt-4">14 days free. No credit card required.</p>
+      <p class="text-slate-500 mt-4">14 days free. No credit card required. All prices excl. VAT.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
@@ -84,10 +89,10 @@ const tiers = [
             ))}
           </ul>
 
-          <a href="#cta" class={tier.highlighted
+          <a href={`mailto:markos@heshbonai.co?subject=Start Free Trial — ${tier.name}`} class={tier.highlighted
             ? 'inline-flex items-center justify-center px-6 py-3 bg-white text-forest font-semibold rounded-lg hover:bg-forest-pale transition-all duration-200 text-sm shadow-sm w-full text-center'
             : 'btn-secondary w-full text-center'}>
-            {tier.price === 'Custom' ? 'Contact Sales' : 'Start Free Trial'}
+            Start Free Trial
           </a>
         </div>
       ))}
