@@ -7,6 +7,59 @@ interface Props {
 
 const { title, description, canonical } = Astro.props;
 const siteUrl = 'https://heshbonai.co';
+const currentUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
+
+// Schema.org structured data
+const organizationSchema = {
+  "@type": "Organization",
+  "name": "Heshbonai Ltd",
+  "url": siteUrl,
+  "logo": `${siteUrl}/favicon.svg`,
+  "description": "AI-powered document collection for CPAs and accountants in Israel.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tel Aviv",
+    "addressCountry": "IL"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "support@heshbonai.co",
+    "contactType": "customer support",
+    "availableLanguage": ["Hebrew", "English"]
+  }
+};
+
+const websiteSchema = {
+  "@type": "WebSite",
+  "name": "JOHN — AI Document Collection for CPAs",
+  "url": siteUrl,
+  "description": "JOHN is an AI agent that autonomously collects documents from your clients via WhatsApp.",
+  "publisher": { "@id": `${siteUrl}/#organization` }
+};
+
+const softwareSchema = {
+  "@type": "SoftwareApplication",
+  "name": "JOHN",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "AI agent that autonomously collects documents from clients via WhatsApp for CPAs and accountants in Israel.",
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "1000",
+    "highPrice": "2700",
+    "priceCurrency": "ILS",
+    "offerCount": "3"
+  }
+};
+
+const graphSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { ...organizationSchema, "@id": `${siteUrl}/#organization` },
+    websiteSchema,
+    softwareSchema
+  ]
+};
 ---
 
 <!doctype html>
@@ -19,39 +72,31 @@ const siteUrl = 'https://heshbonai.co';
     <!-- Primary Meta -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical || Astro.url.href} />
+    <link rel="canonical" href={currentUrl} />
+
+    <!-- Geo/Locale -->
+    <meta name="geo.region" content="IL" />
+    <meta name="geo.placename" content="Tel Aviv" />
+    <link rel="alternate" hreflang="en" href={currentUrl} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:url" content={currentUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="JOHN" />
+    <meta property="og:locale" content="en_IL" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
-    <!-- Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "JOHN",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "description": "AI agent that autonomously collects documents from clients via WhatsApp for CPAs and accountants.",
-      "offers": {
-        "@type": "AggregateOffer",
-        "lowPrice": "10",
-        "highPrice": "15",
-        "priceCurrency": "USD",
-        "offerCount": "3"
-      }
-    })} />
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" set:html={JSON.stringify(graphSchema)} />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

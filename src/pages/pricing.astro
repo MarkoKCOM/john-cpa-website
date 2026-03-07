@@ -9,6 +9,39 @@ const description = 'Flat monthly pricing in NIS. All plans include WhatsApp doc
 ---
 
 <Layout title={title} description={description} canonical="https://heshbonai.co/pricing">
+  <!-- FAQ Schema for rich snippets -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is JOHN different from just messaging clients myself on WhatsApp?",
+        "acceptedAnswer": { "@type": "Answer", "text": "JOHN doesn't just send messages. It tracks what's been requested, what's been received, what's still missing, and follows up automatically on a smart schedule. No spreadsheets, no sticky notes, no forgetting." }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my clients know they're talking to a bot?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Messages come from your firm's branded WhatsApp Business number with your firm name and logo. The tone is professional and human. In testing, most clients thought it was a new team member." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the 14-day free trial work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sign up, connect your WhatsApp Business account, upload your client list, and JOHN starts collecting immediately. Full access to all Professional plan features. No credit card required." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do my clients need to install anything?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Zero downloads. Zero signups. JOHN messages them on WhatsApp — the app they already use 50 times a day. They just reply with a photo or file." }
+      },
+      {
+        "@type": "Question",
+        "name": "How are sensitive documents protected?",
+        "acceptedAnswer": { "@type": "Answer", "text": "All documents are encrypted in transit (TLS 1.3) and at rest (AES-256). We use the official WhatsApp Business API — the same infrastructure used by banks and healthcare providers." }
+      }
+    ]
+  })} />
+
   <Navbar />
 
   <main>
