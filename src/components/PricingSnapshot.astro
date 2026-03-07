@@ -57,7 +57,7 @@ const tiers = [
     <div class="text-center mb-16">
       <p class="section-label mb-4">Pricing</p>
       <h2 class="text-3xl sm:text-4xl font-bold text-white">Simple pricing for growing firms</h2>
-      <p class="text-muted mt-4">14 days free. No credit card required. All prices excl. VAT.</p>
+      <p class="text-muted mt-4">All prices excl. VAT. Onboarding fee may apply.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
@@ -89,10 +89,10 @@ const tiers = [
             ))}
           </ul>
 
-          <a href={`mailto:markos@heshbonai.co?subject=Start Free Trial — ${tier.name}`} class={tier.highlighted
+          <a href="/contact" class={tier.highlighted
             ? 'inline-flex items-center justify-center px-6 py-3 bg-white text-blue font-semibold rounded-lg hover:bg-blue-pale transition-all duration-200 text-sm shadow-sm w-full text-center'
             : 'btn-secondary w-full text-center'}>
-            Start Free Trial
+            Get Started
           </a>
         </div>
       ))}
