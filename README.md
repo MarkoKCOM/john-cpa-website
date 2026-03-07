@@ -139,6 +139,6 @@ All prices excl. VAT. Onboarding fee may apply.
 
 ## Contact
 
-- **CEO:** Marko Sione — markos@heshbonai.co
+- **CEO:** Marko Sione — marko@heshbonai.co
 - **Support:** support@heshbonai.co
 - **Company:** Heshbonai Ltd., Tel Aviv, Israel
