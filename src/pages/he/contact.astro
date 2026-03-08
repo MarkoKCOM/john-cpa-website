@@ -1,0 +1,192 @@
+---
+import LayoutHe from '../../layouts/LayoutHe.astro';
+import NavbarHe from '../../components/NavbarHe.astro';
+import FooterHe from '../../components/FooterHe.astro';
+import '../../styles/global.css';
+---
+
+<LayoutHe
+  title="צרו קשר — HeshbonAI | העוזר החכם למשרדי רו״ח"
+  description="צרו קשר עם HeshbonAI. ספרו לנו על המשרד שלכם ונראה לכם איך אנחנו מייעלים מעקב ואיסוף מסמכים."
+>
+  <NavbarHe />
+
+  <main>
+    <!-- Main Section -->
+    <section class="pt-32 pb-20 bg-navy">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <p class="section-label mb-4">בואו נדבר</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+              ספרו לנו על המשרד שלכם
+            </h1>
+            <p class="text-lg text-muted mb-8">
+              ספרו כמה לקוחות אתם מנהלים. נראה לכם איך HeshbonAI יכול לעזור.
+            </p>
+
+            <div class="space-y-6 mb-8">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-blue/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-white">15 דקות, בלי בלבול</p>
+                  <p class="text-muted text-sm">אנחנו מכבדים את הזמן שלכם. שיחה קצרה, תשובות ברורות.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-blue/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-white">התרחישים שלכם, לא שלנו</p>
+                  <p class="text-muted text-sm">ספרו כמה לקוחות יש לכם ונראה תוצאות רלוונטיות.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-whatsapp/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-whatsapp" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-white">הדגמה חיה בוואטסאפ</p>
+                  <p class="text-muted text-sm">תראו בדיוק מה הלקוחות שלכם יחוו.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 class="text-2xl font-bold text-white mb-6">השאירו פרטים</h2>
+            <form id="contact-form" class="space-y-5" action="https://formspree.io/f/mdawkzgo" method="POST">
+              <div>
+                <label for="name" class="block text-sm font-medium text-muted mb-1.5">שם מלא</label>
+                <input type="text" id="name" name="name" required
+                  class="w-full px-4 py-3 bg-navy border border-border rounded-lg text-white placeholder-muted/50
+                         focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-colors" placeholder="יעל דוידוביץ׳" />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-muted mb-1.5">מייל עבודה</label>
+                <input type="email" id="email" name="email" required
+                  class="w-full px-4 py-3 bg-navy border border-border rounded-lg text-white placeholder-muted/50
+                         focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-colors" placeholder="yael@firm.co.il" />
+              </div>
+              <div>
+                <label for="firm" class="block text-sm font-medium text-muted mb-1.5">שם המשרד</label>
+                <input type="text" id="firm" name="firm" required
+                  class="w-full px-4 py-3 bg-navy border border-border rounded-lg text-white placeholder-muted/50
+                         focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-colors" placeholder="דוידוביץ׳ ולוי רואי חשבון" />
+              </div>
+              <div>
+                <label for="clients" class="block text-sm font-medium text-muted mb-1.5">כמה לקוחות אתם מנהלים?</label>
+                <select id="clients" name="clients" required
+                  class="w-full px-4 py-3 bg-navy border border-border rounded-lg text-white
+                         focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-colors">
+                  <option value="" disabled selected>בחרו טווח</option>
+                  <option value="1-25">1-25 לקוחות</option>
+                  <option value="26-50">26-50 לקוחות</option>
+                  <option value="51-100">51-100 לקוחות</option>
+                  <option value="101-200">101-200 לקוחות</option>
+                  <option value="200+">200+ לקוחות</option>
+                </select>
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-muted mb-1.5">טלפון (אופציונלי)</label>
+                <input type="tel" id="phone" name="phone"
+                  class="w-full px-4 py-3 bg-navy border border-border rounded-lg text-white placeholder-muted/50
+                         focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-colors" placeholder="050-123-4567" />
+              </div>
+              <button type="submit" id="submit-btn" class="btn-primary w-full text-lg py-4">
+                שלחו הודעה
+              </button>
+              <div id="form-status" class="hidden text-center text-sm py-2 rounded-lg"></div>
+              <p class="text-xs text-muted/60 text-center">
+                נחזור אליכם תוך 4 שעות בימי עבודה (א׳-ה׳).
+              </p>
+            </form>
+
+            <div class="mt-6 pt-6 border-t border-border text-center">
+              <p class="text-sm text-muted mb-3">מעדיפים לקבוע ישירות?</p>
+              <a href="https://cal.com/heshbonai/intro" target="_blank" rel="noopener noreferrer"
+                class="btn-secondary w-full text-center inline-flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                קבעו שיחה של 15 דקות
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alternative Contact -->
+    <section class="py-16 bg-navy-light border-t border-border">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-2xl font-bold text-white mb-8">דרכים נוספות ליצור קשר</h2>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="card text-center">
+            <svg class="w-8 h-8 text-blue mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <p class="font-semibold text-white mb-1">מייל</p>
+            <a href="mailto:support@heshbonai.co" class="text-blue text-sm hover:underline">support@heshbonai.co</a>
+          </div>
+          <div class="card text-center">
+            <svg class="w-8 h-8 text-blue mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <p class="font-semibold text-white mb-1">מיקום</p>
+            <p class="text-muted text-sm">תל אביב, ישראל</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <FooterHe />
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contact-form');
+      const btn = document.getElementById('submit-btn');
+      const status = document.getElementById('form-status');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        btn.disabled = true;
+        btn.textContent = 'שולח...';
+        status.classList.add('hidden');
+
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' },
+          });
+
+          if (res.ok) {
+            status.textContent = 'ההודעה נשלחה. נחזור אליכם בהקדם.';
+            status.className = 'text-center text-sm py-2 rounded-lg text-success';
+            form.reset();
+          } else {
+            throw new Error('Submission failed');
+          }
+        } catch {
+          status.textContent = 'משהו השתבש. שלחו מייל ל-marko@heshbonai.co';
+          status.className = 'text-center text-sm py-2 rounded-lg text-error';
+        }
+
+        btn.disabled = false;
+        btn.textContent = 'שלחו הודעה';
+      });
+    });
+  </script>
+</LayoutHe>

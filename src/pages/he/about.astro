@@ -1,0 +1,144 @@
+---
+import LayoutHe from '../../layouts/LayoutHe.astro';
+import NavbarHe from '../../components/NavbarHe.astro';
+import FooterHe from '../../components/FooterHe.astro';
+import '../../styles/global.css';
+---
+
+<LayoutHe
+  title="אודות HeshbonAI — העוזר החכם למשרדי רו״ח"
+  description="HeshbonAI נבנה בישראל לרואי חשבון ישראליים. אנחנו מייעלים מעקב אחרי לקוחות ואיסוף מסמכים דרך וואטסאפ כדי שרו״ח יתמקדו בחשבונאות."
+>
+  <NavbarHe />
+
+  <main>
+    <!-- Hero -->
+    <section class="pt-32 pb-16 bg-navy">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <p class="section-label mb-4">אודות HeshbonAI</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+          העוזר שכל משרד רו״ח צריך
+        </h1>
+        <p class="text-lg md:text-xl text-muted max-w-2xl mx-auto">
+          HeshbonAI נולד מתצפית פשוטה: משרדי רואי חשבון בישראל מבזבזים יותר זמן על רדיפה אחרי מסמכים מאשר על חשבונאות. החלטנו לתקן את זה.
+        </p>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="py-16 md:py-20 bg-navy-light">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">הבעיה שאנחנו פותרים</h2>
+            <p class="text-muted text-lg mb-4">
+              לכל משרד רו״ח בישראל יש את אותו טקס יומי: לשלוח הודעות ללקוחות, לבקש מסמכים, לעקוב מי ענה, לשלוח תזכורות, ושוב מההתחלה.
+            </p>
+            <p class="text-muted text-lg mb-4">
+              זה בולע <span class="text-white font-semibold">10+ שעות בשבוע</span> לכל משרד. זה משעמם, חוזר על עצמו, ומרחיק רואי חשבון מקצועיים מעבודה שבאמת דורשת את המיומנות שלהם.
+            </p>
+            <p class="text-muted text-lg">
+              פורטלים ללקוחות לא עובדים — אף אחד לא מוריד עוד אפליקציה. מיילים לא עובדים — אף אחד לא קורא אותם. אבל וואטסאפ? <span class="text-white font-semibold">80%+ מהישראלים משתמשים בו כל יום.</span>
+            </p>
+          </div>
+          <div class="card">
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-lg bg-error/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-error" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-white">250+ שעות בשנה</p>
+                  <p class="text-muted text-sm">הולכות לרדיפה אחרי מסמכים בכל משרד</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-lg bg-warning/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-warning" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-white">23% תגובה במייל</p>
+                  <p class="text-muted text-sm">לעומת 82% בוואטסאפ</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-lg bg-blue/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-white">73% מהקבצים בפורטל</p>
+                  <p class="text-muted text-sm">מגיעים לתיקייה לא נכונה</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="py-16 md:py-20 bg-navy">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">הגישה שלנו</h2>
+          <p class="text-muted text-lg max-w-2xl mx-auto">
+            אנחנו לא מבקשים מהלקוחות שלכם לשנות התנהגות. אנחנו פוגשים אותם במקום שהם כבר נמצאים.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card text-center">
+            <div class="w-16 h-16 rounded-2xl bg-whatsapp/10 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">WhatsApp-native</h3>
+            <p class="text-muted">בלי אפליקציות חדשות, בלי פורטלים, בלי סיסמאות. הלקוחות עונים בפלטפורמה שהם משתמשים בה כל יום.</p>
+          </div>
+          <div class="card text-center">
+            <div class="w-16 h-16 rounded-2xl bg-blue/10 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">משתלב בתהליך שלכם</h3>
+            <p class="text-muted">HeshbonAI עובד עם הכלים הקיימים שלכם — וואטסאפ, מייל, גוגל, ותוכנת הנהלת החשבונות. בלי מיגרציה.</p>
+          </div>
+          <div class="card text-center">
+            <div class="w-16 h-16 rounded-2xl bg-blue/10 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">בנוי לישראל</h3>
+            <p class="text-muted">עברית מלאה. מכבד שבת. מכיר דדליינים ישראליים. נבנה על ידי רואי חשבון, בשביל רואי חשבון.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 md:py-28 bg-navy-light border-t border-border">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          מוכנים לייעל את המעקב?
+        </h2>
+        <p class="text-muted text-lg mb-8">
+          הטמעה מודרכת. תראו תוצאות כבר בשבוע הראשון.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://cal.com/heshbonai/intro" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-8 py-4">קבעו שיחת היכרות</a>
+          <a href="/he/pricing" class="btn-secondary text-lg px-8 py-4">ראו מחירים</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <FooterHe />
+</LayoutHe>
