@@ -78,6 +78,16 @@ All animations use vanilla JS IntersectionObserver — no animation libraries. E
 - WhatsApp Demo: Messages appear sequentially, status transitions
 - Cards: 2px hover lift with border brightening
 
+## Design Agents
+
+Three specialized agent prompts are available in `.cursor/agents/`:
+
+- **ui-designer.md** — Visual consistency, component quality, typography hierarchy, responsive design, accessibility. Use when working on component styling or layout.
+- **ux-architect.md** — Information architecture, conversion path, content hierarchy, user flow. Use when restructuring pages or optimizing for conversions.
+- **brand-guardian.md** — Brand voice, forbidden terms, naming conventions, visual brand compliance. Use when writing or reviewing copy.
+
+Reference these agents when doing design/UX/copy work. They are tailored to this project's design system and brand rules.
+
 ## When editing
 
 - Read the relevant `docs/` file before changing copy (e.g., docs/website/homepage.md for homepage)
