@@ -5,11 +5,26 @@ import FooterHe from '../../components/FooterHe.astro';
 import '../../styles/global.css';
 
 const steps = [
-  { title: "שיחת היכרות", description: "נלמד על המשרד שלכם, כמות הלקוחות, ואיך אתם עובדים היום. 15 דקות." },
-  { title: "חיבור וואטסאפ", description: "נעזור לכם להגדיר או לחבר את חשבון ה-WhatsApp Business שלכם. אנחנו מטפלים בצד הטכני." },
-  { title: "ייבוא לקוחות", description: "העלו רשימת לקוחות דרך CSV או חברו את תוכנת הנהלת החשבונות. אנחנו ממפים מסמכים ודדליינים." },
-  { title: "הגדרה ובדיקה", description: "קבעו לוחות זמנים למעקב, תבניות הודעות וכללי ביקורת. בדקו עם כמה לקוחות לפני עלייה לאוויר." },
-  { title: "עלייה לאוויר", description: "השקה לכל הלקוחות. הצוות שלכם מקבל גישה לדשבורד והדרכה. אנחנו זמינים לשבועיים הראשונים." },
+  {
+    title: 'קבעו שיחת היכרות',
+    description: 'נלמד על המשרד שלכם, כמות הלקוחות, ואיך אתם עובדים היום. 15 דקות.',
+  },
+  {
+    title: 'חיבור WhatsApp',
+    description: 'נעזור לכם להגדיר או לחבר את חשבון ה-WhatsApp Business שלכם. אנחנו מטפלים בצד הטכני.',
+  },
+  {
+    title: 'ייבוא לקוחות',
+    description: 'העלו רשימת לקוחות דרך CSV או חברו את תוכנת הנהלת החשבונות. אנחנו ממפים מסמכים ודדליינים.',
+  },
+  {
+    title: 'הגדרה ובדיקה',
+    description: 'קבעו לוחות זמנים למעקב, תבניות הודעות וכללי ביקורת. בדקו עם כמה לקוחות לפני עלייה לאוויר.',
+  },
+  {
+    title: 'עלייה לאוויר עם הצוות',
+    description: 'השקה לכל הלקוחות. הצוות שלכם מקבל גישה לדשבורד והדרכה. אנחנו זמינים לשבועיים הראשונים.',
+  },
 ];
 
 const tiers = [
@@ -24,8 +39,8 @@ const tiers = [
       'כל האינטגרציות כלולות',
       'מעקבים ללא הגבלה',
       'איסוף ואישור מסמכים בוואטסאפ',
-      'דשבורד מעקב מסמכים',
-      'עוזר שאלות נפוצות ללקוחות',
+      'דשבורד למעקב מסמכים',
+      'עוזר FAQ לשאלות לקוחות',
       'סיכומים יומיים',
       'עברית + אנגלית',
     ],
@@ -35,11 +50,10 @@ const tiers = [
     name: 'Professional',
     price: '\u20AA1,800',
     unit: '/חודש',
-    description: 'קריאת מסמכים, חילוץ נתונים ורב-משתמשים',
-    clients: 'עד 150 לקוחות',
-    setupFee: false,
+    description: 'קריאת מסמכים, חילוץ נתונים וריבוי משתמשים',
+    clients: 'עד 100 לקוחות',
     features: [
-      'הכל מתוכנית Starter',
+      'הכל ב-Starter',
       'קריאת מסמכים וחילוץ נתונים ב-AI',
       'דוחות חודשיים אוטומטיים',
       'ריבוי רואי חשבון (עד 5)',
@@ -54,10 +68,9 @@ const tiers = [
     price: '\u20AA2,700',
     unit: '/חודש',
     description: 'אינטגרציה מלאה, דוחות ומיתוג',
-    clients: 'עד 300 לקוחות',
-    setupFee: false,
+    clients: 'עד 200 לקוחות',
     features: [
-      'הכל מתוכנית Professional',
+      'הכל ב-Professional',
       'יצירת PDF ודוחות אוטומטית',
       'אינטגרציה מלאה לתוכנות',
       'מיתוג מותאם (white-label)',
@@ -70,89 +83,165 @@ const tiers = [
 
 const faqs = [
   {
-    question: "הלקוחות יידעו שהם מדברים עם עוזר אוטומטי?",
-    answer: "ההודעות יוצאות ממספר ה-WhatsApp Business של המשרד שלכם, עם השם והלוגו שלכם. הטון מקצועי ואנושי. רוב הלקוחות חושבים שזה עובד חדש. אם לקוח שואל משהו שהעוזר לא יודע לענות עליו — הוא מסמן את זה לצוות שלכם.",
+    question: 'הלקוחות יידעו שהם מדברים עם עוזר?',
+    answer:
+      'ההודעות יוצאות ממספר ה-WhatsApp Business הממותג של המשרד שלכם עם שם המשרד והלוגו. הטון מקצועי ואנושי. רוב הלקוחות חושבים שזה עובד חדש. אם לקוח שואל משהו שהעוזר לא יודע לענות עליו, הוא מסמן את זה לצוות שלכם.',
   },
   {
-    question: "המערכת עובדת בעברית?",
-    answer: "כן. HeshbonAI בנוי עברית-first. המערכת תומכת גם באנגלית, ערבית, רוסית וצרפתית לבסיסי לקוחות רב-שפתיים.",
+    question: 'האם זה עובד בעברית?',
+    answer:
+      'כן. HeshbonAI בנוי עברית-first. המערכת תומכת גם באנגלית, ערבית, רוסית וצרפתית לבסיסי לקוחות רב-לשוניים.',
   },
   {
-    question: "הלקוחות צריכים פורטל או אפליקציה?",
-    answer: "לא. אפס הורדות. אפס הרשמות. הלקוחות עונים בוואטסאפ — האפליקציה שהם כבר משתמשים בה כל יום. פשוט שולחים תמונה או קובץ.",
+    question: 'הלקוחות צריכים פורטל או אפליקציה?',
+    answer:
+      'לא. אפס הורדות. אפס הרשמות. הלקוחות עונים בוואטסאפ, האפליקציה שהם כבר משתמשים בה כל יום. פשוט שולחים תמונה או קובץ.',
   },
   {
-    question: "אפשר לבדוק הודעות לפני שהן יוצאות?",
-    answer: "כן. אתם שולטים בתבניות ההודעות ובתזמון המעקבים. הצוות שלכם יכול לעיין, לעצור או לדרוס כל שיחה. יש מעקב מלא אחרי כל הודעה שנשלחה.",
+    question: 'האם הצוות יכול לבדוק הודעות לפני שהן יוצאות?',
+    answer:
+      'כן. אתם שולטים בתבניות ההודעות ובתזמון המעקבים. הצוות שלכם יכול לבדוק, לעצור או לדרוס כל שיחה. יש תיעוד מלא של כל הודעה שנשלחה.',
   },
   {
-    question: "כמה זמן לוקח ההטמעה?",
-    answer: "כל משרד מקבל הטמעה מודרכת. אנחנו קובעים שיחת הגדרה, מייבאים את רשימת הלקוחות, מחברים וואטסאפ ומגדירים הכל ביחד. רוב המשרדים עולים לאוויר תוך כמה ימים.",
+    question: 'כמה זמן לוקח ההטמעה?',
+    answer:
+      'כל משרד מקבל הטמעה מודרכת. אנחנו קובעים שיחת הגדרה, מייבאים את רשימת הלקוחות, מחברים WhatsApp ומגדירים הכל ביחד. רוב המשרדים עולים לאוויר תוך כמה ימים.',
   },
   {
-    question: "אפשר לשלוט בתזמון המעקבים?",
-    answer: "כן. אתם קובעים את לוח הזמנים למעקב (מינימום 3 ימים בין הודעות). העוזר לעולם לא שולח לפני 8:00 בבוקר או אחרי 8:00 בערב. הוא מכבד שבת וחגים אוטומטית.",
+    question: 'אפשר לשלוט בתזמון המעקבים?',
+    answer:
+      'כן. אתם קובעים את לוח הזמנים למעקב, עם מינימום 3 ימים בין הודעות. העוזר לא שולח לפני 08:00 או אחרי 20:00, ומכבד שבת וחגים אוטומטית.',
   },
 ];
 ---
 
 <LayoutHe
   title="HeshbonAI — העוזר החכם למשרד רו״ח | אוטומציה לאיסוף מסמכים"
-  description="אוטומציה למעקב אחרי לקוחות ואיסוף מסמכים דרך וואטסאפ. בנוי למשרדי רואי חשבון בישראל. משתלב בכלים שלכם — בלי לשנות כלום."
+  description="אוטומציה למעקב אחרי לקוחות ואיסוף מסמכים דרך וואטסאפ. בנוי למשרדי רואי חשבון בישראל. משתלב בכלים שלכם בלי לשנות את תהליך העבודה."
+  canonical="https://heshbonai.co/he/"
 >
   <NavbarHe />
   <main>
-
-    <!-- Hero -->
-    <section class="relative pt-32 pb-20 bg-navy overflow-hidden">
+    <section class="relative pt-24 pb-16 sm:pt-32 sm:pb-24 bg-navy overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.15] mb-6 text-white">
-            הפסיקו לרדוף.<br />
-            <span class="text-blue">תתחילו לנהל.</span>
-          </h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="text-right">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-6 text-white">
+              העוזר החכם<br />
+              <span class="text-blue">למשרדי רו״ח</span>
+            </h1>
 
-          <p class="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
-            HeshbonAI מתאים לדרך שהמשרד שלכם כבר עובד — וואטסאפ, מייל, אקסל, ותוכנות חשבונאות. בלי לשנות כלום.
-          </p>
+            <p class="text-lg text-muted max-w-lg mr-auto mb-10 leading-relaxed">
+              HeshbonAI משתלב בדרך שבה המשרד שלכם כבר עובד. הוא ממכן מעקבים חוזרים, אוסף מסמכים דרך וואטסאפ, ונותן לצוות שלכם שקיפות במקום אחד.
+            </p>
 
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-            <a href="https://cal.com/heshbonai/intro" target="_blank" rel="noopener noreferrer" class="btn-primary text-base px-8 py-4">
-              קבעו שיחת היכרות
-            </a>
-            <a href="/he/contact" class="btn-secondary text-base px-8 py-4">
-              צרו קשר
-            </a>
+            <div class="flex flex-col sm:flex-row items-start gap-4 mb-10">
+              <a href="/he/contact" class="btn-primary text-base px-8 py-4">
+                התחילו עכשיו
+              </a>
+              <a href="/he/pricing" class="btn-secondary text-base px-8 py-4">
+                ראו מחירים
+              </a>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-start gap-4 text-muted text-sm">
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-blue-soft" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                בנוי למשרדי רו״ח בישראל
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                WhatsApp-native
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-blue-soft" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                עברית-first
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-blue-soft" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                בלי פורטל ללקוח
+              </div>
+            </div>
           </div>
 
-          <div class="flex flex-wrap items-center justify-center gap-4 text-muted text-sm">
-            <div class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-              משרדי רו״ח בישראל
-            </div>
-            <div class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-              וואטסאפ
-            </div>
-            <div class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-              עברית מלאה
-            </div>
-            <div class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-              בלי פורטל ללקוח
+          <div class="relative">
+            <div class="card shadow-2xl shadow-blue/5">
+              <div class="flex items-center justify-between mb-6">
+                <div>
+                  <h3 class="text-white font-semibold text-sm">סקירת לקוחות</h3>
+                  <p class="text-muted text-xs mt-0.5">מרץ 2026</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-1 bg-success/10 text-success text-xs font-medium rounded-md">12 הושלמו</span>
+                  <span class="px-2 py-1 bg-warning/10 text-warning text-xs font-medium rounded-md">5 ממתינים</span>
+                  <span class="px-2 py-1 bg-error/10 text-error text-xs font-medium rounded-md">2 באיחור</span>
+                </div>
+              </div>
+
+              <div class="space-y-3">
+                <div class="flex items-center justify-between py-3 px-4 bg-navy rounded-lg border border-border">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-success/10 flex items-center justify-center"><span class="text-success text-xs font-bold">אכ</span></div>
+                    <div>
+                      <p class="text-white text-sm font-medium">אבי כהן</p>
+                      <p class="text-muted text-xs">3/3 מסמכים התקבלו</p>
+                    </div>
+                  </div>
+                  <span class="px-2 py-0.5 bg-success/10 text-success text-xs rounded font-medium">הושלם</span>
+                </div>
+
+                <div id="hero-dana-row-he" class="flex items-center justify-between py-3 px-4 bg-navy rounded-lg border border-border transition-all duration-500">
+                  <div class="flex items-center gap-3">
+                    <div id="hero-dana-avatar-he" class="w-8 h-8 rounded-full bg-blue/10 flex items-center justify-center transition-colors duration-500"><span id="hero-dana-initials-he" class="text-blue text-xs font-bold transition-colors duration-500">דל</span></div>
+                    <div>
+                      <p class="text-white text-sm font-medium">דנה לוי</p>
+                      <p id="hero-dana-sub-he" class="text-muted text-xs transition-opacity duration-300">2/4 מסמכים, נשלח מעקב</p>
+                    </div>
+                  </div>
+                  <span id="hero-dana-badge-he" class="px-2 py-0.5 bg-blue/10 text-blue text-xs rounded font-medium transition-all duration-500">בתהליך</span>
+                </div>
+
+                <div class="flex items-center justify-between py-3 px-4 bg-navy rounded-lg border border-border">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-warning/10 flex items-center justify-center"><span class="text-warning text-xs font-bold">מש</span></div>
+                    <div>
+                      <p class="text-white text-sm font-medium">משה שפירא</p>
+                      <p class="text-muted text-xs">0/5 מסמכים, אין תגובה</p>
+                    </div>
+                  </div>
+                  <span class="px-2 py-0.5 bg-warning/10 text-warning text-xs rounded font-medium">ממתין</span>
+                </div>
+
+                <div class="flex items-center justify-between py-3 px-4 bg-navy rounded-lg border border-border">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-error/10 flex items-center justify-center"><span class="text-error text-xs font-bold">רמ</span></div>
+                    <div>
+                      <p class="text-white text-sm font-medium">רחל מזרחי</p>
+                      <p class="text-muted text-xs">1/3 מסמכים, דדליין מחר</p>
+                    </div>
+                  </div>
+                  <span class="px-2 py-0.5 bg-error/10 text-error text-xs rounded font-medium">באיחור</span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2 mt-4 px-1">
+                <span id="hero-pulse-he" class="w-2 h-2 rounded-full bg-muted transition-colors duration-500"></span>
+                <p id="hero-timestamp-he" class="text-muted text-xs transition-opacity duration-300">עודכן לפני 5 דקות</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Pain Points -->
-    <section class="py-16 bg-navy-light">
+    <section class="py-20 sm:py-28 bg-navy-light">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <p class="section-label mb-4">הכאב</p>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white">הכאב שכל משרד מכיר</h2>
+          <p class="section-label mb-4">הבעיה</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">מה מאט את המשרד שלכם בכל חודש</h2>
+          <p class="text-muted mt-4 max-w-2xl mx-auto">
+            רוב העבודה שמשאירה את הצוות עד מאוחר היא לא חשבונאות, אלא כל האדמין שמסביב: לרדוף אחרי לקוחות, להזין נתונים מחדש, לענות על אותן שאלות, ולהילחץ לפני דדליינים.
+          </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -162,9 +251,9 @@ const faqs = [
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 class="text-white font-semibold text-lg mb-2">שעות על רדיפה אחרי מסמכים</h3>
+            <h3 class="text-white font-semibold text-lg mb-2">שעות שמתבזבזות על רדיפה אחרי לקוחות</h3>
             <p class="text-muted text-sm leading-relaxed">
-              הצוות שולח תזכורות, בודק מי ענה, שולח שוב. רואי חשבון מקצועיים מבזבזים את הזמן שלהם על מעקב במקום על עבודה מקצועית.
+              הצוות שולח תזכורות, בודק מי ענה, ושולח שוב. רואי חשבון מקצועיים מבזבזים זמן על אדמין במקום על עבודה מחייבת.
             </p>
           </div>
 
@@ -174,259 +263,343 @@ const faqs = [
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
-            <h3 class="text-white font-semibold text-lg mb-2">הזנה ידנית של נתונים ממסמכים</h3>
+            <h3 class="text-white font-semibold text-lg mb-2">הזנת נתונים ידנית ממסמכים</h3>
             <p class="text-muted text-sm leading-relaxed">
-              כל מסמך שמגיע צריך לפתוח, לקרוא, להקליד נתונים ידנית. טעויות בדרך, זמן שנשרף, ותסכול שמצטבר.
+              חשבוניות, קבלות, דפי בנק. הצוות שלכם מקליד נתונים מתוך PDF-ים ותמונות אל טבלאות ותוכנות הנהלת חשבונות, מסמך אחר מסמך.
             </p>
           </div>
 
           <div class="card">
             <div class="w-12 h-12 rounded-xl bg-blue/10 flex items-center justify-center mb-5">
               <svg class="w-6 h-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
             </div>
-            <h3 class="text-white font-semibold text-lg mb-2">אותן שאלות שוב ושוב</h3>
+            <h3 class="text-white font-semibold text-lg mb-2">אותן שאלות, שוב ושוב</h3>
             <p class="text-muted text-sm leading-relaxed">
-              &quot;מתי הדוח מוכן?&quot;, &quot;מה עוד צריך לשלוח?&quot;, &quot;מה המצב שלי?&quot; — הצוות עונה על אותן שאלות עשרות פעמים בחודש.
+              &quot;קיבלתם את החשבונית?&quot; &quot;מתי הדדליין למע״מ?&quot; &quot;איזה מסמכים צריך?&quot; הצוות שלכם עונה על אותן שאלות כל שבוע.
             </p>
           </div>
 
           <div class="card">
-            <div class="w-12 h-12 rounded-xl bg-error/10 flex items-center justify-center mb-5">
-              <svg class="w-6 h-6 text-error" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            <div class="w-12 h-12 rounded-xl bg-warning/10 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6 text-warning" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
             <h3 class="text-white font-semibold text-lg mb-2">דוחות נדחקים לסוף</h3>
             <p class="text-muted text-sm leading-relaxed">
-              הדדליין מתקרב, אבל חצי מהלקוחות עדיין לא שלחו את מה שצריך. הדוח נדחה, הלחץ עולה, והלקוח לא מבין למה.
+              בניית סיכומים ודוחות סטטוס חשובה אבל אף פעם לא דחופה, עד שדדליין מגיע. ואז כולם מנסים להבין במהירות איפה הדברים עומדים.
             </p>
           </div>
 
-          <div class="card lg:col-span-2">
-            <div class="w-12 h-12 rounded-xl bg-warning/10 flex items-center justify-center mb-5">
-              <svg class="w-6 h-6 text-warning" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <div class="card md:col-span-2 lg:col-span-2">
+            <div class="w-12 h-12 rounded-xl bg-error/10 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6 text-error" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7" />
               </svg>
             </div>
-            <h3 class="text-white font-semibold text-lg mb-2">עבודה מפוזרת בין וואטסאפ, מייל, אקסל וזיכרון</h3>
+            <h3 class="text-white font-semibold text-lg mb-2">עבודה שמפוזרת בין וואטסאפ, מייל, אקסל וזיכרון</h3>
             <p class="text-muted text-sm leading-relaxed">
-              אין מקום אחד לראות מי שלח מה ומה עדיין חסר. מידע חי בצ׳אטים, באימייל, בטבלאות, ובראש של מישהו שהיום לא בעבודה.
+              אין מקום אחד לראות מי שלח מה ומה עדיין חסר. דברים חשובים חיים בצ׳אטים, בתיבות מייל, בגיליונות, ובראש של מישהו. כשהוא לא נמצא, אף אחד לא יודע את הסטטוס.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="py-16 bg-navy">
+    <section id="how-it-works-he" class="py-20 sm:py-28 bg-navy">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <p class="section-label mb-4">איך זה עובד</p>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white">איך HeshbonAI עובד</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">לא צריך לשנות איך המשרד שלכם עובד</h2>
+          <p class="text-muted mt-4 max-w-2xl mx-auto">
+            HeshbonAI משתלב בתהליך הקיים. הלקוחות שלכם ממשיכים להשתמש בוואטסאפ. הצוות שלכם מקבל דשבורד. המעקב קורה אוטומטית.
+          </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          <!-- Step 1 -->
-          <div class="text-center">
-            <div class="w-12 h-12 rounded-full bg-blue/10 border border-blue/20 flex items-center justify-center mx-auto mb-4">
-              <span class="text-blue font-bold text-lg">1</span>
-            </div>
-            <h3 class="text-white font-semibold text-base mb-2">הגדרה</h3>
-            <p class="text-muted text-sm leading-relaxed">מגדירים מה כל לקוח צריך — חשבוניות, דפי בנק, תלושים, מה שצריך.</p>
+        <div class="relative max-w-4xl mx-auto">
+          <div class="hidden md:block absolute top-7 left-[10%] right-[10%] h-px bg-border">
+            <div id="hiw-line-he" class="h-full bg-blue origin-right" style="transform: scaleX(0); transition: transform 1.5s ease-out;"></div>
           </div>
 
-          <!-- Step 2 -->
-          <div class="text-center">
-            <div class="w-12 h-12 rounded-full bg-blue/10 border border-blue/20 flex items-center justify-center mx-auto mb-4">
-              <span class="text-blue font-bold text-lg">2</span>
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4">
+            <div class="hiw-step-he text-center opacity-0 translate-y-4" style="transition: opacity 0.5s ease-out, transform 0.5s ease-out;">
+              <div class="w-14 h-14 rounded-2xl bg-blue/10 flex items-center justify-center mx-auto mb-4 relative z-10">
+                <span class="text-blue font-display font-bold text-xl">1</span>
+              </div>
+              <h3 class="text-white font-semibold text-sm mb-2">מגדירים מה צריך</h3>
+              <p class="text-muted text-xs leading-relaxed">
+                מגדירים את המסמכים הנדרשים לכל לקוח או קבוצה.
+              </p>
             </div>
-            <h3 class="text-white font-semibold text-base mb-2">מעקב אוטומטי</h3>
-            <p class="text-muted text-sm leading-relaxed">HeshbonAI שולח תזכורות בוואטסאפ — בעברית, בשפה של הלקוח, עם רשימה מדויקת.</p>
-          </div>
 
-          <!-- Step 3 -->
-          <div class="text-center">
-            <div class="w-12 h-12 rounded-full bg-blue/10 border border-blue/20 flex items-center justify-center mx-auto mb-4">
-              <span class="text-blue font-bold text-lg">3</span>
+            <div class="hiw-step-he text-center opacity-0 translate-y-4" style="transition: opacity 0.5s ease-out 0.2s, transform 0.5s ease-out 0.2s;">
+              <div class="w-14 h-14 rounded-2xl bg-blue/10 flex items-center justify-center mx-auto mb-4 relative z-10">
+                <span class="text-blue font-display font-bold text-xl">2</span>
+              </div>
+              <h3 class="text-white font-semibold text-sm mb-2">מעקב אוטומטי</h3>
+              <p class="text-muted text-xs leading-relaxed">
+                העוזר שולח הודעות ללקוחות בוואטסאפ ומבקש את מה שחסר.
+              </p>
             </div>
-            <h3 class="text-white font-semibold text-base mb-2">הלקוח שולח</h3>
-            <p class="text-muted text-sm leading-relaxed">תמונה או קובץ ישירות בוואטסאפ. בלי פורטלים, בלי סיסמאות, בלי לינקים.</p>
-          </div>
 
-          <!-- Step 4 -->
-          <div class="text-center">
-            <div class="w-12 h-12 rounded-full bg-blue/10 border border-blue/20 flex items-center justify-center mx-auto mb-4">
-              <span class="text-blue font-bold text-lg">4</span>
+            <div class="hiw-step-he text-center opacity-0 translate-y-4" style="transition: opacity 0.5s ease-out 0.4s, transform 0.5s ease-out 0.4s;">
+              <div class="w-14 h-14 rounded-2xl bg-whatsapp/10 flex items-center justify-center mx-auto mb-4 relative z-10">
+                <svg class="w-6 h-6 text-whatsapp" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+              </div>
+              <h3 class="text-white font-semibold text-sm mb-2">הלקוח שולח מסמכים</h3>
+              <p class="text-muted text-xs leading-relaxed">
+                הלקוח עונה בוואטסאפ עם תמונה או קובץ. בלי פורטל ובלי אפליקציה.
+              </p>
             </div>
-            <h3 class="text-white font-semibold text-base mb-2">אישור ומעקב</h3>
-            <p class="text-muted text-sm leading-relaxed">המערכת מאשרת קבלה, מסווגת אוטומטית, ומעדכנת את הסטטוס.</p>
-          </div>
 
-          <!-- Step 5 -->
-          <div class="text-center">
-            <div class="w-12 h-12 rounded-full bg-success/10 border border-success/20 flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
+            <div class="hiw-step-he text-center opacity-0 translate-y-4" style="transition: opacity 0.5s ease-out 0.6s, transform 0.5s ease-out 0.6s;">
+              <div class="w-14 h-14 rounded-2xl bg-success/10 flex items-center justify-center mx-auto mb-4 relative z-10">
+                <svg class="w-6 h-6 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              </div>
+              <h3 class="text-white font-semibold text-sm mb-2">מאושר ומנוהל</h3>
+              <p class="text-muted text-xs leading-relaxed">
+                המערכת מאשרת קבלה, מעדכנת סטטוס, ומתריעה לצוות שלכם.
+              </p>
             </div>
-            <h3 class="text-white font-semibold text-base mb-2">סיכום יומי</h3>
-            <p class="text-muted text-sm leading-relaxed">הצוות מקבל תמונת מצב — מי השלים, מי חסר, מי דורש תשומת לב.</p>
+
+            <div class="hiw-step-he text-center opacity-0 translate-y-4" style="transition: opacity 0.5s ease-out 0.8s, transform 0.5s ease-out 0.8s;">
+              <div class="w-14 h-14 rounded-2xl bg-blue/10 flex items-center justify-center mx-auto mb-4 relative z-10">
+                <svg class="w-6 h-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+              </div>
+              <h3 class="text-white font-semibold text-sm mb-2">סיכום יומי</h3>
+              <p class="text-muted text-xs leading-relaxed">
+                הצוות שלכם מקבל דשבורד ברור ודוח סטטוס יומי.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="mt-12 max-w-2xl mx-auto text-center">
-          <blockquote class="text-muted text-base italic border-r-2 border-blue pr-4">
-            לא צריך לשנות את איך שהמשרד והלקוחות שלכם כבר עובדים. HeshbonAI משתלב בתהליך הקיים.
-          </blockquote>
+        <div class="mt-16 text-center max-w-3xl mx-auto">
+          <p class="text-muted text-base leading-relaxed border-r-2 border-blue pr-6 text-right">
+            אתם לא צריכים לשנות איך שהמשרד והלקוחות שלכם כבר עובדים. HeshbonAI משתלב בתהליך הקיים, ממכן את המעקב החוזר, ונותן לכם שקיפות במקום אחד.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Integrations -->
-    <section class="py-16 bg-navy">
+    <section id="integrations-he" class="py-20 sm:py-28 bg-navy">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <p class="section-label mb-4">אינטגרציות</p>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white">עובד עם הכלים שכבר יש לכם</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">עובד עם הכלים שהמשרד שלכם כבר משתמש בהם</h2>
+          <p class="text-muted mt-4 max-w-2xl mx-auto">
+            HeshbonAI משתלב בתהליך הקיים שלכם. בלי מיגרציה, בלי פורטלים חדשים, ובלי הפרעה לעבודה. רואי החשבון שלכם יכולים גם לשלוח הודעות לעוזר בוואטסאפ כדי לבדוק סטטוס, לבקש עדכונים, או לנהל משימות תוך כדי תנועה.
+          </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="card">
             <div class="w-10 h-10 rounded-lg bg-whatsapp/10 flex items-center justify-center mb-4">
               <svg class="w-5 h-5 text-whatsapp" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
             </div>
             <h3 class="text-white font-semibold mb-2">WhatsApp</h3>
-            <p class="text-muted text-sm">שליחת תזכורות, קבלת מסמכים ומענה אוטומטי ללקוחות — הכל דרך וואטסאפ.</p>
+            <p class="text-muted text-sm">לקוחות עונים באפליקציה שהם כבר משתמשים בה. גם רואי החשבון שלכם יכולים לשלוח הודעות לעוזר כדי לבדוק סטטוס או להפעיל מעקבים.</p>
           </div>
 
           <div class="card">
             <div class="w-10 h-10 rounded-lg bg-blue/10 flex items-center justify-center mb-4">
               <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             </div>
-            <h3 class="text-white font-semibold mb-2">Email</h3>
-            <p class="text-muted text-sm">קליטת מסמכים שמגיעים במייל ושילוב אוטומטי בתיקיית הלקוח.</p>
+            <h3 class="text-white font-semibold mb-2">תיבת מייל</h3>
+            <p class="text-muted text-sm">ניטור מסמכים שמגיעים במייל והתאמה אוטומטית שלהם לבקשות הלקוח.</p>
           </div>
 
           <div class="card">
             <div class="w-10 h-10 rounded-lg bg-blue/10 flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-blue" fill="currentColor" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
             </div>
             <h3 class="text-white font-semibold mb-2">Google Workspace</h3>
-            <p class="text-muted text-sm">סנכרון עם Gmail, Google Drive ולוח שנה — הכל מחובר.</p>
+            <p class="text-muted text-sm">סנכרון עם Google Drive, Sheets ו-Docs. ארגון קבצים, הפקת ניתוחים, ומעקב מהיר יותר עם כלי גוגל שכבר יש לכם.</p>
           </div>
 
           <div class="card">
-            <div class="w-10 h-10 rounded-lg bg-success/10 flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zM9.5 17L7 13.5 9.5 10h1.7L9 13.5 11.2 17H9.5zm5 0h-1.7L15 13.5 12.8 10h1.7L17 13.5 14.5 17zM13 9V3.5L18.5 9H13z"/></svg>
+            <div class="w-10 h-10 rounded-lg bg-blue/10 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h4a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" /></svg>
             </div>
-            <h3 class="text-white font-semibold mb-2">Excel / CSV</h3>
-            <p class="text-muted text-sm">ייבוא וייצוא נתונים בפורמטים שאתם כבר עובדים איתם.</p>
+            <h3 class="text-white font-semibold mb-2">ייצוא Excel / CSV</h3>
+            <p class="text-muted text-sm">ייצוא נתוני לקוחות, סטטוס מסמכים ודוחות ל-Excel או CSV בכל רגע לניתוח פנימי שלכם.</p>
           </div>
 
           <div class="card">
             <div class="w-10 h-10 rounded-lg bg-blue/10 flex items-center justify-center mb-4">
               <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3v-6m-3 6v-1m6-9a2 2 0 012 2v10a2 2 0 01-2 2H9a2 2 0 01-2-2V9a2 2 0 012-2m0-2h6a2 2 0 012 2v0H7v0a2 2 0 012-2z" /></svg>
             </div>
-            <h3 class="text-white font-semibold mb-2">תוכנות חשבונאות</h3>
-            <p class="text-muted text-sm">חיבור לחשבשבת, Priority, רווחית ותוכנות נוספות.</p>
+            <h3 class="text-white font-semibold mb-2">תוכנות הנהלת חשבונות</h3>
+            <p class="text-muted text-sm">חיבור לחשבשבת, Priority, רווחית, Green Invoice, ועוד.</p>
           </div>
 
           <div class="card">
             <div class="w-10 h-10 rounded-lg bg-blue/10 flex items-center justify-center mb-4">
               <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
             </div>
-            <h3 class="text-white font-semibold mb-2">API</h3>
-            <p class="text-muted text-sm">ממשק פתוח לחיבור כל מערכת שתרצו — גמישות מלאה.</p>
+            <h3 class="text-white font-semibold mb-2">גישה ל-API</h3>
+            <p class="text-muted text-sm">API מלא לאינטגרציות מותאמות עם המערכות הקיימות שלכם.</p>
           </div>
         </div>
 
-        <!-- Logo strip -->
-        <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-          <div class="flex items-center gap-2 text-muted hover:text-whatsapp transition-colors">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-            <span class="text-sm font-medium">WhatsApp</span>
-          </div>
-          <div class="flex items-center gap-2 text-muted hover:text-blue transition-colors">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-            <span class="text-sm font-medium">Google</span>
-          </div>
-          <div class="flex items-center gap-2 text-muted hover:text-success transition-colors">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zM9.5 17L7 13.5 9.5 10h1.7L9 13.5 11.2 17H9.5zm5 0h-1.7L15 13.5 12.8 10h1.7L17 13.5 14.5 17zM13 9V3.5L18.5 9H13z"/></svg>
-            <span class="text-sm font-medium">Excel</span>
-          </div>
-          <div class="flex items-center gap-2 text-muted hover:text-blue transition-colors">
-            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3v-6m-3 6v-1m6-9a2 2 0 012 2v10a2 2 0 01-2 2H9a2 2 0 01-2-2V9a2 2 0 012-2m0-2h6a2 2 0 012 2v0H7v0a2 2 0 012-2z" /></svg>
-            <span class="text-sm font-medium">חשבשבת</span>
-          </div>
-          <div class="flex items-center gap-2 text-muted hover:text-blue transition-colors">
-            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-            <span class="text-sm font-medium">Priority</span>
-          </div>
-          <div class="flex items-center gap-2 text-muted hover:text-blue transition-colors">
-            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-            <span class="text-sm font-medium">רווחית</span>
-          </div>
-          <div class="flex items-center gap-2 text-muted hover:text-success transition-colors">
-            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-            <span class="text-sm font-medium">Green Invoice</span>
+        <div class="mt-12 pt-10 border-t border-border">
+          <p class="text-muted/60 text-xs text-center uppercase tracking-wider mb-6">מתחבר עם</p>
+          <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-60">
+            <div class="flex items-center gap-2 text-muted hover:text-whatsapp transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+              <span class="text-sm font-medium">WhatsApp</span>
+            </div>
+            <div class="flex items-center gap-2 text-muted hover:text-blue transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              <span class="text-sm font-medium">Google</span>
+            </div>
+            <div class="flex items-center gap-2 text-muted hover:text-success transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zM9.5 17L7 13.5 9.5 10h1.7L9 13.5 11.2 17H9.5zm5 0h-1.7L15 13.5 12.8 10h1.7L17 13.5 14.5 17zM13 9V3.5L18.5 9H13z"/></svg>
+              <span class="text-sm font-medium">Excel</span>
+            </div>
+            <div class="flex items-center gap-2 text-muted hover:text-blue transition-colors">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3v-6m-3 6v-1m6-9a2 2 0 012 2v10a2 2 0 01-2 2H9a2 2 0 01-2-2V9a2 2 0 012-2m0-2h6a2 2 0 012 2v0H7v0a2 2 0 012-2z" /></svg>
+              <span class="text-sm font-medium">חשבשבת</span>
+            </div>
+            <div class="flex items-center gap-2 text-muted hover:text-blue transition-colors">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+              <span class="text-sm font-medium">Priority</span>
+            </div>
+            <div class="flex items-center gap-2 text-muted hover:text-blue transition-colors">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              <span class="text-sm font-medium">רווחית</span>
+            </div>
+            <div class="flex items-center gap-2 text-muted hover:text-success transition-colors">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              <span class="text-sm font-medium">Green Invoice</span>
+            </div>
           </div>
         </div>
+
+        <p class="text-muted text-sm text-center mt-8">
+          אינטגרציות נוספות בדרך. יש לכם בקשה ספציפית? <a href="/he/contact" class="text-blue hover:text-blue/80 underline underline-offset-2">ספרו לנו</a>.
+        </p>
       </div>
     </section>
 
-    <!-- WhatsApp Demo -->
-    <section class="py-16 bg-navy-light">
+    <section class="py-20 sm:py-28 bg-navy-light">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <p class="section-label mb-4">חוויית הלקוח</p>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white">ככה זה נראה מצד הלקוח</h2>
+          <p class="section-label mb-4">חוויית לקוח</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">חוויית לקוח טובה יותר, בלי עוד עבודה לצוות שלכם</h2>
         </div>
 
-        <div id="wa-demo-he" class="max-w-md mx-auto">
-          <!-- WhatsApp Thread -->
+        <div id="wa-demo-he" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div class="card p-0 overflow-hidden">
-            <div class="bg-[#075E54] px-4 py-3 flex items-center gap-3">
-              <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white text-xs font-bold">LC</div>
+            <div class="bg-[#075E54] px-4 py-3 flex items-center gap-3" dir="ltr">
+              <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white text-xs font-bold">לש</div>
               <div>
-                <p class="text-white text-sm font-semibold">לוי ושות׳ רו״ח</p>
+                <p class="text-white text-sm font-semibold">לוי ושות׳</p>
                 <p class="text-white/60 text-xs">מחובר</p>
               </div>
             </div>
-            <div class="bg-[#0B141A] px-3 py-4 space-y-2">
-              <!-- Assistant message -->
+            <div class="bg-[#0B141A] px-3 py-4 space-y-2" dir="rtl">
               <div class="wa-msg-he flex justify-start opacity-0" style="transform: translateY(8px); transition: opacity 0.4s ease-out, transform 0.4s ease-out;">
                 <div class="max-w-[85%] rounded-lg px-3 py-2 bg-[#1F2C34] text-[#E9EDEF]" style="border-top-right-radius: 2px;">
                   <p class="text-[#00A884] text-xs font-medium mb-1">עוזר המשרד</p>
-                  <p class="text-sm leading-relaxed">שלום אבי, אנחנו צריכים 3 מסמכים לדוח השנתי. אפשר לשלוח פה?</p>
+                  <p class="text-sm leading-relaxed">היי אבי, אנחנו צריכים 3 מסמכים לדוח השנתי:<br />1. דף בנק דצמבר<br />2. קבלות הוצאות רכב<br />3. טופס 106 חתום</p>
                   <div class="flex justify-start mt-1"><span class="text-[10px] text-[#8696A0]">10:02</span></div>
                 </div>
               </div>
-              <!-- Client reply -->
               <div class="wa-msg-he flex justify-end opacity-0" style="transform: translateY(8px); transition: opacity 0.4s ease-out 0.6s, transform 0.4s ease-out 0.6s;">
                 <div class="max-w-[85%] rounded-lg px-3 py-2 bg-[#005C4B] text-[#E9EDEF]" style="border-top-left-radius: 2px;">
-                  <p class="text-sm">בטח! רגע</p>
-                  <div class="flex justify-start mt-1"><span class="text-[10px] text-[#8696A0]">11:45</span></div>
-                </div>
-              </div>
-              <!-- Client sends file -->
-              <div class="wa-msg-he flex justify-end opacity-0" style="transform: translateY(8px); transition: opacity 0.4s ease-out 1.0s, transform 0.4s ease-out 1.0s;">
-                <div class="max-w-[85%] rounded-lg px-3 py-2 bg-[#005C4B] text-[#E9EDEF]" style="border-top-left-radius: 2px;">
-                  <div class="flex items-center gap-2 bg-[#024B3F] rounded px-2 py-1">
+                  <p class="text-sm">הנה דף הבנק</p>
+                  <div class="flex items-center gap-2 mt-1 bg-[#024B3F] rounded px-2 py-1" dir="ltr">
                     <svg class="w-4 h-4 text-[#8696A0]" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/></svg>
-                    <span class="text-xs text-[#8696A0]">bank_statement_2025.pdf</span>
+                    <span class="text-xs text-[#8696A0]">bank-dec-2025.pdf</span>
                   </div>
                   <div class="flex justify-start mt-1"><span class="text-[10px] text-[#8696A0]">11:47</span></div>
                 </div>
               </div>
-              <!-- Assistant confirms -->
-              <div class="wa-msg-he flex justify-start opacity-0" style="transform: translateY(8px); transition: opacity 0.4s ease-out 1.6s, transform 0.4s ease-out 1.6s;">
+              <div class="wa-msg-he flex justify-start opacity-0" style="transform: translateY(8px); transition: opacity 0.4s ease-out 1.2s, transform 0.4s ease-out 1.2s;">
                 <div class="max-w-[85%] rounded-lg px-3 py-2 bg-[#1F2C34] text-[#E9EDEF]" style="border-top-right-radius: 2px;">
                   <p class="text-[#00A884] text-xs font-medium mb-1">עוזר המשרד</p>
-                  <p class="text-sm leading-relaxed">קיבלנו, תודה! נשארו עוד 2.</p>
+                  <p class="text-sm leading-relaxed">קיבלנו, דף הבנק התקבל. עדיין חסרים:<br />- קבלות הוצאות רכב<br />- טופס 106 חתום</p>
                   <div class="flex justify-start mt-1"><span class="text-[10px] text-[#8696A0]">11:47</span></div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="text-white font-semibold text-sm mb-4 flex items-center gap-2">
+              <svg class="w-4 h-4 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+              סטטוס שזוהה ב-AI
+            </h3>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span id="wa-dot-1-he" class="w-2 h-2 rounded-full bg-warning transition-colors duration-500"></span>
+                  <span class="text-sm text-offwhite">דף בנק דצמבר</span>
+                </div>
+                <span id="wa-status-1-he" class="text-xs text-warning font-medium transition-all duration-500">ממתין</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-warning"></span>
+                  <span class="text-sm text-offwhite">קבלות הוצאות רכב</span>
+                </div>
+                <span class="text-xs text-warning font-medium">ממתין</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-warning"></span>
+                  <span class="text-sm text-offwhite">טופס 106 חתום</span>
+                </div>
+                <span class="text-xs text-warning font-medium">ממתין</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-border">
+              <p class="text-muted text-xs">המעקב הבא מתוזמן ל:</p>
+              <p class="text-white text-sm font-medium mt-1">10 במרץ, 10:00</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="text-white font-semibold text-sm mb-4 flex items-center gap-2">
+              <svg class="w-4 h-4 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+              הדשבורד עודכן
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between text-sm mb-1.5">
+                  <span class="text-offwhite">אבי כהן</span>
+                  <span id="wa-dash-count-he" class="text-warning font-mono text-xs transition-colors duration-500">0/3</span>
+                </div>
+                <div class="w-full bg-navy rounded-full h-1.5">
+                  <div id="wa-dash-bar-he" class="bg-warning h-1.5 rounded-full transition-all duration-700 ease-out" style="width: 3%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5">
+                  <span class="text-offwhite">דנה לוי</span>
+                  <span class="text-success font-mono text-xs">4/4</span>
+                </div>
+                <div class="w-full bg-navy rounded-full h-1.5">
+                  <div class="bg-success h-1.5 rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5">
+                  <span class="text-offwhite">משה שפירא</span>
+                  <span class="text-warning font-mono text-xs">0/5</span>
+                </div>
+                <div class="w-full bg-navy rounded-full h-1.5">
+                  <div class="bg-warning h-1.5 rounded-full" style="width: 3%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-border">
+              <div class="flex items-center gap-2">
+                <span id="wa-dash-pulse-he" class="w-2 h-2 rounded-full bg-muted transition-colors duration-500"></span>
+                <p id="wa-dash-time-he" class="text-muted text-xs transition-opacity duration-300">ממתין לעדכונים...</p>
               </div>
             </div>
           </div>
@@ -434,33 +607,13 @@ const faqs = [
       </div>
     </section>
 
-    <script>
-      const waDemoHe = document.getElementById('wa-demo-he');
-      if (waDemoHe) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              observer.disconnect();
-              waDemoHe.querySelectorAll('.wa-msg-he').forEach((msg) => {
-                const el = msg as HTMLElement;
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-              });
-            }
-          });
-        }, { threshold: 0.2 });
-        observer.observe(waDemoHe);
-      }
-    </script>
-
-    <!-- Features / Product -->
-    <section class="py-16 bg-navy">
+    <section id="product-he" class="py-20 sm:py-28 bg-navy">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <p class="section-label mb-4">המוצר</p>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white">מקום אחד לראות מה הגיע, מה חסר ומה דורש תשומת לב</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">מקום אחד לראות מה הגיע, מה חסר, ומה דורש תשומת לב</h2>
           <p class="text-muted mt-4 max-w-2xl mx-auto">
-            תפסיקו לסמוך על צ׳אטים, טבלאות וזיכרון. HeshbonAI נותן למשרד שלכם תמונה תפעולית ברורה של איסוף המסמכים.
+            תפסיקו להסתמך על צ׳אטים, טבלאות וזיכרון. HeshbonAI נותן למשרד שלכם תמונה תפעולית ברורה של איסוף המסמכים.
           </p>
         </div>
 
@@ -470,7 +623,7 @@ const faqs = [
               <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
             </div>
             <h3 class="text-white font-semibold mb-2">תור לקוחות</h3>
-            <p class="text-muted text-sm">למי חסר מה, מי צריך תזכורת, מי תקוע. כל הלקוחות בתצוגה ממוינת לפי עדיפות.</p>
+            <p class="text-muted text-sm">למי חסר מה, מי צריך תזכורת, ומי תקוע. כל הלקוחות במקום אחד לפי סדר עדיפות.</p>
           </div>
 
           <div class="card">
@@ -478,7 +631,7 @@ const faqs = [
               <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" /></svg>
             </div>
             <h3 class="text-white font-semibold mb-2">תיבת מסמכים</h3>
-            <p class="text-muted text-sm">קבצים שהתקבלו, העלאות מסווגות, פעילות אחרונה. ה-AI קורא ומסווג מסמכים אוטומטית.</p>
+            <p class="text-muted text-sm">קבצים שהתקבלו, העלאות מסווגות ופעילות אחרונה. AI קורא ומסווג מסמכים אוטומטית.</p>
           </div>
 
           <div class="card">
@@ -486,125 +639,81 @@ const faqs = [
               <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
             </div>
             <h3 class="text-white font-semibold mb-2">מרכז פעולה</h3>
-            <p class="text-muted text-sm">דדליינים דחופים, לקוחות שלא מגיבים, מקרים שדורשים טיפול אנושי. דעו מה דורש תשומת לב עכשיו.</p>
+            <p class="text-muted text-sm">דדליינים דחופים, לקוחות עם אחוז תגובה נמוך, ומקרים שדורשים בדיקה אנושית. תדעו מה צריך תשומת לב עכשיו.</p>
           </div>
 
           <div class="card">
             <div class="w-10 h-10 rounded-lg bg-whatsapp/10 flex items-center justify-center mb-4">
               <svg class="w-5 h-5 text-whatsapp" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
             </div>
-            <h3 class="text-white font-semibold mb-2">וואטסאפ-native</h3>
-            <p class="text-muted text-sm">לקוחות עונים באפליקציה שהם כבר משתמשים בה. בלי פורטלים, בלי הורדות, בלי חשבונות חדשים.</p>
+            <h3 class="text-white font-semibold mb-2">WhatsApp-native</h3>
+            <p class="text-muted text-sm">לקוחות עונים באפליקציה שהם כבר משתמשים בה. בלי פורטלים, בלי הורדות, ובלי חשבונות חדשים.</p>
           </div>
 
           <div class="card">
             <div class="w-10 h-10 rounded-lg bg-blue/10 flex items-center justify-center mb-4">
               <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
             </div>
-            <h3 class="text-white font-semibold mb-2">זיהוי דדליינים</h3>
-            <p class="text-muted text-sm">הסלמת דחיפות אוטומטית ככל שהדדליין מתקרב. לעולם לא תפספסו מועד הגשה בגלל מסמך חסר.</p>
+            <h3 class="text-white font-semibold mb-2">אינטליגנציית דדליינים</h3>
+            <p class="text-muted text-sm">הסלמת דחיפות אוטומטית ככל שהדדליין מתקרב. לא תפספסו מועד הגשה בגלל מסמך חסר.</p>
           </div>
 
           <div class="card">
             <div class="w-10 h-10 rounded-lg bg-blue/10 flex items-center justify-center mb-4">
               <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
             </div>
-            <h3 class="text-white font-semibold mb-2">אבטחה ובקרה</h3>
-            <p class="text-muted text-sm">הצפנה מקצה לקצה, מעקב ביקורת מלא, תקשורת ממותגת. הצוות שלכם בודק הודעות לפני שהן יוצאות.</p>
+            <h3 class="text-white font-semibold mb-2">אבטחה ושליטה</h3>
+            <p class="text-muted text-sm">הצפנה מקצה לקצה, מעקב ביקורת, ותקשורת ממותגת בשם המשרד. הצוות שלכם בודק הודעות לפני שהן יוצאות.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Outcomes / ROI -->
-    <section class="py-16 bg-navy-light">
+    <section class="py-16 sm:py-20 bg-navy-light">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <p class="section-label mb-4">תוצאות</p>
           <h2 class="text-3xl sm:text-4xl font-bold text-white">מה משתנה כשהמעקב הופך לאוטומטי</h2>
           <p class="text-muted mt-4 max-w-2xl mx-auto">
-            פחות רדיפה, פחות דדליינים שנפספסים, יותר זמן לעבודה שהלקוחות שלכם באמת משלמים עליה.
+            פחות רדיפה, פחות דדליינים שמתפספסים, ויותר זמן לעבודה שהלקוחות באמת משלמים עליה.
           </p>
         </div>
 
-        <div id="roi-grid-he" class="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div id="roi-grid-he" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           <div class="card text-center">
-            <div class="text-4xl sm:text-5xl font-extrabold text-blue mb-2" data-count-to="70" data-suffix="%">0%</div>
-            <p class="text-white font-semibold mb-1">פחות רדיפה</p>
-            <p class="text-muted text-sm">תזכורות אוטומטיות מחליפות מעקב ידני</p>
+            <div class="text-3xl font-bold text-blue font-display mb-2" data-count-to="70" data-suffix="%">0%</div>
+            <p class="text-offwhite text-sm font-medium mb-1">פחות זמן על רדיפה אחרי לקוחות</p>
+            <p class="text-muted text-xs">תזכורות אוטומטיות מחליפות שיחות והודעות ידניות</p>
           </div>
 
           <div class="card text-center">
-            <div class="text-4xl sm:text-5xl font-extrabold text-blue mb-2" data-count-to="82" data-suffix="%">0%</div>
-            <p class="text-white font-semibold mb-1">תגובה</p>
-            <p class="text-muted text-sm">לקוחות עונים בוואטסאפ — כי שם הם נמצאים</p>
+            <div class="text-3xl font-bold text-blue font-display mb-2" data-count-to="82" data-suffix="%">0%</div>
+            <p class="text-offwhite text-sm font-medium mb-1">אחוז תגובת לקוחות</p>
+            <p class="text-muted text-xs">וואטסאפ מול 23% במייל, כי הלקוחות עונים במקום שנוח להם</p>
           </div>
 
           <div class="card text-center">
-            <div class="text-4xl sm:text-5xl font-extrabold text-blue mb-2" data-count-to="94" data-suffix="%">0%</div>
-            <p class="text-white font-semibold mb-1">מסמכים בזמן</p>
-            <p class="text-muted text-sm">תזכורות חכמות שמגיעות בזמן הנכון</p>
+            <div class="text-3xl font-bold text-blue font-display mb-2" data-count-to="94" data-suffix="%">0%</div>
+            <p class="text-offwhite text-sm font-medium mb-1">איסוף מסמכים בזמן</p>
+            <p class="text-muted text-xs">המסמכים מגיעים לפני הדדליין, לא בלילה שלפני ההגשה</p>
           </div>
 
           <div class="card text-center">
-            <div class="text-4xl sm:text-5xl font-extrabold text-success mb-2" data-count-text="10+ שעות">—</div>
-            <p class="text-white font-semibold mb-1">נחסכות בשבוע</p>
-            <p class="text-muted text-sm">לכל עובד — זמן שחוזר לעבודה אמיתית</p>
+            <div class="text-3xl font-bold text-success font-display mb-2" data-count-text="10+ שעות">—</div>
+            <p class="text-offwhite text-sm font-medium mb-1">נחסכות בכל שבוע</p>
+            <p class="text-muted text-xs">זמן שהצוות שלכם מקבל בחזרה לעבודה חשבונאית אמיתית</p>
           </div>
         </div>
       </div>
     </section>
 
-    <script>
-      function animateCountUpHe(el: HTMLElement, target: number, suffix: string, duration: number) {
-        const start = performance.now();
-        function tick(now: number) {
-          const elapsed = now - start;
-          const progress = Math.min(elapsed / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          const current = Math.round(eased * target);
-          el.textContent = current + suffix;
-          if (progress < 1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-      }
-
-      const roiGridHe = document.getElementById('roi-grid-he');
-      if (roiGridHe) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              observer.disconnect();
-              roiGridHe.querySelectorAll<HTMLElement>('[data-count-to]').forEach((el, i) => {
-                const target = parseInt(el.dataset.countTo || '0', 10);
-                const suffix = el.dataset.suffix || '';
-                setTimeout(() => animateCountUpHe(el, target, suffix, 1200), i * 150);
-              });
-              roiGridHe.querySelectorAll<HTMLElement>('[data-count-text]').forEach((el) => {
-                setTimeout(() => {
-                  el.style.transition = 'opacity 0.3s';
-                  el.style.opacity = '0';
-                  setTimeout(() => {
-                    el.textContent = el.dataset.countText || '';
-                    el.style.opacity = '1';
-                  }, 200);
-                }, 3 * 150 + 400);
-              });
-            }
-          });
-        }, { threshold: 0.3 });
-        observer.observe(roiGridHe);
-      }
-    </script>
-
-    <!-- Onboarding -->
-    <section id="onboarding-he" class="py-16 bg-navy-light">
+    <section id="onboarding-he" class="py-16 sm:py-20 bg-navy-light">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <p class="section-label mb-4">תחילת עבודה</p>
           <h2 class="text-3xl sm:text-4xl font-bold text-white">הטמעה שמכינה אתכם להצלחה</h2>
           <p class="text-muted mt-4 max-w-2xl mx-auto">
-            אנחנו מגדירים את HeshbonAI ביחד איתכם — לא רק בשבילכם. כל משרד מקבל הטמעה מודרכת.
+            אנחנו מגדירים את HeshbonAI איתכם, לא רק בשבילכם. כל משרד מקבל הטמעה מודרכת.
           </p>
         </div>
 
@@ -613,12 +722,13 @@ const faqs = [
             <div class="onboarding-step-he flex gap-6 opacity-0 translate-y-4" style={`transition: opacity 0.5s ease-out ${i * 0.2}s, transform 0.5s ease-out ${i * 0.2}s;`}>
               <div class="flex flex-col items-center">
                 <div class="w-10 h-10 rounded-full bg-blue/10 border-2 border-blue flex items-center justify-center flex-shrink-0 relative z-10">
-                  <span class="text-blue font-bold text-sm">{i + 1}</span>
+                  <span class="text-blue font-display font-bold text-sm">{i + 1}</span>
                 </div>
                 {i < steps.length - 1 && (
                   <div class="w-px flex-1 bg-border mt-0"></div>
                 )}
               </div>
+
               <div class={`pb-10 ${i === steps.length - 1 ? 'pb-0' : ''}`}>
                 <h3 class="text-white font-semibold text-lg mb-1">{step.title}</h3>
                 <p class="text-muted text-sm leading-relaxed">{step.description}</p>
@@ -632,37 +742,18 @@ const faqs = [
             קבעו שיחת היכרות
           </a>
           <p class="text-muted text-sm mt-4">
-            או שלחו לנו מייל: <a href="mailto:marko@heshbonai.co" class="text-blue hover:underline">marko@heshbonai.co</a>
+            או שלחו לנו מייל ל-<a href="mailto:marko@heshbonai.co" class="text-blue hover:underline">marko@heshbonai.co</a>
           </p>
         </div>
       </div>
     </section>
 
-    <script>
-      const onboardingSectionHe = document.getElementById('onboarding-he');
-      if (onboardingSectionHe) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              observer.disconnect();
-              onboardingSectionHe.querySelectorAll('.onboarding-step-he').forEach((step) => {
-                (step as HTMLElement).style.opacity = '1';
-                (step as HTMLElement).style.transform = 'translateY(0)';
-              });
-            }
-          });
-        }, { threshold: 0.2 });
-        observer.observe(onboardingSectionHe);
-      }
-    </script>
-
-    <!-- Pricing Snapshot -->
-    <section id="pricing-he" class="py-16 bg-navy">
+    <section id="pricing-he" class="py-16 sm:py-20 bg-navy-light">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <p class="section-label mb-4">מחירון</p>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white">תוכניות ומחירים</h2>
-          <p class="text-muted mt-4">כל המחירים לפני מע״מ. ייתכן חיוב חד-פעמי על הטמעה.</p>
+          <p class="section-label mb-4">מחירים</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">מחירים פשוטים למשרדים בצמיחה</h2>
+          <p class="text-muted mt-4">כל המחירים לא כוללים מע״מ. ייתכן דמי הטמעה חד-פעמיים.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
@@ -675,12 +766,12 @@ const faqs = [
               )}
 
               <div class="mb-5">
-                <h3 class={`text-lg font-bold mb-1 ${tier.highlighted ? 'text-white' : 'text-white'}`}>{tier.name}</h3>
+                <h3 class="text-lg font-bold mb-1 text-white">{tier.name}</h3>
                 <p class={`text-sm ${tier.highlighted ? 'text-white/70' : 'text-muted'}`}>{tier.description}</p>
               </div>
 
               <div class="mb-5">
-                <span class={`text-4xl font-extrabold ${tier.highlighted ? 'text-white' : 'text-white'}`}>{tier.price}</span>
+                <span class="text-4xl font-extrabold font-display text-white">{tier.price}</span>
                 {tier.unit && <span class={`text-sm ${tier.highlighted ? 'text-white/70' : 'text-muted'}`}>{tier.unit}</span>}
                 <p class={`text-sm font-medium mt-1 ${tier.highlighted ? 'text-blue-pale' : 'text-blue'}`}>{tier.clients}</p>
               </div>
@@ -697,11 +788,11 @@ const faqs = [
               <a href="/he/contact" class={tier.highlighted
                 ? 'inline-flex items-center justify-center px-6 py-3 bg-white text-blue font-semibold rounded-lg hover:bg-blue-pale transition-all duration-200 text-sm shadow-sm w-full text-center'
                 : 'btn-secondary w-full text-center'}>
-                בואו נתחיל
+                התחילו עכשיו
               </a>
 
               <div class={`mt-3 space-y-1 text-xs ${tier.highlighted ? 'text-white/50' : 'text-muted/50'}`}>
-                {tier.setupFee && <p>* חיוב חד-פעמי על הטמעה</p>}
+                {tier.setupFee && <p>* דמי הטמעה חד-פעמיים עשויים לחול</p>}
                 <p>שימוש ב-API מחויב בנפרד</p>
               </div>
             </div>
@@ -710,22 +801,21 @@ const faqs = [
 
         <div class="text-center mt-6">
           <a href="/he/pricing" class="text-blue hover:text-blue-soft text-sm font-medium transition-colors inline-flex items-center gap-1">
-            ראו את כל הפרטים
+            ראו את כל פרטי המחירון
             <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq-he" class="py-16 bg-navy">
+    <section id="faq-he" class="py-16 sm:py-20 bg-navy">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <p class="section-label mb-4">שאלות נפוצות</p>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white">שאלות ותשובות</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">שאלות נפוצות</h2>
         </div>
 
-        <div class="space-y-3" id="he-faq-list">
+        <div class="space-y-3" id="homepage-faq-list-he">
           {faqs.map((faq) => (
             <div class="faq-item-he rounded-2xl border border-border overflow-hidden">
               <button class="faq-toggle-he w-full flex items-center justify-between px-6 py-5 text-right hover:bg-navy-light transition-colors" aria-expanded="false">
@@ -740,71 +830,253 @@ const faqs = [
         </div>
 
         <p class="text-muted text-sm text-center mt-8">
-          יש שאלה נוספת? <a href="/he/contact" class="text-blue hover:text-blue/80 underline underline-offset-2">צרו קשר</a>.
+          יש לכם שאלה נוספת? <a href="/he/contact" class="text-blue hover:text-blue/80 underline underline-offset-2">צרו קשר</a>.
         </p>
       </div>
     </section>
 
-    <script>
-      const faqListHe = document.getElementById('he-faq-list');
-      if (faqListHe) {
-        faqListHe.querySelectorAll('.faq-toggle-he').forEach((toggle) => {
-          toggle.addEventListener('click', () => {
-            const item = toggle.closest('.faq-item-he');
-            const content = item?.querySelector('.faq-content-he') as HTMLElement;
-            const icon = toggle.querySelector('.faq-icon-he') as HTMLElement;
-            if (!content || !icon) return;
-            const isOpen = !content.classList.contains('hidden');
-
-            faqListHe.querySelectorAll('.faq-item-he').forEach((otherItem) => {
-              if (otherItem !== item) {
-                const otherContent = otherItem.querySelector('.faq-content-he') as HTMLElement;
-                const otherIcon = otherItem.querySelector('.faq-icon-he') as HTMLElement;
-                const otherToggle = otherItem.querySelector('.faq-toggle-he');
-                if (otherContent) { otherContent.classList.add('hidden'); otherContent.style.maxHeight = ''; }
-                if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
-                if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
-              }
-            });
-
-            if (isOpen) {
-              content.style.maxHeight = '';
-              setTimeout(() => content.classList.add('hidden'), 200);
-              icon.style.transform = 'rotate(0deg)';
-              toggle.setAttribute('aria-expanded', 'false');
-            } else {
-              content.classList.remove('hidden');
-              content.style.maxHeight = content.scrollHeight + 'px';
-              icon.style.transform = 'rotate(180deg)';
-              toggle.setAttribute('aria-expanded', 'true');
-            }
-          });
-        });
-      }
-    </script>
-
-    <style>
-      .faq-content-he { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-      .faq-content-he:not(.hidden) { max-height: none; }
-      .faq-icon-he { transition: transform 0.2s ease; }
-    </style>
-
-    <!-- Final CTA -->
-    <section class="py-16 bg-navy border-t border-border">
+    <section class="py-16 sm:py-20 bg-navy border-t border-border">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
           תנו לצוות שלכם להתמקד בחשבונאות
         </h2>
         <p class="text-muted text-lg mb-10 max-w-xl mx-auto">
-          HeshbonAI מטפל במעקב, באיסוף ובסטטוס — כדי שהצוות שלכם יוכל לעשות את מה שהוא יודע הכי טוב.
+          HeshbonAI מטפל בעבודת המעקב החוזרת, כדי שהצוות שלכם יתמקד בעבודה שלקוחות באמת משלמים עליה.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="https://cal.com/heshbonai/intro" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-8 py-4">שיחת היכרות</a>
-          <a href="/he/contact" class="btn-secondary text-lg px-8 py-4">צרו קשר</a>
+          <a href="https://cal.com/heshbonai/intro" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-8 py-4">קבעו שיחת היכרות</a>
+          <a href="/he/contact" class="btn-secondary text-lg px-8 py-4">שלחו הודעה</a>
         </div>
       </div>
     </section>
-
   </main>
+
   <FooterHe />
+
+  <script>
+    function runHeroAnimationHe() {
+      const row = document.getElementById('hero-dana-row-he');
+      if (!row) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            observer.disconnect();
+            setTimeout(animateDanaHe, 2000);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      observer.observe(row);
+    }
+
+    function animateDanaHe() {
+      const sub = document.getElementById('hero-dana-sub-he');
+      const badge = document.getElementById('hero-dana-badge-he');
+      const avatar = document.getElementById('hero-dana-avatar-he');
+      const initials = document.getElementById('hero-dana-initials-he');
+      const pulse = document.getElementById('hero-pulse-he');
+      const timestamp = document.getElementById('hero-timestamp-he');
+      if (!sub || !badge || !avatar || !initials || !pulse || !timestamp) return;
+
+      sub.style.opacity = '0';
+      setTimeout(() => {
+        sub.textContent = '4/4 מסמכים התקבלו';
+        sub.style.opacity = '1';
+      }, 300);
+
+      setTimeout(() => {
+        badge.className = 'px-2 py-0.5 bg-success/10 text-success text-xs rounded font-medium transition-all duration-500';
+        badge.textContent = 'הושלם';
+      }, 400);
+
+      setTimeout(() => {
+        avatar.className = avatar.className.replace('bg-blue/10', 'bg-success/10');
+        initials.className = initials.className.replace('text-blue', 'text-success');
+      }, 400);
+
+      setTimeout(() => {
+        pulse.className = 'w-2 h-2 rounded-full bg-success animate-pulse transition-colors duration-500';
+        timestamp.style.opacity = '0';
+        setTimeout(() => {
+          timestamp.textContent = 'עודכן ממש עכשיו';
+          timestamp.className = 'text-success text-xs transition-opacity duration-300';
+          timestamp.style.opacity = '1';
+        }, 200);
+      }, 600);
+    }
+
+    const hiwSectionHe = document.getElementById('how-it-works-he');
+    if (hiwSectionHe) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            observer.disconnect();
+            hiwSectionHe.querySelectorAll('.hiw-step-he').forEach((step) => {
+              (step as HTMLElement).style.opacity = '1';
+              (step as HTMLElement).style.transform = 'translateY(0)';
+            });
+            const line = document.getElementById('hiw-line-he');
+            if (line) {
+              setTimeout(() => { line.style.transform = 'scaleX(1)'; }, 200);
+            }
+          }
+        });
+      }, { threshold: 0.2 });
+      observer.observe(hiwSectionHe);
+    }
+
+    const waDemoHe = document.getElementById('wa-demo-he');
+    if (waDemoHe) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            observer.disconnect();
+
+            waDemoHe.querySelectorAll('.wa-msg-he').forEach((msg) => {
+              const el = msg as HTMLElement;
+              el.style.opacity = '1';
+              el.style.transform = 'translateY(0)';
+            });
+
+            setTimeout(() => {
+              const dot = document.getElementById('wa-dot-1-he');
+              const status = document.getElementById('wa-status-1-he');
+              if (dot && status) {
+                dot.className = 'w-2 h-2 rounded-full bg-success transition-colors duration-500';
+                status.className = 'text-xs text-success font-medium transition-all duration-500';
+                status.textContent = 'התקבל';
+              }
+            }, 1800);
+
+            setTimeout(() => {
+              const bar = document.getElementById('wa-dash-bar-he');
+              const count = document.getElementById('wa-dash-count-he');
+              const pulse = document.getElementById('wa-dash-pulse-he');
+              const time = document.getElementById('wa-dash-time-he');
+              if (bar && count) {
+                bar.style.width = '33%';
+                bar.className = 'bg-blue h-1.5 rounded-full transition-all duration-700 ease-out';
+                count.textContent = '1/3';
+                count.className = 'text-blue font-mono text-xs transition-colors duration-500';
+              }
+              if (pulse && time) {
+                pulse.className = 'w-2 h-2 rounded-full bg-success animate-pulse transition-colors duration-500';
+                time.style.opacity = '0';
+                setTimeout(() => {
+                  time.textContent = 'לייב, עודכן ממש עכשיו';
+                  time.className = 'text-success text-xs transition-opacity duration-300';
+                  time.style.opacity = '1';
+                }, 200);
+              }
+            }, 2400);
+          }
+        });
+      }, { threshold: 0.2 });
+      observer.observe(waDemoHe);
+    }
+
+    function animateCountUpHe(el: HTMLElement, target: number, suffix: string, duration: number) {
+      const start = performance.now();
+      function tick(now: number) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * target);
+        el.textContent = current + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    const roiGridHe = document.getElementById('roi-grid-he');
+    if (roiGridHe) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            observer.disconnect();
+            roiGridHe.querySelectorAll<HTMLElement>('[data-count-to]').forEach((el, i) => {
+              const target = parseInt(el.dataset.countTo || '0', 10);
+              const suffix = el.dataset.suffix || '';
+              setTimeout(() => animateCountUpHe(el, target, suffix, 1200), i * 150);
+            });
+            roiGridHe.querySelectorAll<HTMLElement>('[data-count-text]').forEach((el) => {
+              setTimeout(() => {
+                el.style.transition = 'opacity 0.3s';
+                el.style.opacity = '0';
+                setTimeout(() => {
+                  el.textContent = el.dataset.countText || '';
+                  el.style.opacity = '1';
+                }, 200);
+              }, 3 * 150 + 400);
+            });
+          }
+        });
+      }, { threshold: 0.3 });
+      observer.observe(roiGridHe);
+    }
+
+    const onboardingSectionHe = document.getElementById('onboarding-he');
+    if (onboardingSectionHe) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            observer.disconnect();
+            onboardingSectionHe.querySelectorAll('.onboarding-step-he').forEach((step) => {
+              (step as HTMLElement).style.opacity = '1';
+              (step as HTMLElement).style.transform = 'translateY(0)';
+            });
+          }
+        });
+      }, { threshold: 0.2 });
+      observer.observe(onboardingSectionHe);
+    }
+
+    const faqListHe = document.getElementById('homepage-faq-list-he');
+    if (faqListHe) {
+      faqListHe.querySelectorAll('.faq-toggle-he').forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+          const item = toggle.closest('.faq-item-he');
+          const content = item?.querySelector('.faq-content-he') as HTMLElement | null;
+          const icon = toggle.querySelector('.faq-icon-he') as HTMLElement | null;
+          if (!content || !icon) return;
+          const isOpen = !content.classList.contains('hidden');
+
+          faqListHe.querySelectorAll('.faq-item-he').forEach((otherItem) => {
+            if (otherItem !== item) {
+              const otherContent = otherItem.querySelector('.faq-content-he') as HTMLElement | null;
+              const otherIcon = otherItem.querySelector('.faq-icon-he') as HTMLElement | null;
+              const otherToggle = otherItem.querySelector('.faq-toggle-he');
+              if (otherContent) {
+                otherContent.classList.add('hidden');
+                otherContent.style.maxHeight = '';
+              }
+              if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+              if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          if (isOpen) {
+            content.style.maxHeight = '';
+            setTimeout(() => content.classList.add('hidden'), 200);
+            icon.style.transform = 'rotate(0deg)';
+            toggle.setAttribute('aria-expanded', 'false');
+          } else {
+            content.classList.remove('hidden');
+            content.style.maxHeight = content.scrollHeight + 'px';
+            icon.style.transform = 'rotate(180deg)';
+            toggle.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    }
+
+    runHeroAnimationHe();
+  </script>
+
+  <style>
+    .faq-content-he { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-content-he:not(.hidden) { max-height: none; }
+    .faq-icon-he { transition: transform 0.2s ease; }
+  </style>
 </LayoutHe>

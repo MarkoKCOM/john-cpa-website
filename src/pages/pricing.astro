@@ -287,14 +287,14 @@ const description = 'Flat monthly pricing in NIS. All plans include WhatsApp doc
               if (!otherContent || !otherIcon || !otherToggle) return;
 
               otherContent.classList.add('hidden');
-              otherContent.style.maxHeight = null;
+              otherContent.style.maxHeight = '';
               otherIcon.style.transform = 'rotate(0deg)';
               otherToggle.setAttribute('aria-expanded', 'false');
             }
           });
 
           if (isOpen) {
-            content.style.maxHeight = null;
+            content.style.maxHeight = '';
             setTimeout(() => content.classList.add('hidden'), 200);
             icon.style.transform = 'rotate(0deg)';
             toggle.setAttribute('aria-expanded', 'false');

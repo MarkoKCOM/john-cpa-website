@@ -5,38 +5,38 @@ import FooterHe from '../../components/FooterHe.astro';
 import '../../styles/global.css';
 
 const title = 'מחירים — HeshbonAI | העוזר החכם למשרדי רו״ח';
-const description = 'מחירים חודשיים בשקלים. כל התוכניות כוללות איסוף מסמכים בוואטסאפ, מעקב אוטומטי, לוח בקרה ותמיכה בעברית.';
+const description = 'מחירים חודשיים קבועים בשקלים. כל התוכניות כוללות איסוף מסמכים בוואטסאפ, מעקב אוטומטי, דשבורד, ותמיכה בעברית.';
 ---
 
-<LayoutHe title={title} description={description}>
+<LayoutHe title={title} description={description} canonical="https://heshbonai.co/he/pricing">
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "האם הלקוחות ידעו שהם מדברים עם עוזר?",
-        "acceptedAnswer": { "@type": "Answer", "text": "הודעות יוצאות מהמספר הממותג שלכם בוואטסאפ עם שם המשרד והלוגו. הטון מקצועי ואנושי. רוב הלקוחות חושבים שזה עובד חדש בצוות." }
+        "name": "האם הלקוחות יידעו שהם מדברים עם עוזר?",
+        "acceptedAnswer": { "@type": "Answer", "text": "הודעות יוצאות ממספר ה-WhatsApp Business הממותג של המשרד שלכם. הטון מקצועי ואנושי. רוב הלקוחות חושבים שזה עובד חדש בצוות." }
       },
       {
         "@type": "Question",
-        "name": "האם זה עובד בעברית?",
-        "acceptedAnswer": { "@type": "Answer", "text": "כן. HeshbonAI הוא עברית-first. תומך גם באנגלית, ערבית ורוסית." }
+        "name": "האם HeshbonAI עובד בעברית?",
+        "acceptedAnswer": { "@type": "Answer", "text": "כן. HeshbonAI בנוי עברית-first. הוא תומך גם באנגלית, ערבית, ורוסית לבסיסי לקוחות רב-לשוניים." }
       },
       {
         "@type": "Question",
-        "name": "האם לקוחות צריכים פורטל?",
-        "acceptedAnswer": { "@type": "Answer", "text": "לא. אפס הורדות, אפס הרשמות. לקוחות עונים בוואטסאפ — האפליקציה שהם כבר משתמשים בה כל יום." }
+        "name": "האם לקוחות צריכים פורטל או אפליקציה?",
+        "acceptedAnswer": { "@type": "Answer", "text": "לא. אפס הורדות. אפס הרשמות. הלקוחות עונים בוואטסאפ, האפליקציה שהם כבר משתמשים בה כל יום." }
       },
       {
         "@type": "Question",
-        "name": "כמה זמן לוקח ההקמה?",
-        "acceptedAnswer": { "@type": "Answer", "text": "כל משרד מקבל הטמעה מודרכת. אנחנו קובעים שיחת הקמה, מייבאים את רשימת הלקוחות, מחברים את הוואטסאפ ומגדירים הכל יחד. רוב המשרדים עולים לאוויר תוך כמה ימים." }
+        "name": "כמה זמן לוקחת ההטמעה?",
+        "acceptedAnswer": { "@type": "Answer", "text": "כל משרד מקבל הטמעה מודרכת. אנחנו קובעים שיחת הקמה, מייבאים את רשימת הלקוחות, מחברים WhatsApp ומגדירים הכל יחד. רוב המשרדים עולים לאוויר תוך כמה ימים." }
       },
       {
         "@type": "Question",
-        "name": "האם הצוות יכול לבדוק הודעות לפני שליחה?",
-        "acceptedAnswer": { "@type": "Answer", "text": "כן. אתם שולטים בתבניות ובתזמון. הצוות יכול לבדוק, לעצור או לדרוס כל שיחה בכל רגע." }
+        "name": "האם הצוות יכול לבדוק הודעות לפני שהן נשלחות?",
+        "acceptedAnswer": { "@type": "Answer", "text": "כן. אתם שולטים בתבניות ההודעות ובתזמון המעקבים. הצוות יכול לבדוק, לעצור, או לדרוס כל שיחה בכל רגע." }
       }
     ]
   })} />
@@ -44,95 +44,102 @@ const description = 'מחירים חודשיים בשקלים. כל התוכני
   <NavbarHe />
 
   <main>
-    <!-- Hero -->
     <section class="pt-32 pb-16 md:pt-40 md:pb-20 px-4 bg-navy">
       <div class="max-w-4xl mx-auto text-center">
         <span class="section-label">מחירים</span>
         <h1 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
-          תוכניות פשוטות, מחירים בשקלים
+          מחירים פשוטים למשרדים בצמיחה
         </h1>
         <p class="mt-6 text-lg md:text-xl text-muted max-w-2xl mx-auto">
-          בלי הפתעות. בלי עמלות נסתרות. תשלום חודשי, ביטול בכל זמן.
+          בלי תשלום פר לקוח. בלי התחייבות שנתית. כל המחירים לא כוללים מע״מ.
         </p>
       </div>
     </section>
 
-    <!-- Pricing Tiers -->
     <section class="pb-20 px-4 bg-navy-light pt-16">
       <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-start">
-
-        <!-- Starter -->
         <div class="card flex flex-col h-full">
           <div class="mb-6">
             <h3 class="text-lg font-semibold text-white">Starter</h3>
-            <p class="text-sm text-muted mt-1">עד 25 לקוחות</p>
+            <p class="text-sm text-muted mt-1">למשרדים קטנים שמתחילים להכניס אוטומציה</p>
             <div class="mt-4 flex items-baseline gap-1">
               <span class="text-4xl font-bold text-white font-display">&#8362;1,000</span>
               <span class="text-muted text-sm">/חודש</span>
             </div>
+            <p class="mt-2 text-sm text-muted">עד 25 לקוחות</p>
           </div>
-          <a href="https://cal.com/heshbonai/intro" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full text-center mb-4">קבעו שיחת היכרות</a>
-          <p class="text-xs text-muted/50 mb-8">*דמי הקמה עשויים לחול</p>
+          <a href="/he/contact" class="btn-secondary w-full text-center mb-4">התחילו עכשיו</a>
+          <p class="text-xs text-muted/50 mb-8">* דמי הטמעה חד-פעמיים עשויים לחול</p>
           <ul class="space-y-3 text-sm text-muted flex-1">
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>מעקב אוטומטי ללא הגבלה</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>איסוף מסמכים בוואטסאפ</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>סיווג מסמכים עם AI</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>לוח בקרה וסיכומים יומיים</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>כל האינטגרציות כלולות (וואטסאפ, מייל, Google, Excel)</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>תמיכה בעברית ואנגלית</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>כל האינטגרציות כלולות (WhatsApp, מייל, Google, Excel)</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>מעקבים ללא הגבלה לכל מסמך</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>איסוף מסמכים בוואטסאפ ואישור קבלה</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>דשבורד למעקב מסמכים</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>עוזר FAQ ללקוחות עם תשובות מיידיות</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>סיכומים יומיים</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>עברית + אנגלית</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>תמיכה במייל (מענה תוך 24 שעות)</li>
           </ul>
+          <p class="text-xs text-muted/50 mt-6 pt-4 border-t border-border">שימוש בטוקני API מחויב בנפרד</p>
         </div>
 
-        <!-- Professional -->
         <div class="bg-blue rounded-2xl p-8 flex flex-col h-full text-white ring-2 ring-blue shadow-xl shadow-blue/10 relative">
           <div class="absolute -top-3 left-1/2 -translate-x-1/2">
-            <span class="bg-warning text-navy text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full">הכי פופולרי</span>
+            <span class="bg-warning text-navy text-xs font-bold px-4 py-1 rounded-full">הכי פופולרי</span>
           </div>
           <div class="mb-6">
             <h3 class="text-lg font-semibold text-white">Professional</h3>
-            <p class="text-sm text-white/70 mt-1">עד 100 לקוחות</p>
+            <p class="text-sm text-white/70 mt-1">למשרדים בצמיחה שצריכים יותר אינטליגנציה וקנה מידה</p>
             <div class="mt-4 flex items-baseline gap-1">
               <span class="text-4xl font-bold text-white font-display">&#8362;1,800</span>
               <span class="text-white/70 text-sm">/חודש</span>
             </div>
+            <p class="mt-2 text-sm text-white/70">עד 100 לקוחות</p>
           </div>
-          <a href="https://cal.com/heshbonai/intro" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 bg-white text-blue font-semibold rounded-lg hover:bg-blue-pale transition-all duration-200 text-sm shadow-sm w-full text-center mb-8">קבעו שיחת היכרות</a>
+          <a href="/he/contact" class="inline-flex items-center justify-center px-6 py-3 bg-white text-blue font-semibold rounded-lg hover:bg-blue-pale transition-all duration-200 text-sm shadow-sm w-full text-center mb-8">התחילו עכשיו</a>
           <p class="text-xs text-white/60 mb-4">הכל ב-Starter, ובנוסף:</p>
           <ul class="space-y-3 text-sm text-white/90 flex-1">
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue-pale shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>תמיכה רב-לשונית (רוסית, ערבית, צרפתית)</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue-pale shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>תזכורות מותאמות אישית</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue-pale shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>חיבור לחשבשבת, Priority, רווחית</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue-pale shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>תמיכה מועדפת</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue-pale shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>קריאת מסמכים ב-AI וחילוץ נתונים מחשבוניות, קבלות ודפי בנק</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue-pale shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>דוחות חודשיים אוטומטיים</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue-pale shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>מנוע עדיפויות מבוסס דדליינים</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue-pale shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>ריבוי רואי חשבון (עד 5)</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue-pale shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>רב-שפתי (רוסית, ערבית, צרפתית)</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue-pale shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>ייצוא CSV / API</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue-pale shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>תמיכה מועדפת (4 שעות)</li>
           </ul>
+          <p class="text-xs text-white/40 mt-6 pt-4 border-t border-white/10">שימוש בטוקני API מחויב בנפרד</p>
         </div>
 
-        <!-- Complete -->
         <div class="card flex flex-col h-full">
           <div class="mb-6">
             <h3 class="text-lg font-semibold text-white">Complete</h3>
-            <p class="text-sm text-muted mt-1">לקוחות ללא הגבלה</p>
+            <p class="text-sm text-muted mt-1">אוטומציה מלאה למשרדים גדולים ורשתות</p>
             <div class="mt-4 flex items-baseline gap-1">
               <span class="text-4xl font-bold text-white font-display">&#8362;2,700</span>
               <span class="text-muted text-sm">/חודש</span>
             </div>
+            <p class="mt-2 text-sm text-muted">עד 200 לקוחות</p>
           </div>
-          <a href="/he/contact" class="btn-secondary w-full text-center mb-8">צרו קשר</a>
+          <a href="/he/contact" class="btn-secondary w-full text-center mb-8">התחילו עכשיו</a>
           <p class="text-xs text-muted/60 mb-4">הכל ב-Professional, ובנוסף:</p>
           <ul class="space-y-3 text-sm text-muted flex-1">
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>לקוחות ללא הגבלה</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>שרת ייעודי</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>חיבור API מותאם</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>מנהל הצלחה ייעודי</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>יצירת PDF ודוחות אוטומטיים לכל לקוח</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>תזמון חכם עם עדיפות משימות אוטומטית</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>אינטגרציה מלאה עם חשבשבת, Priority, רווחית, Green Invoice ועוד</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>מיתוג מותאם, שם המשרד שלכם על כל הודעה</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>חברי צוות ללא הגבלה</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>מנהל לקוח ייעודי</li>
+            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>תמיכה בטלפון ובוואטסאפ</li>
           </ul>
+          <p class="text-xs text-muted/50 mt-6 pt-4 border-t border-border">שימוש בטוקני API מחויב בנפרד</p>
         </div>
       </div>
 
       <p class="text-center text-muted text-sm mt-8 max-w-xl mx-auto">
-        דמי הקמה עשויים לחול. תשלום שנתי — <strong class="text-white">חודשיים חינם</strong>. כל המחירים לא כוללים מע״מ.
+        ייתכן דמי הטמעה. בתשלום שנתי תקבלו <strong class="text-white">חודשיים חינם</strong>. כל המחירים לא כוללים מע״מ.
       </p>
     </section>
 
-    <!-- FAQ -->
     <section class="py-20 px-4 bg-navy">
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-12">
@@ -143,11 +150,11 @@ const description = 'מחירים חודשיים בשקלים. כל התוכני
         <div class="space-y-3" id="faq-list-he">
           <div class="faq-item rounded-2xl border border-border overflow-hidden">
             <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-right hover:bg-navy-light transition-colors" aria-expanded="false">
-              <span class="font-medium text-white">האם הלקוחות ידעו שהם מדברים עם עוזר?</span>
+              <span class="font-medium text-white">האם הלקוחות יידעו שהם מדברים עם עוזר?</span>
               <svg class="faq-icon w-5 h-5 text-muted shrink-0 mr-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </button>
             <div class="faq-content hidden px-6 pb-5">
-              <p class="text-muted text-sm leading-relaxed">הודעות יוצאות מהמספר הממותג שלכם בוואטסאפ עם שם המשרד והלוגו. הטון מקצועי ואנושי. רוב הלקוחות חושבים שזה עובד חדש בצוות. אם לקוח שואל משהו שהעוזר לא יודע לענות עליו — הוא מעביר את זה לצוות שלכם.</p>
+              <p class="text-muted text-sm leading-relaxed">הודעות יוצאות ממספר ה-WhatsApp Business הממותג של המשרד שלכם עם שם המשרד והלוגו. הטון מקצועי ואנושי. רוב הלקוחות חושבים שזה עובד חדש בצוות. אם לקוח שואל משהו שהעוזר לא יודע לענות עליו, הוא מסמן את זה לצוות שלכם.</p>
             </div>
           </div>
 
@@ -157,7 +164,7 @@ const description = 'מחירים חודשיים בשקלים. כל התוכני
               <svg class="faq-icon w-5 h-5 text-muted shrink-0 mr-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </button>
             <div class="faq-content hidden px-6 pb-5">
-              <p class="text-muted text-sm leading-relaxed">כן. HeshbonAI הוא עברית-first. תומך גם באנגלית, ערבית ורוסית.</p>
+              <p class="text-muted text-sm leading-relaxed">כן. HeshbonAI בנוי עברית-first. הוא תומך גם באנגלית, ערבית, ורוסית לבסיסי לקוחות רב-לשוניים.</p>
             </div>
           </div>
 
@@ -167,27 +174,27 @@ const description = 'מחירים חודשיים בשקלים. כל התוכני
               <svg class="faq-icon w-5 h-5 text-muted shrink-0 mr-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </button>
             <div class="faq-content hidden px-6 pb-5">
-              <p class="text-muted text-sm leading-relaxed">כן. אתם שולטים בתבניות ההודעות ובתזמון המעקב. הצוות יכול לבדוק, לעצור או לדרוס כל שיחה בכל רגע. יש תיעוד מלא של כל הודעה שנשלחה.</p>
+              <p class="text-muted text-sm leading-relaxed">כן. אתם שולטים בתבניות ההודעות ובתזמון המעקבים. הצוות שלכם יכול לבדוק, לעצור או לדרוס כל שיחה. יש תיעוד מלא של כל הודעה שנשלחה.</p>
             </div>
           </div>
 
           <div class="faq-item rounded-2xl border border-border overflow-hidden">
             <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-right hover:bg-navy-light transition-colors" aria-expanded="false">
-              <span class="font-medium text-white">מה אם לקוח שואל משהו מורכב?</span>
+              <span class="font-medium text-white">מה קורה אם לקוח שואל משהו מורכב?</span>
               <svg class="faq-icon w-5 h-5 text-muted shrink-0 mr-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </button>
             <div class="faq-content hidden px-6 pb-5">
-              <p class="text-muted text-sm leading-relaxed">העוזר מעביר את השאלה לצוות שלכם מיד במקום לנחש. הוא עונה ללקוח: ״שאלה טובה — בודק עם הצוות וחוזר אליך.״ ומסמן את זה בלוח הבקרה.</p>
+              <p class="text-muted text-sm leading-relaxed">העוזר מסלים לצוות שלכם מיד במקום לנחש. הוא עונה ללקוח: &quot;שאלה טובה, אני בודק עם הצוות וחוזר אליך&quot;, ואז מסמן את זה בדשבורד.</p>
             </div>
           </div>
 
           <div class="faq-item rounded-2xl border border-border overflow-hidden">
             <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-right hover:bg-navy-light transition-colors" aria-expanded="false">
-              <span class="font-medium text-white">אפשר לשלוט בתזמון התזכורות?</span>
+              <span class="font-medium text-white">אפשר לשלוט בתזמון המעקבים?</span>
               <svg class="faq-icon w-5 h-5 text-muted shrink-0 mr-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </button>
             <div class="faq-content hidden px-6 pb-5">
-              <p class="text-muted text-sm leading-relaxed">כן. אתם קובעים את לוח הזמנים של התזכורות (מינימום 3 ימים בין הודעות). העוזר אף פעם לא שולח לפני 08:00 או אחרי 20:00. הוא מכבד שבת וחגים אוטומטית.</p>
+              <p class="text-muted text-sm leading-relaxed">כן. אתם קובעים את לוח הזמנים למעקב, עם מינימום 3 ימים בין הודעות. העוזר לא שולח לפני 08:00 או אחרי 20:00, ומכבד שבת וחגים אוטומטית.</p>
             </div>
           </div>
 
@@ -197,7 +204,7 @@ const description = 'מחירים חודשיים בשקלים. כל התוכני
               <svg class="faq-icon w-5 h-5 text-muted shrink-0 mr-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </button>
             <div class="faq-content hidden px-6 pb-5">
-              <p class="text-muted text-sm leading-relaxed">לא. אפס הורדות. אפס הרשמות. הלקוחות עונים בוואטסאפ — האפליקציה שהם כבר משתמשים בה כל יום. פשוט שולחים תמונה או קובץ.</p>
+              <p class="text-muted text-sm leading-relaxed">לא. אפס הורדות. אפס הרשמות. הלקוחות עונים בוואטסאפ, האפליקציה שהם כבר משתמשים בה כל יום. פשוט שולחים תמונה או קובץ.</p>
             </div>
           </div>
 
@@ -207,7 +214,7 @@ const description = 'מחירים חודשיים בשקלים. כל התוכני
               <svg class="faq-icon w-5 h-5 text-muted shrink-0 mr-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </button>
             <div class="faq-content hidden px-6 pb-5">
-              <p class="text-muted text-sm leading-relaxed">כל משרד מקבל הטמעה מודרכת. אנחנו קובעים שיחת הקמה, מייבאים את רשימת הלקוחות, מחברים את הוואטסאפ ומגדירים הכל יחד. רוב המשרדים עולים לאוויר תוך כמה ימים.</p>
+              <p class="text-muted text-sm leading-relaxed">כל משרד מקבל הטמעה מודרכת. אנחנו קובעים שיחת הקמה, מייבאים את רשימת הלקוחות, מחברים WhatsApp, ומגדירים הכל יחד. רוב המשרדים עולים לאוויר תוך כמה ימים.</p>
             </div>
           </div>
 
@@ -217,23 +224,21 @@ const description = 'מחירים חודשיים בשקלים. כל התוכני
               <svg class="faq-icon w-5 h-5 text-muted shrink-0 mr-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </button>
             <div class="faq-content hidden px-6 pb-5">
-              <p class="text-muted text-sm leading-relaxed">כן. HeshbonAI משתמש ב-API הרשמי של WhatsApp Business. אנחנו מלווים אתכם בהקמה אם עוד אין לכם — רוב המשרדים מסיימים את זה תוך יום.</p>
+              <p class="text-muted text-sm leading-relaxed">כן. HeshbonAI משתמש ב-API הרשמי של WhatsApp Business. אנחנו מלווים אתכם בהקמה אם עדיין אין לכם, ורוב המשרדים מסיימים את זה תוך יום.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Billing -->
     <section class="py-12 px-4 bg-navy-light border-t border-border">
       <div class="max-w-3xl mx-auto text-center text-xs text-muted/60 space-y-1">
-        <p>כל המחירים בשקלים, לא כולל מע״מ (17%).</p>
-        <p>תשלום חודשי כברירת מחדל, שנתי בהנחה של 17%.</p>
+        <p>כל המחירים בשקלים, לא כולל מע״מ.</p>
+        <p>תשלום חודשי כברירת מחדל. תשלום שנתי זמין בהנחה של 17%.</p>
         <p>תשלום בכרטיס אשראי או העברה בנקאית. חשבונית מס תסופק.</p>
       </div>
     </section>
 
-    <!-- CTA -->
     <section class="py-20 px-4 bg-navy border-t border-border">
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-white">
@@ -243,8 +248,8 @@ const description = 'מחירים חודשיים בשקלים. כל התוכני
           HeshbonAI מטפל במעקב. הצוות שלכם מטפל בחשבונאות.
         </p>
         <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="https://cal.com/heshbonai/intro" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-8 py-4">קבעו שיחת היכרות</a>
-          <a href="/he/contact" class="btn-secondary text-lg px-8 py-4">שלחו הודעה</a>
+          <a href="/he/contact" class="btn-primary text-lg px-8 py-4">התחילו עכשיו</a>
+          <a href="mailto:marko@heshbonai.co" class="btn-secondary text-lg px-8 py-4">שלחו מייל</a>
         </div>
       </div>
     </section>
@@ -258,21 +263,30 @@ const description = 'מחירים חודשיים בשקלים. כל התוכני
       toggles.forEach((toggle) => {
         toggle.addEventListener('click', () => {
           const item = toggle.closest('.faq-item');
-          const content = item.querySelector('.faq-content');
-          const icon = toggle.querySelector('.faq-icon');
+          if (!item) return;
+
+          const content = item.querySelector('.faq-content') as HTMLElement | null;
+          const icon = toggle.querySelector('.faq-icon') as HTMLElement | null;
+          if (!content || !icon) return;
+
           const isOpen = !content.classList.contains('hidden');
 
           document.querySelectorAll('#faq-list-he .faq-item').forEach((otherItem) => {
             if (otherItem !== item) {
-              otherItem.querySelector('.faq-content').classList.add('hidden');
-              otherItem.querySelector('.faq-content').style.maxHeight = null;
-              otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
-              otherItem.querySelector('.faq-toggle').setAttribute('aria-expanded', 'false');
+              const otherContent = otherItem.querySelector('.faq-content') as HTMLElement | null;
+              const otherIcon = otherItem.querySelector('.faq-icon') as HTMLElement | null;
+              const otherToggle = otherItem.querySelector('.faq-toggle');
+              if (!otherContent || !otherIcon || !otherToggle) return;
+
+              otherContent.classList.add('hidden');
+              otherContent.style.maxHeight = '';
+              otherIcon.style.transform = 'rotate(0deg)';
+              otherToggle.setAttribute('aria-expanded', 'false');
             }
           });
 
           if (isOpen) {
-            content.style.maxHeight = null;
+            content.style.maxHeight = '';
             setTimeout(() => content.classList.add('hidden'), 200);
             icon.style.transform = 'rotate(0deg)';
             toggle.setAttribute('aria-expanded', 'false');
