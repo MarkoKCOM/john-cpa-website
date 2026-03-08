@@ -1,0 +1,256 @@
+---
+import LayoutHe from '../../layouts/LayoutHe.astro';
+import NavbarHe from '../../components/NavbarHe.astro';
+import FooterHe from '../../components/FooterHe.astro';
+import '../../styles/global.css';
+---
+
+<LayoutHe
+  title="אוטומציה למשרד רו״ח — תזכורות, איסוף מסמכים ו-OCR | HeshbonAI"
+  description="אוטומציה לרואי חשבון: תזכורות בוואטסאפ, איסוף מסמכים, OCR לחשבוניות וקבלות, וסיווג אוטומטי עם AI. בנוי למשרדי רו״ח בישראל."
+>
+  <NavbarHe />
+
+  <main>
+    <!-- Hero -->
+    <section class="pt-32 pb-16 bg-navy">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <p class="section-label mb-4">אוטומציה לרואי חשבון</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+          אוטומציה למשרד רו״ח — פחות רדיפה, יותר חשבונאות
+        </h1>
+        <p class="text-lg md:text-xl text-muted max-w-2xl mx-auto mb-10">
+          תפסיקו לעשות עבודה ידנית חוזרת. HeshbonAI מבצע בשבילכם מעקב אחרי לקוחות, איסוף מסמכים, סיווג אוטומטי ותזכורות — הכל אוטומטי.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://cal.com/heshbonai/intro" class="btn-primary">קבעו שיחת היכרות</a>
+          <a href="/contact" class="btn-secondary">צרו קשר</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What gets automated -->
+    <section class="py-16 md:py-24 bg-navy-light">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <p class="section-label mb-4">אוטומציה למשרד רו״ח</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-white">מה HeshbonAI מייעל עבורכם</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="card">
+            <div class="w-12 h-12 rounded-lg bg-blue/10 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">תזכורות אוטומטיות</h3>
+            <p class="text-muted">שליחת תזכורות בוואטסאפ על מסמכים חסרים — בלי שתצטרכו להרים טלפון או לכתוב הודעה.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="card">
+            <div class="w-12 h-12 rounded-lg bg-blue/10 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">איסוף מסמכים</h3>
+            <p class="text-muted">לקוחות שולחים מסמכים ישירות בוואטסאפ — בלי פורטלים, בלי אפליקציות, בלי חיכוכים.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="card">
+            <div class="w-12 h-12 rounded-lg bg-blue/10 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">סיווג מסמכים עם AI</h3>
+            <p class="text-muted">זיהוי אוטומטי של חשבוניות, קבלות ודפי בנק — בלי מיון ידני, בלי טעויות.</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="card">
+            <div class="w-12 h-12 rounded-lg bg-blue/10 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">מעקב אחרי לקוחות</h3>
+            <p class="text-muted">לוח בקרה שמראה בזמן אמת מה הגיע ומה חסר — לכל לקוח, לכל תקופה.</p>
+          </div>
+          <!-- Card 5 -->
+          <div class="card">
+            <div class="w-12 h-12 rounded-lg bg-blue/10 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">סיכומים יומיים</h3>
+            <p class="text-muted">דוח יומי אוטומטי לצוות על סטטוס המסמכים — מי שלח, מה חסר, מה דחוף.</p>
+          </div>
+          <!-- Card 6 -->
+          <div class="card">
+            <div class="w-12 h-12 rounded-lg bg-blue/10 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">חיבור לתוכנות חשבונאות</h3>
+            <p class="text-muted">עובד עם חשבשבת, Priority, רווחית, Green Invoice ועוד — בלי להחליף מערכות.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OCR Section -->
+    <section class="py-16 md:py-24 bg-navy">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <p class="section-label mb-4">OCR לחשבוניות וקבלות לרואי חשבון</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">OCR לחשבוניות וקבלות — זיהוי אוטומטי</h2>
+          <p class="text-lg text-muted max-w-3xl mx-auto">
+            כשלקוח שולח תמונה של קבלה או חשבונית בוואטסאפ, ה-AI קורא את המסמך, מחלץ את השדות המרכזיים — סכום, תאריך, ספק — מסווג אותו אוטומטית ומתאים אותו ללקוח הנכון.
+          </p>
+        </div>
+        <div class="max-w-2xl mx-auto space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-success/10 flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-white font-semibold text-lg">זיהוי סכום, תאריך וספק מתוך תמונה</p>
+              <p class="text-muted">ה-AI קורא כל תמונה שנשלחת ומחלץ את המידע הרלוונטי בשניות.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-success/10 flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-white font-semibold text-lg">סיווג אוטומטי — חשבונית, קבלה, דף בנק</p>
+              <p class="text-muted">כל מסמך מקבל תיוג אוטומטי לפי סוג — בלי מיון ידני.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-success/10 flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-white font-semibold text-lg">התאמה ללקוח ולבקשה ללא מיון ידני</p>
+              <p class="text-muted">המסמך מותאם אוטומטית ללקוח שביקש ממנו — בלי גרירת קבצים בין תיקיות.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before/After -->
+    <section class="py-16 md:py-24 bg-navy-light">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <p class="section-label mb-4">השוואה</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-white">לפני ואחרי HeshbonAI</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Before -->
+          <div class="card border-error/30">
+            <h3 class="text-2xl font-bold text-white mb-6 text-center">לפני</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-error/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-error" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+                <p class="text-muted">רדיפה ידנית אחרי כל לקוח — הודעות, שיחות, תזכורות</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-error/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-error" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+                <p class="text-muted">מיילים שלא נפתחים ופורטלים שאף אחד לא משתמש בהם</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-error/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-error" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+                <p class="text-muted">מסמכים בתיקיות לא נכונות — בלגן, טעויות מיון</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-error/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-error" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+                <p class="text-muted">10+ שעות בשבוע על מעקב במקום עבודה מקצועית</p>
+              </div>
+            </div>
+          </div>
+          <!-- After -->
+          <div class="card border-success/30">
+            <h3 class="text-2xl font-bold text-white mb-6 text-center">אחרי</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-success/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-muted">תזכורות אוטומטיות בוואטסאפ — בלי מגע יד אנושית</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-success/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-muted">82% תגובה בוואטסאפ — לקוחות מגיבים כי זה נוח להם</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-success/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-muted">סיווג אוטומטי עם AI — כל מסמך במקום הנכון</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-success/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-muted">10+ שעות חזרו לעבודה אמיתית — חשבונאות, ייעוץ, צמיחה</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 md:py-24 bg-navy border-t border-border">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">מוכנים לייעל את המשרד?</h2>
+        <p class="text-lg text-muted mb-10 max-w-xl mx-auto">
+          תנו ל-HeshbonAI לטפל ברדיפה, באיסוף ובמיון — ותחזרו לעשות חשבונאות.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://cal.com/heshbonai/intro" class="btn-primary">קבעו שיחת היכרות</a>
+          <a href="/pricing" class="btn-secondary">ראו מחירים</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <FooterHe />
+</LayoutHe>

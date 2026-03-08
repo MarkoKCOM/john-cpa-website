@@ -1,0 +1,69 @@
+---
+---
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-navy/90 backdrop-blur-md border-b border-border transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="/he" class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-blue rounded-lg flex items-center justify-center">
+          <span class="text-white font-display font-bold text-sm">H</span>
+        </div>
+        <span class="text-white font-display font-bold text-xl">HeshbonAI</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/he/whatsapp-accounting" class="text-muted hover:text-white transition-colors duration-200 text-sm font-medium">וואטסאפ לרו״ח</a>
+        <a href="/he/document-collection" class="text-muted hover:text-white transition-colors duration-200 text-sm font-medium">איסוף מסמכים</a>
+        <a href="/pricing" class="text-muted hover:text-white transition-colors duration-200 text-sm font-medium">מחירים</a>
+        <a href="/" class="text-muted hover:text-white transition-colors duration-200 text-sm font-medium">English</a>
+      </div>
+
+      <div class="hidden md:block">
+        <a href="/contact" class="btn-primary text-sm">צרו קשר</a>
+      </div>
+
+      <button id="mobile-menu-btn-he" class="md:hidden text-offwhite p-2 rounded-lg hover:bg-navy-light transition-colors" aria-label="פתח תפריט" aria-expanded="false">
+        <svg id="menu-icon-open-he" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="menu-icon-close-he" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu-he" class="md:hidden hidden border-t border-border bg-navy/95 backdrop-blur-md">
+    <div class="px-4 py-4 space-y-3">
+      <a href="/he/whatsapp-accounting" class="block text-muted hover:text-white transition-colors text-sm font-medium py-2">וואטסאפ לרו״ח</a>
+      <a href="/he/document-collection" class="block text-muted hover:text-white transition-colors text-sm font-medium py-2">איסוף מסמכים</a>
+      <a href="/pricing" class="block text-muted hover:text-white transition-colors text-sm font-medium py-2">מחירים</a>
+      <a href="/" class="block text-muted hover:text-white transition-colors text-sm font-medium py-2">English</a>
+      <a href="/contact" class="btn-primary text-sm w-full text-center mt-2">צרו קשר</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn-he');
+  const menu = document.getElementById('mobile-menu-he');
+  const iconOpen = document.getElementById('menu-icon-open-he');
+  const iconClose = document.getElementById('menu-icon-close-he');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden');
+    iconOpen?.classList.toggle('hidden');
+    iconClose?.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      iconOpen?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+      btn?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

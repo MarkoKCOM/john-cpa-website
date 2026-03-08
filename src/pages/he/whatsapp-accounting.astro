@@ -1,0 +1,292 @@
+---
+import LayoutHe from '../../layouts/LayoutHe.astro';
+import NavbarHe from '../../components/NavbarHe.astro';
+import FooterHe from '../../components/FooterHe.astro';
+import '../../styles/global.css';
+---
+
+<LayoutHe
+  title="וואטסאפ למשרד רו״ח — תזכורות אוטומטיות ואיסוף מסמכים | HeshbonAI"
+  description="אוטומציה לשליחת תזכורות ואיסוף מסמכים מלקוחות בוואטסאפ. 82% שיעור תגובה לעומת 23% במייל. בנוי למשרדי רואי חשבון בישראל."
+>
+  <NavbarHe />
+  <main>
+
+    <!-- Hero -->
+    <section class="bg-navy pt-32 pb-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <span class="section-label">וואטסאפ לרואה חשבון</span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mt-4 leading-tight">
+          וואטסאפ למשרד רו״ח — תזכורות אוטומטיות שעובדות
+        </h1>
+        <p class="text-lg md:text-xl text-muted mt-6 max-w-2xl mx-auto leading-relaxed">
+          הלקוחות שלכם לא עונים למיילים. הם כן עונים בוואטסאפ.
+          <strong class="text-offwhite">82% שיעור תגובה בוואטסאפ</strong> לעומת 23% במייל.
+          תזכורות אוטומטיות ללקוחות, איסוף מסמכים, ומעקב — הכל דרך הערוץ שהלקוח כבר משתמש בו כל יום.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+          <a href="https://cal.com/heshbonai/intro" class="btn-primary text-lg px-8 py-4">
+            קבעו שיחת היכרות
+          </a>
+          <a href="/pricing" class="btn-secondary text-lg px-8 py-4">
+            ראו מחירים
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="bg-navy-light py-16 md:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <span class="section-label">הבעיה</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-4">
+            למה מיילים ופורטלים לא עובדים
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card">
+            <div class="text-4xl mb-4">
+              <svg class="w-10 h-10 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">23% שיעור תגובה במייל</h3>
+            <p class="text-muted leading-relaxed">
+              שולחים מייל ללקוח עם בקשה למסמכים? רוב הסיכויים שהוא לא יפתח אותו. המייל נקבר בין 200 הודעות אחרות, וצריך לשלוח תזכורות שוב ושוב.
+            </p>
+          </div>
+          <div class="card">
+            <div class="text-4xl mb-4">
+              <svg class="w-10 h-10 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">אף לקוח לא יוריד פורטל</h3>
+            <p class="text-muted leading-relaxed">
+              קניתם מערכת עם "פורטל לקוחות"? נחמד. עכשיו תנסו לשכנע בעל עסק בן 55 להוריד אפליקציה, ליצור סיסמה, ולהעלות קבצים. זה פשוט לא קורה.
+            </p>
+          </div>
+          <div class="card">
+            <div class="text-4xl mb-4">
+              <svg class="w-10 h-10 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" /></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">וואטסאפ — שם הלקוח נמצא</h3>
+            <p class="text-muted leading-relaxed">
+              מעל 80% מהישראלים משתמשים בוואטסאפ כל יום. זה הערוץ הכי טבעי לתקשורת עסקית בישראל. הודעה נקראת תוך 3 דקות בממוצע.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="bg-navy py-16 md:py-24">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14">
+          <span class="section-label">וואטסאפ למשרד רו״ח</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-4">
+            איך זה עובד בפועל
+          </h2>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-8">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue/10 border border-blue/20 flex items-center justify-center">
+              <span class="text-blue font-bold text-lg">1</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white mb-1">מגדירים רשימת לקוחות ומסמכים נדרשים</h3>
+              <p class="text-muted leading-relaxed">
+                מעלים את רשימת הלקוחות, מסמנים מה צריך מכל אחד — תלושים, חשבוניות, אישורי ניכוי מס, מה שצריך.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue/10 border border-blue/20 flex items-center justify-center">
+              <span class="text-blue font-bold text-lg">2</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white mb-1">HeshbonAI שולח תזכורות אוטומטיות מהמספר העסקי שלכם</h3>
+              <p class="text-muted leading-relaxed">
+                ההודעות יוצאות מהמספר של המשרד, עם השם והלוגו שלכם. הלקוח מקבל הודעה אישית ומנוסחת בטון הנכון.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue/10 border border-blue/20 flex items-center justify-center">
+              <span class="text-blue font-bold text-lg">3</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white mb-1">הלקוח מצלם ושולח ישירות בוואטסאפ — בלי פורטל, בלי אפליקציה</h3>
+              <p class="text-muted leading-relaxed">
+                הלקוח פשוט מצלם את המסמך ושולח. בדיוק כמו שהוא שולח תמונה לחבר. אפס חיכוך, אפס סיבוכים.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue/10 border border-blue/20 flex items-center justify-center">
+              <span class="text-blue font-bold text-lg">4</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white mb-1">המערכת מאשרת, מסווגת ומעדכנת את הצוות</h3>
+              <p class="text-muted leading-relaxed">
+                HeshbonAI מזהה את סוג המסמך, מאשר ללקוח שהתקבל, ומעדכן את הצוות שלכם בזמן אמת. בלי מעקב ידני.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Mockup -->
+    <section class="bg-navy-light py-16 md:py-24">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10">
+          <span class="section-label">תזכורות אוטומטיות ללקוחות</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white mt-4">
+            ככה זה נראה מצד הלקוח
+          </h2>
+        </div>
+        <!-- WhatsApp Chat Mockup -->
+        <div class="rounded-2xl overflow-hidden border border-border shadow-2xl max-w-md mx-auto" dir="rtl">
+          <!-- WhatsApp Header -->
+          <div class="bg-[#1F2C34] px-4 py-3 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+            </div>
+            <div>
+              <div class="text-white text-sm font-semibold">משרד כהן רו״ח</div>
+              <div class="text-[#8696A0] text-xs">חשבון עסקי מאומת</div>
+            </div>
+          </div>
+          <!-- Chat Body -->
+          <div class="bg-[#0B141A] px-3 py-4 space-y-3 min-h-[320px]">
+            <!-- Outgoing (from business) -->
+            <div class="flex justify-start">
+              <div class="bg-[#005C4B] rounded-lg rounded-tr-none px-3 py-2 max-w-[85%] shadow">
+                <p class="text-[#E9EDEF] text-sm leading-relaxed">
+                  שלום אבי, אנחנו צריכים 3 מסמכים לדוח השנתי. אפשר לשלוח אותם כאן?
+                </p>
+                <p class="text-[#E9EDEF] text-sm leading-relaxed mt-2">
+                  1. אישור ניכוי מס במקור<br/>
+                  2. ריכוז תלושי שכר 2025<br/>
+                  3. אישור יתרה מהבנק
+                </p>
+                <div class="text-[#8696A0] text-[10px] text-left mt-1 flex items-center gap-1 justify-end">
+                  09:14
+                  <svg class="w-4 h-3 text-[#53BDEB]" viewBox="0 0 16 11" fill="currentColor"><path d="M11.07.66L4.88 6.85 2.6 4.57l-.7.7 2.98 2.98.7-.7 6.19-6.19-.7-.7zM6.58 9.55l-.7-.7-2.28-2.28-.7.7 2.98 2.98.7-.7zM12.47 1.36l-.7-.7-4.79 4.79.7.7 4.79-4.79z"/></svg>
+                </div>
+              </div>
+            </div>
+            <!-- Incoming (from client) -->
+            <div class="flex justify-end">
+              <div class="bg-[#1F2C34] rounded-lg rounded-tl-none px-3 py-2 max-w-[85%] shadow">
+                <p class="text-[#E9EDEF] text-sm leading-relaxed">
+                  בטח, רגע אני מחפש
+                </p>
+                <div class="text-[#8696A0] text-[10px] text-left mt-1">09:15</div>
+              </div>
+            </div>
+            <!-- Incoming (from client - document) -->
+            <div class="flex justify-end">
+              <div class="bg-[#1F2C34] rounded-lg rounded-tl-none px-3 py-2 max-w-[85%] shadow">
+                <div class="flex items-center gap-2 bg-[#0B141A] rounded-lg p-2 mb-1">
+                  <svg class="w-8 h-8 text-[#8696A0]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+                  <div>
+                    <div class="text-[#E9EDEF] text-xs font-medium">אישור_ניכוי_מס_2025.pdf</div>
+                    <div class="text-[#8696A0] text-[10px]">PDF - 245 KB</div>
+                  </div>
+                </div>
+                <p class="text-[#E9EDEF] text-sm">הנה הראשון</p>
+                <div class="text-[#8696A0] text-[10px] text-left mt-1">09:17</div>
+              </div>
+            </div>
+            <!-- Outgoing (confirmation) -->
+            <div class="flex justify-start">
+              <div class="bg-[#005C4B] rounded-lg rounded-tr-none px-3 py-2 max-w-[85%] shadow">
+                <p class="text-[#E9EDEF] text-sm leading-relaxed">
+                  קיבלנו את אישור ניכוי המס, תודה! נשארו עוד 2 מסמכים. קחו את הזמן.
+                </p>
+                <div class="text-[#8696A0] text-[10px] text-left mt-1 flex items-center gap-1 justify-end">
+                  09:17
+                  <svg class="w-4 h-3 text-[#53BDEB]" viewBox="0 0 16 11" fill="currentColor"><path d="M11.07.66L4.88 6.85 2.6 4.57l-.7.7 2.98 2.98.7-.7 6.19-6.19-.7-.7zM6.58 9.55l-.7-.7-2.28-2.28-.7.7 2.98 2.98.7-.7zM12.47 1.36l-.7-.7-4.79 4.79.7.7 4.79-4.79z"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-muted text-sm text-center mt-6">
+          * הדוגמה להמחשה בלבד. ההודעות נשלחות מהמספר העסקי של המשרד שלכם.
+        </p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="bg-navy py-16 md:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <span class="section-label">יתרונות</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-4">
+            למה וואטסאפ ולא עוד פורטל
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="card">
+            <div class="mb-4">
+              <svg class="w-10 h-10 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">אין הורדות — הלקוח כבר שם</h3>
+            <p class="text-muted leading-relaxed">
+              לא צריך לשכנע אף אחד להוריד אפליקציה או ליצור חשבון. וואטסאפ כבר מותקן אצל כל לקוח. פשוט שולחים הודעה ומתחילים לעבוד.
+            </p>
+          </div>
+          <div class="card">
+            <div class="mb-4">
+              <svg class="w-10 h-10 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">תזכורות חכמות — מכבד שבת וחגים</h3>
+            <p class="text-muted leading-relaxed">
+              המערכת יודעת מתי לא לשלוח: שבת, חגים, שעות לא סבירות. תזכורות אוטומטיות ללקוחות יוצאות רק בזמנים הנכונים, בתדירות שלא מעצבנת.
+            </p>
+          </div>
+          <div class="card">
+            <div class="mb-4">
+              <svg class="w-10 h-10 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" /></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">גם רו״ח יכול לשלוח הודעות לעוזר</h3>
+            <p class="text-muted leading-relaxed">
+              צריך לבקש מסמך מלקוח ספציפי? שלחו הודעה ל-HeshbonAI ישירות מהוואטסאפ שלכם והמערכת מטפלת. בלי להיכנס לשום ממשק.
+            </p>
+          </div>
+          <div class="card">
+            <div class="mb-4">
+              <svg class="w-10 h-10 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">מספר עסקי ממותג — עם שם ולוגו המשרד</h3>
+            <p class="text-muted leading-relaxed">
+              ההודעות יוצאות מחשבון WhatsApp Business מאומת עם שם המשרד, לוגו ותיאור. הלקוח רואה שזה באמת אתם, לא ספאם.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="bg-navy-light border-t border-border py-16 md:py-24">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
+          מוכנים לתת לוואטסאפ לעבוד בשבילכם?
+        </h2>
+        <p class="text-lg text-muted mt-4 max-w-xl mx-auto">
+          תנו ל-HeshbonAI לטפל בתזכורות ובאיסוף המסמכים. אתם תתעסקו במה שאתם יודעים לעשות הכי טוב — לתת שירות מקצועי ללקוחות.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+          <a href="https://cal.com/heshbonai/intro" class="btn-primary text-lg px-8 py-4">
+            קבעו שיחת היכרות
+          </a>
+          <a href="/pricing" class="btn-secondary text-lg px-8 py-4">
+            ראו מחירים
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <FooterHe />
+</LayoutHe>

@@ -8,6 +8,7 @@ interface Props {
 const { title, description, canonical } = Astro.props;
 const siteUrl = 'https://heshbonai.co';
 const currentUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
+const enUrl = currentUrl.replace('/he/', '/').replace('/he', '/');
 
 const graphSchema = {
   "@context": "https://schema.org",
@@ -18,10 +19,10 @@ const graphSchema = {
       "name": "Heshbonai Ltd",
       "url": siteUrl,
       "logo": `${siteUrl}/favicon.svg`,
-      "description": "AI assistant for CPA firms — automates client follow-up, document collection, and workflow visibility through WhatsApp.",
+      "description": "עוזר AI למשרדי רואי חשבון — אוטומציה למעקב אחרי לקוחות, איסוף מסמכים ובקרת תהליכים דרך וואטסאפ.",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Tel Aviv",
+        "addressLocality": "תל אביב",
         "addressCountry": "IL"
       },
       "contactPoint": {
@@ -33,9 +34,9 @@ const graphSchema = {
     },
     {
       "@type": "WebSite",
-      "name": "HeshbonAI — The AI Assistant for CPA Firms",
+      "name": "HeshbonAI — העוזר החכם למשרד רו״ח",
       "url": siteUrl,
-      "description": "Automate client follow-up, document collection, and status tracking through WhatsApp.",
+      "description": "אוטומציה למעקב אחרי לקוחות, איסוף מסמכים ובקרת תהליכים דרך וואטסאפ.",
       "publisher": { "@id": `${siteUrl}/#organization` }
     },
     {
@@ -43,7 +44,7 @@ const graphSchema = {
       "name": "HeshbonAI",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
-      "description": "AI assistant that automates client follow-up, document collection, and workflow visibility for CPA firms through WhatsApp.",
+      "description": "עוזר AI שמייעל מעקב אחרי לקוחות, איסוף מסמכים ובקרת תהליכים למשרדי רואי חשבון דרך וואטסאפ.",
       "offers": {
         "@type": "AggregateOffer",
         "lowPrice": "1000",
@@ -57,7 +58,7 @@ const graphSchema = {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -69,8 +70,8 @@ const graphSchema = {
 
     <meta name="geo.region" content="IL" />
     <meta name="geo.placename" content="Tel Aviv" />
-    <link rel="alternate" hreflang="en" href={currentUrl} />
-    <link rel="alternate" hreflang="he" href={`${siteUrl}/he/`} />
+    <link rel="alternate" hreflang="he" href={currentUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -79,7 +80,7 @@ const graphSchema = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="HeshbonAI" />
-    <meta property="og:locale" content="en_IL" />
+    <meta property="og:locale" content="he_IL" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
