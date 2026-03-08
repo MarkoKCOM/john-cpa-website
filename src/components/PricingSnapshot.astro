@@ -4,12 +4,13 @@ const tiers = [
     name: 'Starter',
     price: '\u20AA1,000',
     unit: '/mo',
-    description: 'Document tracking, reminders & FAQ assistant',
-    clients: 'Up to 50 clients',
+    description: 'All core tools for small firms',
+    clients: 'Up to 25 clients',
     setupFee: true,
     features: [
+      'All integrations included',
+      'Unlimited follow-ups',
       'WhatsApp collection & confirmation',
-      'Automated reminders (up to 3)',
       'Document tracking dashboard',
       'FAQ assistant for client questions',
       'Daily summary reports',
@@ -26,9 +27,9 @@ const tiers = [
     features: [
       'Everything in Starter',
       'AI document reading & data extraction',
-      'Unlimited follow-ups',
       'Automated monthly reports',
       'Multi-accountant (up to 5 CPAs)',
+      'Multi-language (Russian, Arabic, French)',
       'CSV / API export',
       'Priority support (4hr)',
     ],
@@ -53,9 +54,9 @@ const tiers = [
 ];
 ---
 
-<section id="pricing" class="py-20 sm:py-28 bg-navy-light">
+<section id="pricing" class="py-16 sm:py-20 bg-navy-light">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
+    <div class="text-center mb-12">
       <p class="section-label mb-4">Pricing</p>
       <h2 class="text-3xl sm:text-4xl font-bold text-white">Simple pricing for growing firms</h2>
       <p class="text-muted mt-4">All prices excl. VAT. Onboarding fee may apply.</p>
@@ -63,25 +64,25 @@ const tiers = [
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
       {tiers.map((tier) => (
-        <div class={`rounded-2xl p-8 flex flex-col relative ${tier.highlighted ? 'bg-blue text-white ring-2 ring-blue shadow-xl shadow-blue/10' : 'bg-navy-light border border-border'}`}>
+        <div class={`rounded-2xl p-6 md:p-8 flex flex-col relative ${tier.highlighted ? 'bg-blue text-white ring-2 ring-blue shadow-xl shadow-blue/10' : 'bg-navy-light border border-border'}`}>
           {tier.highlighted && (
             <div class="absolute -top-3 left-1/2 -translate-x-1/2">
               <span class="bg-warning text-navy text-xs font-bold px-3 py-1 rounded-full">Most Popular</span>
             </div>
           )}
 
-          <div class="mb-6">
+          <div class="mb-5">
             <h3 class={`text-lg font-bold mb-1 ${tier.highlighted ? 'text-white' : 'text-white'}`}>{tier.name}</h3>
             <p class={`text-sm ${tier.highlighted ? 'text-white/70' : 'text-muted'}`}>{tier.description}</p>
           </div>
 
-          <div class="mb-6">
+          <div class="mb-5">
             <span class={`text-4xl font-extrabold font-display ${tier.highlighted ? 'text-white' : 'text-white'}`}>{tier.price}</span>
             {tier.unit && <span class={`text-sm ${tier.highlighted ? 'text-white/70' : 'text-muted'}`}>{tier.unit}</span>}
             <p class={`text-sm font-medium mt-1 ${tier.highlighted ? 'text-blue-pale' : 'text-blue'}`}>{tier.clients}</p>
           </div>
 
-          <ul class="space-y-3 mb-8 flex-1">
+          <ul class="space-y-2.5 mb-6 flex-1">
             {tier.features.map((feature) => (
               <li class={`flex items-start gap-2 text-sm ${tier.highlighted ? 'text-white/90' : 'text-muted'}`}>
                 <svg class={`w-4 h-4 flex-shrink-0 mt-0.5 ${tier.highlighted ? 'text-blue-pale' : 'text-blue'}`} fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -96,7 +97,7 @@ const tiers = [
             Get Started
           </a>
 
-          <div class={`mt-4 space-y-1 text-xs ${tier.highlighted ? 'text-white/50' : 'text-muted/50'}`}>
+          <div class={`mt-3 space-y-1 text-xs ${tier.highlighted ? 'text-white/50' : 'text-muted/50'}`}>
             {tier.setupFee && <p>* One-time setup fee applies</p>}
             <p>API token usage billed separately</p>
           </div>
@@ -104,7 +105,7 @@ const tiers = [
       ))}
     </div>
 
-    <div class="text-center mt-8">
+    <div class="text-center mt-6">
       <a href="/pricing" class="text-blue hover:text-blue-soft text-sm font-medium transition-colors inline-flex items-center gap-1">
         See full pricing details
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
