@@ -6,7 +6,7 @@ import '../styles/global.css';
 ---
 
 <Layout
-  title="Contact Us — HeshbonAI | AI Assistant for CPA Firms"
+  title="Contact Us - HeshbonAI | AI Assistant for CPA Firms"
   description="Get in touch with HeshbonAI. Tell us about your firm and we'll show you how we automate client follow-up and document collection."
 >
   <Navbar />
@@ -153,9 +153,11 @@ import '../styles/global.css';
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('contact-form');
-      const btn = document.getElementById('submit-btn');
-      const status = document.getElementById('form-status');
+      const form = document.getElementById('contact-form') as HTMLFormElement | null;
+      const btn = document.getElementById('submit-btn') as HTMLButtonElement | null;
+      const status = document.getElementById('form-status') as HTMLDivElement | null;
+
+      if (!form || !btn || !status) return;
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();

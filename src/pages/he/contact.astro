@@ -6,7 +6,7 @@ import '../../styles/global.css';
 ---
 
 <LayoutHe
-  title="צרו קשר — HeshbonAI | העוזר החכם למשרדי רו״ח"
+  title="צרו קשר - HeshbonAI | העוזר החכם למשרדי רו״ח"
   description="צרו קשר עם HeshbonAI. ספרו לנו על המשרד שלכם ונראה לכם איך אנחנו מייעלים מעקב ואיסוף מסמכים."
 >
   <NavbarHe />
@@ -155,9 +155,11 @@ import '../../styles/global.css';
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('contact-form');
-      const btn = document.getElementById('submit-btn');
-      const status = document.getElementById('form-status');
+      const form = document.getElementById('contact-form') as HTMLFormElement | null;
+      const btn = document.getElementById('submit-btn') as HTMLButtonElement | null;
+      const status = document.getElementById('form-status') as HTMLDivElement | null;
+
+      if (!form || !btn || !status) return;
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
