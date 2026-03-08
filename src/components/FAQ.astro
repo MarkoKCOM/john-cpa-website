@@ -1,0 +1,99 @@
+---
+const faqs = [
+  {
+    question: "Will clients know they're speaking with an assistant?",
+    answer: "Messages come from your firm's branded WhatsApp Business number with your firm name and logo. The tone is professional and human. Most clients think it's a new team member. If a client asks something the assistant can't answer, it flags it for your team.",
+  },
+  {
+    question: "Does it work in Hebrew?",
+    answer: "Yes. HeshbonAI is Hebrew-first. It also supports English, Arabic, Russian, and French for multi-language client bases.",
+  },
+  {
+    question: "Do clients need a portal or app?",
+    answer: "No. Zero downloads. Zero signups. Clients respond on WhatsApp — the app they already use daily. Just reply with a photo or file.",
+  },
+  {
+    question: "Can our team review messages before they go out?",
+    answer: "Yes. You control message templates and follow-up timing. Your team can review, pause, or override any conversation. There's a full audit trail of every message sent.",
+  },
+  {
+    question: "How long does setup take?",
+    answer: "Every firm gets a guided onboarding. We schedule a setup call, import your client list, connect WhatsApp, and configure everything with you. Most firms are live within a few days.",
+  },
+  {
+    question: "Can we control follow-up timing?",
+    answer: "Yes. You set the follow-up schedule (minimum 3 days between messages). The assistant never messages before 8:00 AM or after 8:00 PM. It respects Shabbat and holidays automatically.",
+  },
+];
+---
+
+<section id="faq" class="py-16 sm:py-20 bg-navy">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <p class="section-label mb-4">FAQ</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="space-y-3" id="homepage-faq-list">
+      {faqs.map((faq) => (
+        <div class="faq-item rounded-2xl border border-border overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left hover:bg-navy-light transition-colors" aria-expanded="false">
+            <span class="font-medium text-white">{faq.question}</span>
+            <svg class="faq-icon w-5 h-5 text-muted shrink-0 ml-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5">
+            <p class="text-muted text-sm leading-relaxed">{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-muted text-sm text-center mt-8">
+      Have another question? <a href="/contact" class="text-blue hover:text-blue/80 underline underline-offset-2">Get in touch</a>.
+    </p>
+  </div>
+</section>
+
+<script>
+  const faqList = document.getElementById('homepage-faq-list');
+  if (faqList) {
+    faqList.querySelectorAll('.faq-toggle').forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        const item = toggle.closest('.faq-item');
+        const content = item?.querySelector('.faq-content') as HTMLElement;
+        const icon = toggle.querySelector('.faq-icon') as HTMLElement;
+        if (!content || !icon) return;
+        const isOpen = !content.classList.contains('hidden');
+
+        faqList.querySelectorAll('.faq-item').forEach((otherItem) => {
+          if (otherItem !== item) {
+            const otherContent = otherItem.querySelector('.faq-content') as HTMLElement;
+            const otherIcon = otherItem.querySelector('.faq-icon') as HTMLElement;
+            const otherToggle = otherItem.querySelector('.faq-toggle');
+            if (otherContent) { otherContent.classList.add('hidden'); otherContent.style.maxHeight = ''; }
+            if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+            if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        if (isOpen) {
+          content.style.maxHeight = '';
+          setTimeout(() => content.classList.add('hidden'), 200);
+          icon.style.transform = 'rotate(0deg)';
+          toggle.setAttribute('aria-expanded', 'false');
+        } else {
+          content.classList.remove('hidden');
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.style.transform = 'rotate(180deg)';
+          toggle.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  }
+</script>
+
+<style>
+  .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  .faq-content:not(.hidden) { max-height: none; }
+  .faq-icon { transition: transform 0.2s ease; }
+</style>
