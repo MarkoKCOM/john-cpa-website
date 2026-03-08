@@ -98,7 +98,7 @@ const description = 'Flat monthly pricing in NIS. All plans include WhatsApp doc
               <span class="text-4xl font-bold text-white font-display">&#8362;1,800</span>
               <span class="text-white/70 text-sm">/month</span>
             </div>
-            <p class="mt-2 text-sm text-white/70">Up to 150 clients</p>
+            <p class="mt-2 text-sm text-white/70">Up to 100 clients</p>
           </div>
           <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 bg-white text-blue font-semibold rounded-lg hover:bg-blue-pale transition-all duration-200 text-sm shadow-sm w-full text-center mb-8">Get Started</a>
           <p class="text-xs text-white/60 mb-4">Everything in Starter, plus:</p>
@@ -123,7 +123,7 @@ const description = 'Flat monthly pricing in NIS. All plans include WhatsApp doc
               <span class="text-4xl font-bold text-white font-display">&#8362;2,700</span>
               <span class="text-muted text-sm">/month</span>
             </div>
-            <p class="mt-2 text-sm text-muted">Up to 300 clients</p>
+            <p class="mt-2 text-sm text-muted">Up to 200 clients</p>
           </div>
           <a href="/contact" class="btn-secondary w-full text-center mb-8">Get Started</a>
           <p class="text-xs text-muted/60 mb-4">Everything in Professional, plus:</p>
@@ -271,16 +271,25 @@ const description = 'Flat monthly pricing in NIS. All plans include WhatsApp doc
       toggles.forEach((toggle) => {
         toggle.addEventListener('click', () => {
           const item = toggle.closest('.faq-item');
-          const content = item.querySelector('.faq-content');
-          const icon = toggle.querySelector('.faq-icon');
+          if (!item) return;
+
+          const content = item.querySelector('.faq-content') as HTMLElement | null;
+          const icon = toggle.querySelector('.faq-icon') as HTMLElement | null;
+          if (!content || !icon) return;
+
           const isOpen = !content.classList.contains('hidden');
 
           document.querySelectorAll('.faq-item').forEach((otherItem) => {
             if (otherItem !== item) {
-              otherItem.querySelector('.faq-content').classList.add('hidden');
-              otherItem.querySelector('.faq-content').style.maxHeight = null;
-              otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
-              otherItem.querySelector('.faq-toggle').setAttribute('aria-expanded', 'false');
+              const otherContent = otherItem.querySelector('.faq-content') as HTMLElement | null;
+              const otherIcon = otherItem.querySelector('.faq-icon') as HTMLElement | null;
+              const otherToggle = otherItem.querySelector('.faq-toggle');
+              if (!otherContent || !otherIcon || !otherToggle) return;
+
+              otherContent.classList.add('hidden');
+              otherContent.style.maxHeight = null;
+              otherIcon.style.transform = 'rotate(0deg)';
+              otherToggle.setAttribute('aria-expanded', 'false');
             }
           });
 
