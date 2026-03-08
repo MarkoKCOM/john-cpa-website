@@ -1,0 +1,86 @@
+---
+const steps = [
+  {
+    title: "Schedule an intro call",
+    description: "We learn about your firm, client count, and current workflow. 15 minutes.",
+  },
+  {
+    title: "Connect WhatsApp",
+    description: "We help you set up or connect your WhatsApp Business account. We handle the technical side.",
+  },
+  {
+    title: "Import your clients",
+    description: "Upload your client list via CSV or connect your accounting software. We map your documents and deadlines.",
+  },
+  {
+    title: "Configure and test",
+    description: "Set follow-up schedules, message templates, and review rules. Test with a few clients before going live.",
+  },
+  {
+    title: "Go live with your team",
+    description: "Launch to all clients. Your team gets dashboard access and training. We're available for the first two weeks.",
+  },
+];
+---
+
+<section id="onboarding" class="py-20 sm:py-28 bg-navy-light">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="section-label mb-4">Getting Started</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white">Onboarding that sets you up for success</h2>
+      <p class="text-muted mt-4 max-w-2xl mx-auto">
+        We configure HeshbonAI with you — not just for you. Every firm gets a guided setup.
+      </p>
+    </div>
+
+    <div class="max-w-2xl mx-auto">
+      {steps.map((step, i) => (
+        <div class="onboarding-step flex gap-6 opacity-0 translate-y-4" style={`transition: opacity 0.5s ease-out ${i * 0.2}s, transform 0.5s ease-out ${i * 0.2}s;`}>
+          {/* Timeline column */}
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-blue/10 border-2 border-blue flex items-center justify-center flex-shrink-0 relative z-10">
+              <span class="text-blue font-display font-bold text-sm">{i + 1}</span>
+            </div>
+            {i < steps.length - 1 && (
+              <div class="w-px flex-1 bg-border mt-0"></div>
+            )}
+          </div>
+
+          {/* Content column */}
+          <div class={`pb-10 ${i === steps.length - 1 ? 'pb-0' : ''}`}>
+            <h3 class="text-white font-semibold text-lg mb-1">{step.title}</h3>
+            <p class="text-muted text-sm leading-relaxed">{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <div class="text-center mt-14">
+      <a href="https://cal.com/heshbonai/intro" class="btn-primary inline-block">
+        Schedule your intro call
+      </a>
+      <p class="text-muted text-sm mt-4">
+        Or email us at <a href="mailto:marko@heshbonai.co" class="text-blue hover:underline">marko@heshbonai.co</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const onboardingSection = document.getElementById('onboarding');
+  if (onboardingSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          observer.disconnect();
+          onboardingSection.querySelectorAll('.onboarding-step').forEach((step) => {
+            (step as HTMLElement).style.opacity = '1';
+            (step as HTMLElement).style.transform = 'translateY(0)';
+          });
+        }
+      });
+    }, { threshold: 0.2 });
+    observer.observe(onboardingSection);
+  }
+</script>
