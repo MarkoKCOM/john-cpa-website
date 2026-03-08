@@ -6,6 +6,7 @@ const tiers = [
     unit: '/mo',
     description: 'Document tracking, reminders & FAQ bot',
     clients: 'Up to 50 clients',
+    setupFee: true,
     features: [
       'WhatsApp collection & confirmation',
       'Automated reminders (up to 3)',
@@ -94,6 +95,11 @@ const tiers = [
             : 'btn-secondary w-full text-center'}>
             Get Started
           </a>
+
+          <div class={`mt-4 space-y-1 text-xs ${tier.highlighted ? 'text-white/50' : 'text-muted/50'}`}>
+            {tier.setupFee && <p>* One-time setup fee applies</p>}
+            <p>API token usage billed separately</p>
+          </div>
         </div>
       ))}
     </div>
