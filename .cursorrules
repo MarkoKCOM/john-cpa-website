@@ -1,0 +1,86 @@
+# HeshbonAI Website — Cursor Rules
+
+## What is HeshbonAI?
+
+HeshbonAI automates client follow-up, document collection, and status tracking through WhatsApp for Israeli CPA firms. The assistant operates as a firm-branded persona (e.g., "Maya from Cohen & Co.") — clients never know it's automated.
+
+- **HeshbonAI** = the company/business entity
+- **John** = the AI assistant product (deployed per CPA firm when customers sign up)
+
+## Tech Stack
+
+- **Framework:** Astro (static site generator)
+- **Styling:** Tailwind CSS with custom color palette (see tailwind.config.mjs)
+- **Fonts:** Inter + Heebo (Hebrew) + JetBrains Mono (data)
+- **Hosting:** Vercel (manual deploy: `npx vercel --prod --yes`)
+- **No backend** — static site only
+
+## Key Files
+
+- `src/components/` — All page sections as Astro components
+- `src/pages/` — Routes: index, pricing, how-it-works, about, contact
+- `src/styles/global.css` — Base styles + component classes (.btn-primary, .card, etc.)
+- `src/layouts/Layout.astro` — Base layout with SEO schema markup
+- `tailwind.config.mjs` — Custom color palette
+- `docs/` — All business docs (branding, product, competitors, prospects, website copy specs)
+
+## Design System
+
+### Colors (from tailwind.config.mjs)
+- Background: Deep Navy `#0A1628`
+- Surface/Cards: Slate Navy `#111C30`
+- Primary Accent: Electric Blue `#2D7FF9`
+- Text Primary: Off White `#E8ECF1`
+- Text Secondary: Cool Gray `#8A95A8`
+- Borders: `#263247`
+- Success: `#00D68F` | Warning: `#FFB020` | Error: `#FF4D4F`
+- WhatsApp: `#25D366`
+
+### Component Classes (global.css)
+- `.btn-primary` — Electric blue CTA button
+- `.btn-secondary` — Bordered outline button
+- `.section-label` — Blue uppercase label above section headings
+- `.card` — Navy card with border and hover lift
+
+## Content Rules — MUST FOLLOW
+
+- Never say "bot" or "chatbot" — always "assistant"
+- Never use AI hype language ("revolutionary," "game-changing")
+- The CPA is the hero, HeshbonAI is the tool
+- Short sentences, direct, outcome-focused
+- Firm-branded assistant model: "Maya from [Firm Name]"
+- No "free trial" — there is no free trial
+- No "demo" page — use /contact instead
+- CTAs say "Get Started" and link to /contact
+- May have onboarding fee
+- All prices excl. VAT
+
+## Pricing (do not change without asking)
+
+| Tier | Price | Clients |
+|------|-------|---------|
+| Starter | ₪1,000/mo | Up to 50 |
+| Professional | ₪1,800/mo | Up to 150 |
+| Complete | ₪2,700/mo | Up to 300 |
+
+## Contact
+
+- CEO: Marko Sione — marko@heshbonai.co
+- Support: support@heshbonai.co
+- Company: Heshbonai Ltd., Tel Aviv, Israel
+
+## Animations
+
+All animations use vanilla JS IntersectionObserver — no animation libraries. Existing:
+- Hero: Dana Levi row progress animation (2/4 → 4/4)
+- How It Works: Sequential step reveal with connecting line
+- ROI: Count-up numbers on scroll
+- WhatsApp Demo: Messages appear sequentially, status transitions
+- Cards: 2px hover lift with border brightening
+
+## When editing
+
+- Read the relevant `docs/` file before changing copy (e.g., docs/website/homepage.md for homepage)
+- Keep the dark theme consistent — use Tailwind classes from the design system
+- Hebrew text uses `font-hebrew` (Heebo) and `dir="rtl"`
+- Test with `npm run dev` (localhost:4321)
