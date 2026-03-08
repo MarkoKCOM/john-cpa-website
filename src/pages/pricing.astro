@@ -270,6 +270,20 @@ const description = 'Flat monthly pricing in NIS. All plans include WhatsApp doc
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggles = document.querySelectorAll('.faq-toggle');
+      document.querySelectorAll('.faq-item').forEach((item, index) => {
+        const toggle = item.querySelector('.faq-toggle');
+        const content = item.querySelector('.faq-content');
+        if (!toggle || !content) return;
+
+        const buttonId = `pricing-faq-button-${index + 1}`;
+        const panelId = `pricing-faq-panel-${index + 1}`;
+        toggle.id = buttonId;
+        toggle.setAttribute('aria-controls', panelId);
+        content.id = panelId;
+        content.setAttribute('role', 'region');
+        content.setAttribute('aria-labelledby', buttonId);
+      });
+
       toggles.forEach((toggle) => {
         toggle.addEventListener('click', () => {
           const item = toggle.closest('.faq-item');

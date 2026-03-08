@@ -57,6 +57,20 @@ const faqs = [
 <script>
   const faqList = document.getElementById('homepage-faq-list');
   if (faqList) {
+    faqList.querySelectorAll('.faq-item').forEach((item, index) => {
+      const toggle = item.querySelector('.faq-toggle');
+      const content = item.querySelector('.faq-content');
+      if (!toggle || !content) return;
+
+      const buttonId = `homepage-faq-button-${index + 1}`;
+      const panelId = `homepage-faq-panel-${index + 1}`;
+      toggle.id = buttonId;
+      toggle.setAttribute('aria-controls', panelId);
+      content.id = panelId;
+      content.setAttribute('role', 'region');
+      content.setAttribute('aria-labelledby', buttonId);
+    });
+
     faqList.querySelectorAll('.faq-toggle').forEach((toggle) => {
       toggle.addEventListener('click', () => {
         const item = toggle.closest('.faq-item');

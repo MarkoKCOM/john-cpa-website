@@ -1,0 +1,81 @@
+---
+import LayoutHe from '../../layouts/LayoutHe.astro';
+import NavbarHe from '../../components/NavbarHe.astro';
+import FooterHe from '../../components/FooterHe.astro';
+import '../../styles/global.css';
+---
+
+<LayoutHe
+  title="הצהרת נגישות - HeshbonAI"
+  description="הצהרת הנגישות של אתר HeshbonAI, כולל מאמצי ההנגשה שלנו ופרטי יצירת קשר לדיווח על בעיות נגישות."
+  canonical="https://heshbonai.co/he/accessibility"
+>
+  <NavbarHe />
+
+  <main class="pt-24">
+    <section class="py-20 md:py-28 bg-navy">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <p class="section-label mb-4">נגישות</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-white">הצהרת נגישות</h1>
+        <p class="text-muted text-lg md:text-xl mt-6 max-w-3xl mx-auto">
+          HeshbonAI פועלת כדי לאפשר שימוש נוח ונגיש ככל האפשר באתר עבור כלל המשתמשים, לרבות אנשים עם מוגבלות.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-navy-light">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="space-y-8">
+          <div class="card">
+            <h2 class="text-2xl font-bold text-white mb-4">המחויבות שלנו</h2>
+            <p class="text-muted leading-relaxed">
+              אנו פועלים לשיפור נגישות האתר והשימושיות שלו באופן שוטף. המטרה שלנו היא לעמוד בבסיס נגישות מעשי
+              התואם לעקרונות מקובלים של WCAG ברמת AA ולדרישות נגישות המקובלות עבור אתרים הפונים למשתמשים בישראל.
+            </p>
+          </div>
+
+          <div class="card">
+            <h2 class="text-2xl font-bold text-white mb-4">מה כבר נגיש באתר</h2>
+            <ul class="space-y-3 text-muted leading-relaxed">
+              <li>ניווט ידידותי למקלדת עם סימון פוקוס ברור.</li>
+              <li>קישור דילוג לתוכן הראשי עבור משתמשי מקלדת.</li>
+              <li>תצוגה רספונסיבית למחשבים ולמכשירים ניידים.</li>
+              <li>התחשבות בהעדפת משתמשים להפחתת אנימציות ככל האפשר.</li>
+              <li>מבנה סמנטי של כותרות, כפתורים וניווט בדפים המרכזיים.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2 class="text-2xl font-bold text-white mb-4">מגבלות ידועות</h2>
+            <p class="text-muted leading-relaxed">
+              אנו ממשיכים לבדוק ולשפר את האתר. ייתכן שחלק מהתכנים, אינטגרציות צד שלישי או עדכונים עתידיים
+              עדיין לא יספקו חוויית נגישות מיטבית בכל מצב. אם נתקלתם בבעיה, נשמח לדעת כדי שנוכל לטפל בה.
+            </p>
+          </div>
+
+          <div class="card">
+            <h2 class="text-2xl font-bold text-white mb-4">נתקלתם בבעיה או צריכים עזרה?</h2>
+            <p class="text-muted leading-relaxed">
+              אם נתקלתם בחסם נגישות באתר, אנא פנו אלינו עם הפרטים הבאים:
+            </p>
+            <ul class="space-y-3 text-muted leading-relaxed mt-4">
+              <li>שם העמוד או האזור שבו נתקלתם בבעיה.</li>
+              <li>תיאור קצר של הקושי.</li>
+              <li>המכשיר, הדפדפן או הטכנולוגיה המסייעת שבהם השתמשתם, אם רלוונטי.</li>
+            </ul>
+            <p class="text-muted leading-relaxed mt-4">
+              יצירת קשר: <a href="mailto:support@heshbonai.co" class="text-blue hover:text-blue-soft underline underline-offset-2">support@heshbonai.co</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <h2 class="text-2xl font-bold text-white mb-4">מועד עדכון ההצהרה</h2>
+            <p class="text-muted leading-relaxed">הצהרה זו עודכנה לאחרונה במרץ 2026.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <FooterHe />
+</LayoutHe>

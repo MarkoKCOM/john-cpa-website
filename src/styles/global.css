@@ -22,6 +22,28 @@
   h1, h2, h3, h4 {
     @apply font-display;
   }
+
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  [tabindex]:not([tabindex="-1"]) {
+    @apply focus:outline-none;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:not([tabindex="-1"]):focus-visible {
+    @apply ring-2 ring-blue-soft ring-offset-2 ring-offset-navy rounded-md;
+  }
+
+  main:focus {
+    outline: none;
+  }
 }
 
 @layer components {
@@ -50,4 +72,223 @@
     @apply border-border shadow-lg shadow-blue/5;
     transform: translateY(-2px);
   }
+
+  .skip-link {
+    @apply sr-only fixed left-4 top-4 z-[100] rounded-md bg-white px-4 py-2 font-medium text-navy shadow-lg;
+  }
+
+  .skip-link:focus {
+    @apply not-sr-only;
+  }
+
+  .accessibility-widget {
+    @apply fixed bottom-4 right-4 z-[100] flex flex-col items-end;
+  }
+
+  .accessibility-widget--rtl {
+    @apply right-auto left-4 items-start;
+  }
+
+  .accessibility-fab {
+    @apply inline-flex items-center gap-2 rounded-full border border-blue/30 bg-blue px-3 py-3 text-white shadow-lg shadow-blue/20 transition-all duration-200;
+  }
+
+  .accessibility-fab:hover {
+    @apply bg-blue-dark;
+    transform: translateY(-1px);
+  }
+
+  .accessibility-fab__icon {
+    @apply h-5 w-5 shrink-0;
+  }
+
+  .accessibility-fab__label {
+    @apply hidden text-sm font-semibold sm:inline;
+  }
+
+  .accessibility-panel {
+    @apply absolute bottom-full right-0 mb-3 w-[min(22rem,calc(100vw-2rem))] rounded-2xl border border-border bg-navy-light/95 p-4 text-offwhite shadow-2xl shadow-black/35 backdrop-blur;
+  }
+
+  .accessibility-widget--rtl .accessibility-panel {
+    @apply right-auto left-0;
+  }
+
+  .accessibility-panel__header {
+    @apply mb-4 flex items-center justify-between gap-4;
+  }
+
+  .accessibility-panel__title {
+    @apply text-lg font-semibold text-white;
+  }
+
+  .accessibility-panel__close {
+    @apply text-sm font-medium text-muted transition-colors duration-200 hover:text-white;
+  }
+
+  .accessibility-panel__body {
+    @apply space-y-3;
+  }
+
+  .accessibility-panel__section {
+    @apply rounded-xl border border-border bg-navy p-4;
+  }
+
+  .accessibility-panel__label {
+    @apply mb-3 text-sm font-semibold text-white;
+  }
+
+  .accessibility-font-controls {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .accessibility-control-btn {
+    @apply inline-flex min-w-[4.5rem] items-center justify-center rounded-lg border border-border bg-navy-light px-3 py-2 text-sm font-medium text-offwhite transition-colors duration-200 hover:border-blue-soft hover:text-white;
+  }
+
+  .accessibility-toggle {
+    @apply flex items-center justify-between gap-3 rounded-xl border border-border bg-navy px-4 py-3 text-sm font-medium text-offwhite;
+  }
+
+  .accessibility-toggle input {
+    @apply h-5 w-5 shrink-0 accent-blue;
+  }
+
+  .accessibility-panel__actions {
+    @apply pt-2;
+  }
+
+  .accessibility-reset-btn {
+    @apply mb-3 inline-flex w-full items-center justify-center rounded-lg bg-white px-4 py-3 text-sm font-semibold text-navy transition-colors duration-200 hover:bg-offwhite;
+  }
+
+  .accessibility-statement-link {
+    @apply inline-flex text-sm font-medium text-blue-soft underline-offset-4 transition-colors duration-200 hover:text-white;
+  }
+}
+
+@layer utilities {
+  html[data-a11y-links] a {
+    text-decoration-line: underline !important;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.18em;
+  }
+
+  html[data-a11y-readable-font] body,
+  html[data-a11y-readable-font] button,
+  html[data-a11y-readable-font] input,
+  html[data-a11y-readable-font] select,
+  html[data-a11y-readable-font] textarea {
+    font-family: Arial, Helvetica, sans-serif !important;
+    letter-spacing: normal !important;
+  }
+
+  html[data-a11y-readable-font] h1,
+  html[data-a11y-readable-font] h2,
+  html[data-a11y-readable-font] h3,
+  html[data-a11y-readable-font] h4,
+  html[data-a11y-readable-font] h5,
+  html[data-a11y-readable-font] h6 {
+    font-family: Arial, Helvetica, sans-serif !important;
+  }
+
+  html[data-a11y-contrast] {
+    color-scheme: dark;
+  }
+
+  html[data-a11y-contrast] body,
+  html[data-a11y-contrast] main,
+  html[data-a11y-contrast] header,
+  html[data-a11y-contrast] footer,
+  html[data-a11y-contrast] nav,
+  html[data-a11y-contrast] section,
+  html[data-a11y-contrast] article,
+  html[data-a11y-contrast] aside,
+  html[data-a11y-contrast] .card,
+  html[data-a11y-contrast] .accessibility-panel,
+  html[data-a11y-contrast] .accessibility-panel__section,
+  html[data-a11y-contrast] .accessibility-toggle,
+  html[data-a11y-contrast] .accessibility-control-btn {
+    background: #000 !important;
+    background-image: none !important;
+    color: #fff !important;
+    border-color: #fff !important;
+    box-shadow: none !important;
+  }
+
+  html[data-a11y-contrast] .btn-primary,
+  html[data-a11y-contrast] .btn-secondary,
+  html[data-a11y-contrast] .accessibility-fab,
+  html[data-a11y-contrast] .accessibility-reset-btn {
+    background: #fff !important;
+    color: #000 !important;
+    border-color: #fff !important;
+    box-shadow: none !important;
+  }
+
+  html[data-a11y-contrast] a,
+  html[data-a11y-contrast] button,
+  html[data-a11y-contrast] label,
+  html[data-a11y-contrast] p,
+  html[data-a11y-contrast] li,
+  html[data-a11y-contrast] span,
+  html[data-a11y-contrast] h1,
+  html[data-a11y-contrast] h2,
+  html[data-a11y-contrast] h3,
+  html[data-a11y-contrast] h4,
+  html[data-a11y-contrast] h5,
+  html[data-a11y-contrast] h6 {
+    color: #fff !important;
+  }
+
+  html[data-a11y-contrast] a {
+    color: #ffe24a !important;
+  }
+
+  html[data-a11y-contrast] input,
+  html[data-a11y-contrast] select,
+  html[data-a11y-contrast] textarea {
+    background: #000 !important;
+    color: #fff !important;
+    border: 1px solid #fff !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .accessibility-widget,
+  .accessibility-widget--rtl {
+    bottom: 1rem;
+  }
+
+  .accessibility-panel {
+    width: min(20rem, calc(100vw - 1rem));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html[data-a11y-reduced-motion] {
+  scroll-behavior: auto !important;
+}
+
+html[data-a11y-reduced-motion] *,
+html[data-a11y-reduced-motion] *::before,
+html[data-a11y-reduced-motion] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
 }

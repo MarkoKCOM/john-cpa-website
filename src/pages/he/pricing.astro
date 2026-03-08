@@ -260,6 +260,20 @@ const description = 'מחירים חודשיים קבועים בשקלים. כל
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggles = document.querySelectorAll('#faq-list-he .faq-toggle');
+      document.querySelectorAll('#faq-list-he .faq-item').forEach((item, index) => {
+        const toggle = item.querySelector('.faq-toggle');
+        const content = item.querySelector('.faq-content');
+        if (!toggle || !content) return;
+
+        const buttonId = `pricing-he-faq-button-${index + 1}`;
+        const panelId = `pricing-he-faq-panel-${index + 1}`;
+        toggle.id = buttonId;
+        toggle.setAttribute('aria-controls', panelId);
+        content.id = panelId;
+        content.setAttribute('role', 'region');
+        content.setAttribute('aria-labelledby', buttonId);
+      });
+
       toggles.forEach((toggle) => {
         toggle.addEventListener('click', () => {
           const item = toggle.closest('.faq-item');

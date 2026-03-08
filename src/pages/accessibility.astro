@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Layout
+  title="Accessibility Statement - HeshbonAI"
+  description="Accessibility statement for the HeshbonAI website, including our accessibility efforts, standards target, and contact details for reporting issues."
+  canonical="https://heshbonai.co/accessibility"
+>
+  <Navbar />
+
+  <main class="pt-24">
+    <section class="py-20 md:py-28 bg-navy">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <p class="section-label mb-4 text-center">Accessibility</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-white text-center">
+          Accessibility Statement
+        </h1>
+        <p class="text-muted text-lg md:text-xl mt-6 text-center max-w-3xl mx-auto">
+          HeshbonAI is committed to making this website accessible to as many people as possible,
+          including people with disabilities.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-navy-light">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="space-y-8">
+          <div class="card">
+            <h2 class="text-2xl font-bold text-white mb-4">Our commitment</h2>
+            <p class="text-muted leading-relaxed">
+              We work to improve the usability and accessibility of this website on an ongoing basis.
+              Our goal is to support a practical accessibility baseline aligned with common WCAG Level AA
+              expectations and the accessibility obligations typically applied to websites serving users in Israel.
+            </p>
+          </div>
+
+          <div class="card">
+            <h2 class="text-2xl font-bold text-white mb-4">Accessibility features on this site</h2>
+            <ul class="space-y-3 text-muted leading-relaxed">
+              <li>Keyboard-friendly navigation and visible focus indicators.</li>
+              <li>A skip link that allows keyboard users to jump directly to the main content.</li>
+              <li>Responsive layouts designed to work across desktop and mobile devices.</li>
+              <li>Support for reduced-motion preferences where possible.</li>
+              <li>Semantic headings, buttons, and navigation patterns across key pages.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2 class="text-2xl font-bold text-white mb-4">Known limitations</h2>
+            <p class="text-muted leading-relaxed">
+              We continue to review and improve the website. Some content, third-party integrations,
+              or future updates may not yet provide the optimal accessibility experience in every case.
+              If you encounter a specific issue, we want to hear about it so we can address it.
+            </p>
+          </div>
+
+          <div class="card">
+            <h2 class="text-2xl font-bold text-white mb-4">Need help or found an issue?</h2>
+            <p class="text-muted leading-relaxed">
+              If you experience an accessibility barrier while using this site, please contact us with:
+            </p>
+            <ul class="space-y-3 text-muted leading-relaxed mt-4">
+              <li>The page or feature you were trying to use.</li>
+              <li>A short description of the issue.</li>
+              <li>The device, browser, or assistive technology you were using, if relevant.</li>
+            </ul>
+            <p class="text-muted leading-relaxed mt-4">
+              Contact: <a href="mailto:support@heshbonai.co" class="text-blue hover:text-blue-soft underline underline-offset-2">support@heshbonai.co</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <h2 class="text-2xl font-bold text-white mb-4">Statement updated</h2>
+            <p class="text-muted leading-relaxed">Last updated: March 2026.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

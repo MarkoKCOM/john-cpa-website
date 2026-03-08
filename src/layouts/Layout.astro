@@ -1,4 +1,6 @@
 ---
+import AccessibilityWidget from '../components/AccessibilityWidget.astro';
+
 interface Props {
   title: string;
   description: string;
@@ -92,6 +94,17 @@ const graphSchema = {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body class="min-h-screen">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <slot />
+    <AccessibilityWidget locale="en" />
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const main = document.querySelector('main');
+        if (!main) return;
+
+        if (!main.id) main.id = 'main-content';
+        if (!main.hasAttribute('tabindex')) main.setAttribute('tabindex', '-1');
+      });
+    </script>
   </body>
 </html>
