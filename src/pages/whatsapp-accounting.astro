@@ -1,39 +1,39 @@
 ---
-import FooterHe from '../../components/FooterHe.astro';
-import NavbarHe from '../../components/NavbarHe.astro';
-import LayoutHe from '../../layouts/LayoutHe.astro';
-import '../../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
 ---
 
-<LayoutHe
-  title="וואטסאפ למשרד רו״ח - תזכורות אוטומטיות ואיסוף מסמכים | HeshbonAI"
-  description="אוטומציה לשליחת תזכורות ואיסוף מסמכים מלקוחות בוואטסאפ. 82% שיעור תגובה לעומת 23% במייל. בנוי למשרדי רואי חשבון בישראל."
+<Layout
+  title="WhatsApp for CPA Firms - Automated Reminders & Document Collection | HeshbonAI"
+  description="Automate client reminders and document collection via WhatsApp. 82% response rate vs 23% for email. Built for accounting firms worldwide."
   breadcrumbs={[
-    { name: "דף הבית", url: "https://heshbonai.co/he/" },
-    { name: "וואטסאפ לרואה חשבון", url: "https://heshbonai.co/he/whatsapp-accounting/" }
+    { name: "Home", url: "https://heshbonai.co/" },
+    { name: "WhatsApp for Accountants", url: "https://heshbonai.co/whatsapp-accounting/" }
   ]}
 >
-  <NavbarHe />
+  <Navbar />
   <main>
 
     <!-- Hero -->
     <section class="bg-navy pt-32 pb-16">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-        <span class="section-label">וואטסאפ לרואה חשבון</span>
+        <span class="section-label">WhatsApp for CPA Firms</span>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mt-4 leading-tight">
-          וואטסאפ למשרד רו״ח - תזכורות אוטומטיות שעובדות
+          WhatsApp for CPA firms — automated reminders that actually work
         </h1>
         <p class="text-lg md:text-xl text-muted mt-6 max-w-2xl mx-auto leading-relaxed">
-          הלקוחות שלכם לא עונים למיילים. הם כן עונים בוואטסאפ.
-          <strong class="text-offwhite">82% שיעור תגובה בוואטסאפ</strong> לעומת 23% במייל.
-          תזכורות אוטומטיות ללקוחות, איסוף מסמכים, ומעקב - הכל דרך הערוץ שהלקוח כבר משתמש בו כל יום.
+          Your clients don't respond to emails. They do respond on WhatsApp.
+          <strong class="text-offwhite">82% response rate on WhatsApp</strong> vs 23% for email.
+          Automated client reminders, document collection, and tracking — all through the channel your clients already use every day.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
           <a href="https://cal.com/heshbonai/intro" class="btn-primary text-lg px-8 py-4">
-            קבעו שיחת היכרות
+            Schedule your intro call
           </a>
           <a href="/pricing" class="btn-secondary text-lg px-8 py-4">
-            ראו מחירים
+            See Pricing
           </a>
         </div>
       </div>
@@ -43,9 +43,9 @@ import '../../styles/global.css';
     <section class="bg-navy-light py-16 md:py-24">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12">
-          <span class="section-label">הבעיה</span>
+          <span class="section-label">The Problem</span>
           <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-4">
-            למה מיילים ופורטלים לא עובדים
+            Why emails and portals don't work
           </h2>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
@@ -53,27 +53,27 @@ import '../../styles/global.css';
             <div class="text-4xl mb-4">
               <svg class="w-10 h-10 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">23% שיעור תגובה במייל</h3>
+            <h3 class="text-lg font-bold text-white mb-2">23% email response rate</h3>
             <p class="text-muted leading-relaxed">
-              שולחים מייל ללקוח עם בקשה למסמכים? רוב הסיכויים שהוא לא יפתח אותו. המייל נקבר בין 200 הודעות אחרות, וצריך לשלוח תזכורות שוב ושוב.
+              Send a client an email asking for documents? Most likely it won't get opened. It gets buried among 200 other messages, and you have to follow up again and again.
             </p>
           </div>
           <div class="card">
             <div class="text-4xl mb-4">
               <svg class="w-10 h-10 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">אף לקוח לא יוריד פורטל</h3>
+            <h3 class="text-lg font-bold text-white mb-2">No client will download a portal</h3>
             <p class="text-muted leading-relaxed">
-              קניתם מערכת עם "פורטל לקוחות"? נחמד. עכשיו תנסו לשכנע בעל עסק בן 55 להוריד אפליקציה, ליצור סיסמה, ולהעלות קבצים. זה פשוט לא קורה.
+              You bought a system with a "client portal"? Nice. Now try convincing a 55-year-old business owner to download an app, create a password, and upload files. It just doesn't happen.
             </p>
           </div>
           <div class="card">
             <div class="text-4xl mb-4">
               <svg class="w-10 h-10 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" /></svg>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">וואטסאפ - שם הלקוח נמצא</h3>
+            <h3 class="text-lg font-bold text-white mb-2">WhatsApp — where your clients are</h3>
             <p class="text-muted leading-relaxed">
-              מעל 80% מהישראלים משתמשים בוואטסאפ כל יום. זה הערוץ הכי טבעי לתקשורת עסקית בישראל. הודעה נקראת תוך 3 דקות בממוצע.
+              Over 2 billion people use WhatsApp daily worldwide. It's the most natural channel for business communication. Messages are read within 3 minutes on average.
             </p>
           </div>
         </div>
@@ -84,9 +84,9 @@ import '../../styles/global.css';
     <section class="bg-navy py-16 md:py-24">
       <div class="max-w-5xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <span class="section-label">וואטסאפ למשרד רו״ח</span>
+          <span class="section-label">WhatsApp for CPA Firms</span>
           <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-4">
-            איך זה עובד בפועל
+            How it works in practice
           </h2>
         </div>
         <div class="grid sm:grid-cols-2 gap-8">
@@ -95,9 +95,9 @@ import '../../styles/global.css';
               <span class="text-blue font-bold text-lg">1</span>
             </div>
             <div>
-              <h3 class="text-lg font-bold text-white mb-1">מגדירים רשימת לקוחות ומסמכים נדרשים</h3>
+              <h3 class="text-lg font-bold text-white mb-1">Set up your client list and required documents</h3>
               <p class="text-muted leading-relaxed">
-                מעלים את רשימת הלקוחות, מסמנים מה צריך מכל אחד - תלושים, חשבוניות, אישורי ניכוי מס, מה שצריך.
+                Upload your client list, mark what you need from each one — pay stubs, invoices, tax certificates, whatever's needed.
               </p>
             </div>
           </div>
@@ -106,9 +106,9 @@ import '../../styles/global.css';
               <span class="text-blue font-bold text-lg">2</span>
             </div>
             <div>
-              <h3 class="text-lg font-bold text-white mb-1">HeshbonAI שולח תזכורות אוטומטיות מהמספר העסקי שלכם</h3>
+              <h3 class="text-lg font-bold text-white mb-1">HeshbonAI sends automatic reminders from your business number</h3>
               <p class="text-muted leading-relaxed">
-                ההודעות יוצאות מהמספר של המשרד, עם השם והלוגו שלכם. הלקוח מקבל הודעה אישית ומנוסחת בטון הנכון.
+                Messages go out from your firm's number, with your name and logo. Clients receive a personalized message in the right tone.
               </p>
             </div>
           </div>
@@ -117,9 +117,9 @@ import '../../styles/global.css';
               <span class="text-blue font-bold text-lg">3</span>
             </div>
             <div>
-              <h3 class="text-lg font-bold text-white mb-1">הלקוח מצלם ושולח ישירות בוואטסאפ - בלי פורטל, בלי אפליקציה</h3>
+              <h3 class="text-lg font-bold text-white mb-1">The client snaps a photo and sends it right in WhatsApp</h3>
               <p class="text-muted leading-relaxed">
-                הלקוח פשוט מצלם את המסמך ושולח. בדיוק כמו שהוא שולח תמונה לחבר. אפס חיכוך, אפס סיבוכים.
+                The client just photographs the document and sends it. Exactly like sending a photo to a friend. Zero friction, zero hassle.
               </p>
             </div>
           </div>
@@ -128,9 +128,9 @@ import '../../styles/global.css';
               <span class="text-blue font-bold text-lg">4</span>
             </div>
             <div>
-              <h3 class="text-lg font-bold text-white mb-1">המערכת מאשרת, מסווגת ומעדכנת את הצוות</h3>
+              <h3 class="text-lg font-bold text-white mb-1">The system confirms, classifies, and updates your team</h3>
               <p class="text-muted leading-relaxed">
-                HeshbonAI מזהה את סוג המסמך, מאשר ללקוח שהתקבל, ומעדכן את הצוות שלכם בזמן אמת. בלי מעקב ידני.
+                HeshbonAI identifies the document type, confirms receipt to the client, and updates your team in real time. No manual tracking.
               </p>
             </div>
           </div>
@@ -138,76 +138,76 @@ import '../../styles/global.css';
       </div>
     </section>
 
-    <!-- WhatsApp Mockup -->
+    <!-- WhatsApp Chat Mockup -->
     <section class="bg-navy-light py-16 md:py-24">
       <div class="max-w-2xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-10">
-          <span class="section-label">תזכורות אוטומטיות ללקוחות</span>
+          <span class="section-label">Automated Client Reminders</span>
           <h2 class="text-2xl sm:text-3xl font-bold text-white mt-4">
-            ככה זה נראה מצד הלקוח
+            What it looks like from the client's side
           </h2>
         </div>
         <!-- WhatsApp Chat Mockup -->
-        <div class="rounded-2xl overflow-hidden border border-border shadow-2xl max-w-md mx-auto" dir="rtl">
+        <div class="rounded-2xl overflow-hidden border border-border shadow-2xl max-w-md mx-auto">
           <!-- WhatsApp Header -->
           <div class="bg-[#1F2C34] px-4 py-3 flex items-center gap-3">
             <div class="w-10 h-10 rounded-full bg-blue/20 flex items-center justify-center">
               <svg class="w-5 h-5 text-blue" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
             </div>
             <div>
-              <div class="text-white text-sm font-semibold">משרד כהן רו״ח</div>
-              <div class="text-[#8696A0] text-xs">חשבון עסקי מאומת</div>
+              <div class="text-white text-sm font-semibold">Williams &amp; Partners CPA</div>
+              <div class="text-[#8696A0] text-xs">Verified business account</div>
             </div>
           </div>
           <!-- Chat Body -->
           <div class="bg-[#0B141A] px-3 py-4 space-y-3 min-h-[320px]">
             <!-- Outgoing (from business) -->
-            <div class="flex justify-start">
+            <div class="flex justify-end">
               <div class="bg-[#005C4B] rounded-lg rounded-tr-none px-3 py-2 max-w-[85%] shadow">
                 <p class="text-[#E9EDEF] text-sm leading-relaxed">
-                  שלום אבי, אנחנו צריכים 3 מסמכים לדוח השנתי. אפשר לשלוח אותם כאן?
+                  Hi Sarah, we need 3 documents for your annual return. You can send them right here:
                 </p>
                 <p class="text-[#E9EDEF] text-sm leading-relaxed mt-2">
-                  1. אישור ניכוי מס במקור<br/>
-                  2. ריכוז תלושי שכר 2025<br/>
-                  3. אישור יתרה מהבנק
+                  1. W-2 from employer<br/>
+                  2. 1099 forms (if any)<br/>
+                  3. Year-end bank statement
                 </p>
-                <div class="text-[#8696A0] text-[10px] text-left mt-1 flex items-center gap-1 justify-end">
+                <div class="text-[#8696A0] text-[10px] text-right mt-1 flex items-center gap-1 justify-end">
                   09:14
                   <svg class="w-4 h-3 text-[#53BDEB]" viewBox="0 0 16 11" fill="currentColor"><path d="M11.07.66L4.88 6.85 2.6 4.57l-.7.7 2.98 2.98.7-.7 6.19-6.19-.7-.7zM6.58 9.55l-.7-.7-2.28-2.28-.7.7 2.98 2.98.7-.7zM12.47 1.36l-.7-.7-4.79 4.79.7.7 4.79-4.79z"/></svg>
                 </div>
               </div>
             </div>
             <!-- Incoming (from client) -->
-            <div class="flex justify-end">
+            <div class="flex justify-start">
               <div class="bg-[#1F2C34] rounded-lg rounded-tl-none px-3 py-2 max-w-[85%] shadow">
                 <p class="text-[#E9EDEF] text-sm leading-relaxed">
-                  בטח, רגע אני מחפש
+                  Sure thing, let me grab those
                 </p>
-                <div class="text-[#8696A0] text-[10px] text-left mt-1">09:15</div>
+                <div class="text-[#8696A0] text-[10px] text-right mt-1">09:15</div>
               </div>
             </div>
             <!-- Incoming (from client - document) -->
-            <div class="flex justify-end">
+            <div class="flex justify-start">
               <div class="bg-[#1F2C34] rounded-lg rounded-tl-none px-3 py-2 max-w-[85%] shadow">
                 <div class="flex items-center gap-2 bg-[#0B141A] rounded-lg p-2 mb-1">
                   <svg class="w-8 h-8 text-[#8696A0]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
                   <div>
-                    <div class="text-[#E9EDEF] text-xs font-medium">אישור_ניכוי_מס_2025.pdf</div>
+                    <div class="text-[#E9EDEF] text-xs font-medium">W2_2025_Sarah_Mitchell.pdf</div>
                     <div class="text-[#8696A0] text-[10px]">PDF - 245 KB</div>
                   </div>
                 </div>
-                <p class="text-[#E9EDEF] text-sm">הנה הראשון</p>
-                <div class="text-[#8696A0] text-[10px] text-left mt-1">09:17</div>
+                <p class="text-[#E9EDEF] text-sm">Here's the first one</p>
+                <div class="text-[#8696A0] text-[10px] text-right mt-1">09:17</div>
               </div>
             </div>
             <!-- Outgoing (confirmation) -->
-            <div class="flex justify-start">
+            <div class="flex justify-end">
               <div class="bg-[#005C4B] rounded-lg rounded-tr-none px-3 py-2 max-w-[85%] shadow">
                 <p class="text-[#E9EDEF] text-sm leading-relaxed">
-                  קיבלנו את אישור ניכוי המס, תודה! נשארו עוד 2 מסמכים. קחו את הזמן.
+                  Got your W-2, thanks Sarah! 2 documents remaining. Take your time.
                 </p>
-                <div class="text-[#8696A0] text-[10px] text-left mt-1 flex items-center gap-1 justify-end">
+                <div class="text-[#8696A0] text-[10px] text-right mt-1 flex items-center gap-1 justify-end">
                   09:17
                   <svg class="w-4 h-3 text-[#53BDEB]" viewBox="0 0 16 11" fill="currentColor"><path d="M11.07.66L4.88 6.85 2.6 4.57l-.7.7 2.98 2.98.7-.7 6.19-6.19-.7-.7zM6.58 9.55l-.7-.7-2.28-2.28-.7.7 2.98 2.98.7-.7zM12.47 1.36l-.7-.7-4.79 4.79.7.7 4.79-4.79z"/></svg>
                 </div>
@@ -216,7 +216,7 @@ import '../../styles/global.css';
           </div>
         </div>
         <p class="text-muted text-sm text-center mt-6">
-          * הדוגמה להמחשה בלבד. ההודעות נשלחות מהמספר העסקי של המשרד שלכם.
+          * Example for illustration only. Messages are sent from your firm's branded business number.
         </p>
       </div>
     </section>
@@ -225,9 +225,9 @@ import '../../styles/global.css';
     <section class="bg-navy py-16 md:py-24">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12">
-          <span class="section-label">יתרונות</span>
+          <span class="section-label">Features</span>
           <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-4">
-            למה וואטסאפ ולא עוד פורטל
+            Why WhatsApp and not another portal
           </h2>
         </div>
         <div class="grid md:grid-cols-2 gap-6">
@@ -235,36 +235,36 @@ import '../../styles/global.css';
             <div class="mb-4">
               <svg class="w-10 h-10 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">אין הורדות - הלקוח כבר שם</h3>
+            <h3 class="text-lg font-bold text-white mb-2">No downloads needed — the client is already there</h3>
             <p class="text-muted leading-relaxed">
-              לא צריך לשכנע אף אחד להוריד אפליקציה או ליצור חשבון. וואטסאפ כבר מותקן אצל כל לקוח. פשוט שולחים הודעה ומתחילים לעבוד.
+              No need to convince anyone to download an app or create an account. WhatsApp is already on every client's phone. Just send a message and start working.
             </p>
           </div>
           <div class="card">
             <div class="mb-4">
               <svg class="w-10 h-10 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">תזכורות חכמות - מכבד שבת וחגים</h3>
+            <h3 class="text-lg font-bold text-white mb-2">Smart scheduling — respects weekends and holidays</h3>
             <p class="text-muted leading-relaxed">
-              המערכת יודעת מתי לא לשלוח: שבת, חגים, שעות לא סבירות. תזכורות אוטומטיות ללקוחות יוצאות רק בזמנים הנכונים, בתדירות שלא מעצבנת.
+              The system knows when not to send: weekends, public holidays, unreasonable hours. Automated reminders only go out at the right times, at a frequency that won't annoy.
             </p>
           </div>
           <div class="card">
             <div class="mb-4">
               <svg class="w-10 h-10 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" /></svg>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">גם רו״ח יכול לשלוח הודעות לעוזר</h3>
+            <h3 class="text-lg font-bold text-white mb-2">CPAs can message the assistant too</h3>
             <p class="text-muted leading-relaxed">
-              צריך לבקש מסמך מלקוח ספציפי? שלחו הודעה ל-HeshbonAI ישירות מהוואטסאפ שלכם והמערכת מטפלת. בלי להיכנס לשום ממשק.
+              Need to request a document from a specific client? Send a message to HeshbonAI directly from your own WhatsApp and the system handles it. No need to open any dashboard.
             </p>
           </div>
           <div class="card">
             <div class="mb-4">
               <svg class="w-10 h-10 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">מספר עסקי ממותג - עם שם ולוגו המשרד</h3>
+            <h3 class="text-lg font-bold text-white mb-2">Branded business number — your firm's name and logo</h3>
             <p class="text-muted leading-relaxed">
-              ההודעות יוצאות מחשבון WhatsApp Business מאומת עם שם המשרד, לוגו ותיאור. הלקוח רואה שזה באמת אתם, לא ספאם.
+              Messages are sent from a verified WhatsApp Business account with your firm's name, logo, and description. The client sees it's really you, not spam.
             </p>
           </div>
         </div>
@@ -275,22 +275,22 @@ import '../../styles/global.css';
     <section class="bg-navy-light border-t border-border py-16 md:py-24">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
-          מוכנים לתת לוואטסאפ לעבוד בשבילכם?
+          Ready to let WhatsApp work for you?
         </h2>
         <p class="text-lg text-muted mt-4 max-w-xl mx-auto">
-          תנו ל-HeshbonAI לטפל בתזכורות ובאיסוף המסמכים. אתם תתעסקו במה שאתם יודעים לעשות הכי טוב - לתת שירות מקצועי ללקוחות.
+          Let HeshbonAI handle the reminders and document collection. You focus on what you do best — delivering professional service to your clients.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
           <a href="https://cal.com/heshbonai/intro" class="btn-primary text-lg px-8 py-4">
-            קבעו שיחת היכרות
+            Schedule your intro call
           </a>
           <a href="/pricing" class="btn-secondary text-lg px-8 py-4">
-            ראו מחירים
+            See Pricing
           </a>
         </div>
       </div>
     </section>
 
   </main>
-  <FooterHe />
-</LayoutHe>
+  <Footer />
+</Layout>

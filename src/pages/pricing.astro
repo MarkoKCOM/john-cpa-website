@@ -8,7 +8,10 @@ const title = 'Pricing - HeshbonAI | AI Assistant for CPA Firms';
 const description = 'Flat monthly pricing in USD. All plans include WhatsApp document collection, follow-ups, dashboard, and multi-language support.';
 ---
 
-<Layout title={title} description={description} canonical="https://heshbonai.co/pricing">
+<Layout title={title} description={description} canonical="https://heshbonai.co/pricing/" breadcrumbs={[
+  { name: "Home", url: "https://heshbonai.co/" },
+  { name: "Pricing", url: "https://heshbonai.co/pricing/" }
+]}>
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",

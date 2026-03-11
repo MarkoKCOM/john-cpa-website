@@ -5,11 +5,28 @@ interface Props {
   title: string;
   description: string;
   canonical?: string;
+  breadcrumbs?: Array<{ name: string; url: string }>;
 }
 
-const { title, description, canonical } = Astro.props;
+const { title, description, canonical, breadcrumbs } = Astro.props;
 const siteUrl = 'https://heshbonai.co';
 const currentUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
+
+// Build page-specific hreflang: /about → /he/about, / → /he/
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '';
+const heUrl = pathname === '' ? `${siteUrl}/he/` : `${siteUrl}/he${pathname}/`;
+
+// Breadcrumb schema
+const breadcrumbSchema = breadcrumbs?.length ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((item, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": item.name,
+    "item": item.url
+  }))
+} : null;
 
 const graphSchema = {
   "@context": "https://schema.org",
@@ -65,7 +82,8 @@ const graphSchema = {
     <link rel="canonical" href={currentUrl} />
 
     <link rel="alternate" hreflang="en" href={currentUrl} />
-    <link rel="alternate" hreflang="he" href={`${siteUrl}/he/`} />
+    <link rel="alternate" hreflang="he" href={heUrl} />
+    <link rel="alternate" hreflang="x-default" href={currentUrl} />
 
     <link rel="icon" type="image/png" href="/images/logo%20tranparent.png" />
     <link rel="apple-touch-icon" href="/images/logo%20tranparent.png" />
@@ -76,12 +94,18 @@ const graphSchema = {
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="HeshbonAI" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={`${siteUrl}/images/og-cover.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="HeshbonAI - AI Assistant for CPA Firms" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}/images/og-cover.png`} />
 
     <script type="application/ld+json" set:html={JSON.stringify(graphSchema)} />
+    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
