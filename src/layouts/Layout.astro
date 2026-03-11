@@ -21,16 +21,11 @@ const graphSchema = {
       "url": siteUrl,
       "logo": `${siteUrl}/images/logo%20tranparent.png`,
       "description": "AI assistant for CPA firms - automates client follow-up, document collection, and workflow visibility through WhatsApp.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Tel Aviv",
-        "addressCountry": "IL"
-      },
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "support@heshbonai.co",
         "contactType": "customer support",
-        "availableLanguage": ["Hebrew", "English"]
+        "availableLanguage": ["English", "Hebrew", "Spanish", "French", "Portuguese"]
       }
     },
     {
@@ -48,9 +43,9 @@ const graphSchema = {
       "description": "AI assistant that automates client follow-up, document collection, and workflow visibility for CPA firms through WhatsApp.",
       "offers": {
         "@type": "AggregateOffer",
-        "lowPrice": "1000",
-        "highPrice": "2700",
-        "priceCurrency": "ILS",
+        "lowPrice": "249",
+        "highPrice": "699",
+        "priceCurrency": "USD",
         "offerCount": "3"
       }
     }
@@ -69,8 +64,6 @@ const graphSchema = {
     <meta name="description" content={description} />
     <link rel="canonical" href={currentUrl} />
 
-    <meta name="geo.region" content="IL" />
-    <meta name="geo.placename" content="Tel Aviv" />
     <link rel="alternate" hreflang="en" href={currentUrl} />
     <link rel="alternate" hreflang="he" href={`${siteUrl}/he/`} />
 
@@ -82,7 +75,7 @@ const graphSchema = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="HeshbonAI" />
-    <meta property="og:locale" content="en_IL" />
+    <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
